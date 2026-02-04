@@ -1,12 +1,12 @@
 export const projects = [
   {
     id: 1,
-    title: 'Project One',
-    description: 'A full-stack web application with real-time features, user authentication, and responsive design. Built to solve a real-world problem with modern technologies.',
+    title: 'Mindful Companion',
+    description: 'An AI-powered journaling app that uses LLMs to validate and reflect on user entries over time, identify emotional trends, and suggest mental health resources.',
     image: null,
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Socket.io'],
-    githubUrl: 'https://github.com/gkatsikis/project-one',
-    liveUrl: 'https://project-one.vercel.app',
+    technologies: ['React', 'Django', 'Tailwind', 'LiteLLM', 'Docker', 'AWS ECS'],
+    githubUrl: 'https://github.com/gkatsikis/mindfulcompanion',
+    liveUrl: 'https://www.mindful-companion.com',
     featured: true,
   },
   {
