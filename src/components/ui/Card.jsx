@@ -10,7 +10,7 @@ function Card({
   const baseStyles = 'bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden'
 
   const hoverStyles = hover
-    ? 'hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300'
+    ? 'hover:border-teal-500/50 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-300'
     : ''
 
   const gradientStyles = gradient

@@ -23,7 +23,7 @@ function SectionHeading({ title, subtitle, align = 'center' }) {
           {subtitle}
         </p>
       )}
-      <div className={`mt-4 h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full ${align === 'center' ? 'mx-auto' : ''}`} />
+      <div className={`mt-4 h-1 w-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full ${align === 'center' ? 'mx-auto' : ''}`} />
     </motion.div>
   )
 }

@@ -15,7 +15,7 @@ export const experience = [
       'Built responsive React.js/TypeScript interfaces for seamless data retrieval',
     ],
     technologies: ['Python', 'Django', 'React', 'TypeScript', 'PostgreSQL', 'Redis'],
-    color: '#8B5CF6', // Purple
+    color: '#14B8A6', // Teal
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ export const experience = [
       'Implemented CI/CD pipelines reducing deployment time by 60%',
     ],
     technologies: ['Node.js', 'Python', 'PostgreSQL', 'Docker'],
-    color: '#EC4899', // Pink
+    color: '#0891B2', // Cyan
   },
   {
     id: 3,
@@ -49,6 +49,6 @@ export const experience = [
       'Contributed to open-source projects and internal developer tools',
     ],
     technologies: ['React', 'JavaScript', 'CSS', 'Git'],
-    color: '#06B6D4', // Cyan
+    color: '#0EA5E9', // Sky
   },
 ]

@@ -9,7 +9,6 @@ function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="About Me"
-          subtitle="Get to know me better"
         />
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -71,7 +70,7 @@ function About() {
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 text-center hover:border-purple-500/50 transition-colors"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 text-center hover:border-teal-500/50 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

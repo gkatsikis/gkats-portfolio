@@ -61,7 +61,7 @@ function Navbar() {
               href="https://github.com/gkatsikis"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-purple-500/25"
+              className="flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-teal-500/25"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -107,7 +107,7 @@ function Navbar() {
                 href="https://github.com/gkatsikis"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-200 font-medium py-2"
+                className="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors duration-200 font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
                 <FaGithub />

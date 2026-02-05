@@ -16,9 +16,9 @@ function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" />
         <div className="absolute top-1/3 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-delayed" />
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 md:w-96 md:h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-slow" />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 md:w-96 md:h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-slow" />
       </div>
 
       {/* Floating tech icons */}
@@ -27,14 +27,15 @@ function Hero() {
           key={index}
           className={`absolute ${position} hidden lg:block`}
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.6, scale: 1 }}
+          animate={{ opacity: 0.8, scale: 1 }}
           transition={{ duration: 0.8, delay: delay + 0.5 }}
         >
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ duration: 4, repeat: Infinity, delay }}
+            className="p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg"
           >
-            <Icon size={48} style={{ color }} className="drop-shadow-lg" />
+            <Icon size={40} style={{ color }} className="drop-shadow-md" />
           </motion.div>
         </motion.div>
       ))}
@@ -47,7 +48,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.p
-            className="text-purple-400 text-lg md:text-xl font-medium mb-4"
+            className="text-teal-400 text-lg md:text-xl font-medium mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}

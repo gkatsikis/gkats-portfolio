@@ -54,7 +54,7 @@ function Technologies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Technologies"
-          subtitle="Tools and technologies I work with"
+          subtitle="Some tools and technologies I work with"
         />
 
         <div className="space-y-16">
