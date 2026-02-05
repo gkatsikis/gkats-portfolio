@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion'
 import { FaGithub, FaChevronDown } from 'react-icons/fa'
-import { SiReact, SiTypescript, SiNodedotjs, SiPython } from 'react-icons/si'
+import { SiReact, SiTypescript, SiDjango, SiPython, SiFastapi } from 'react-icons/si'
 import Button from '../ui/Button'
 
 const floatingIcons = [
   { Icon: SiReact, color: '#61DAFB', position: 'top-20 left-[10%]', delay: 0 },
   { Icon: SiTypescript, color: '#3178C6', position: 'top-32 right-[15%]', delay: 0.5 },
-  { Icon: SiNodedotjs, color: '#339933', position: 'bottom-32 left-[20%]', delay: 1 },
+  { Icon: SiDjango, color: '#092E20', position: 'bottom-32 left-[20%]', delay: 1 },
   { Icon: SiPython, color: '#3776AB', position: 'bottom-40 right-[10%]', delay: 1.5 },
+  { Icon: SiFastapi, color: '#009688', position: 'top-1/2 left-[5%]', delay: 2 },
 ]
 
 function Hero() {
