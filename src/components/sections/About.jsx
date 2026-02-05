@@ -21,16 +21,19 @@ function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I'm a passionate software engineer with expertise in building modern web
-              applications. I love turning complex problems into simple, beautiful, and
-              intuitive solutions with human-centered design.
+              I'm a software engineer with a background in clinical social work and training
+              as a meditation teacher. This unique combination shapes how I approach
+              building software—with empathy, user-centered thinking, and a focus on
+              creating tools that genuinely help people.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              With experience across the full stack, I specialize in React, TypeScript, Django, FastAPI, and Python. I'm always eager to learn new technologies and stay current
-              with industry best practices.
+              Across the full stack, I specialize in Python, Django, FastAPI, React, and
+              TypeScript. I'm particularly drawn to health-tech and wellness spaces where
+              my technical skills and human services background intersect.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              When I'm not coding, you can find me training Brazilian jiu jitsu, meditating, or reading outside on a sunny day.
+              When I'm not coding, you can find me training Brazilian jiu jitsu, teaching
+              meditation, or reading outside on a sunny day.
             </p>
 
             <div className="flex flex-wrap gap-4">

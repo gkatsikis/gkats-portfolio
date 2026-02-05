@@ -5,7 +5,7 @@ import Card from '../ui/Card'
 import Button from '../ui/Button'
 import { projects } from '../../data/projects'
 
-function ProjectCard({ title, description, technologies, githubUrl, liveUrl, featured, index }) {
+function ProjectCard({ title, description, technologies, githubUrl, liveUrl, featured, image, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -14,11 +14,19 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Card className="h-full flex flex-col" gradient>
-        {/* Project preview placeholder */}
+        {/* Project preview */}
         <div className="relative h-48 bg-gradient-to-br from-purple-900/50 to-pink-900/50 overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-6xl font-bold text-white/10">{title.charAt(0)}</span>
-          </div>
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover object-top"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-6xl font-bold text-white/10">{title.charAt(0)}</span>
+            </div>
+          )}
           {featured && (
             <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
               Featured

@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: 'Mindful Companion',
     description: 'An AI-powered journaling app that uses LLMs to validate and reflect on user entries over time, identify emotional trends, and suggest mental health resources.',
-    image: null,
+    image: '/mindfulcompanion.png',
     technologies: ['React', 'Django', 'Tailwind', 'LiteLLM', 'Docker', 'AWS ECS'],
     githubUrl: 'https://github.com/gkatsikis/mindfulcompanion',
     liveUrl: 'https://www.mindful-companion.com',
