@@ -62,9 +62,9 @@ function About() {
           >
             {[
               { number: '4+', label: 'Years Experience' },
-              { number: '20+', label: 'Projects Completed' },
-              { number: '3', label: 'Companies' },
-              { number: '10+', label: 'Technologies' },
+              { number: '10+', label: 'Projects Shipped' },
+              { number: '✓', label: 'Stack Agnostic' },
+              { number: '✓', label: 'Architecture First' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
