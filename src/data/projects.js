@@ -11,7 +11,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'HL7 Converter',
+    title: 'HL7 Converter [In Progress]',
     description: 'A FastAPI-based tool that converts HL7 messages into structured JSON format, enabling seamless integration with modern healthcare applications and improving data interoperability.',
     image: null,
     technologies: ['FastAPI'],
@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Oasis',
+    title: 'Oasis [In Progress]',
     description: 'A mood-boosting agnostic API using asynchronous flows to offer emotional regulating support through activities, journaling, and AI-driven insights. Designed for mental wellness on the go.',
     image: null,
     technologies: ['Python', 'FastAPI'],
