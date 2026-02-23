@@ -14,7 +14,7 @@ export const projects = [
     title: 'HL7 Converter',
     description: 'A FastAPI-based tool that converts HL7 messages into structured JSON format, enabling seamless integration with modern healthcare applications and improving data interoperability.',
     image: '/hl7converter.png',
-    technologies: ['FastAPI', 'HTMX', 'Render'],
+    technologies: ['FastAPI', 'HTMX', 'Pytest', 'Pydantic', 'Render'],
     githubUrl: 'https://github.com/gkatsikis/HL7-Converter',
     liveUrl: 'https://hl7-converter.onrender.com/',
     featured: true,
