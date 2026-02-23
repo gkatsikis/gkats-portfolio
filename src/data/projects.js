@@ -11,12 +11,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'HL7 Converter [In Progress]',
+    title: 'HL7 Converter',
     description: 'A FastAPI-based tool that converts HL7 messages into structured JSON format, enabling seamless integration with modern healthcare applications and improving data interoperability.',
-    image: null,
-    technologies: ['FastAPI'],
-    githubUrl: 'gkats.dev',
-    liveUrl: 'gkats.dev',
+    image: '/hl7converter.png',
+    technologies: ['FastAPI', 'HTMX', 'Render'],
+    githubUrl: 'https://github.com/gkatsikis/HL7-Converter',
+    liveUrl: 'https://hl7-converter.onrender.com/',
     featured: true,
   },
   {
