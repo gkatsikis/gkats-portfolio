@@ -1,7 +1,30 @@
+import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const [visitCount, setVisitCount] = useState(null)
+
+  useEffect(() => {
+    const cached = sessionStorage.getItem('portfolio-visit-count')
+    if (cached) {
+      setVisitCount(Number(cached))
+      return
+    }
+
+    fetch('https://api.counterapi.dev/v1/gkats-portfolio/visits/up')
+      .then((res) => {
+        if (!res.ok) throw new Error('Counter API error')
+        return res.json()
+      })
+      .then((data) => {
+        if (typeof data.count === 'number') {
+          setVisitCount(data.count)
+          sessionStorage.setItem('portfolio-visit-count', String(data.count))
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   const socialLinks = [
     {
@@ -54,6 +77,12 @@ function Footer() {
             &copy; {currentYear} All rights reserved.
           </p>
         </div>
+
+        {visitCount !== null && (
+          <p className="text-center text-gray-600 text-xs mt-8">
+            {visitCount.toLocaleString()} {visitCount === 1 ? 'visit' : 'visits'}
+          </p>
+        )}
       </div>
     </footer>
   )
