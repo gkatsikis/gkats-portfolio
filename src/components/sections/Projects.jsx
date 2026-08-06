@@ -5,7 +5,7 @@ import Card from '../ui/Card'
 import Button from '../ui/Button'
 import { projects } from '../../data/projects'
 
-function ProjectCard({ title, description, technologies, githubUrl, liveUrl, featured, image, index }) {
+function ProjectCard({ title, description, technologies, githubUrl, liveUrl, featured, image, imageFit, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -20,7 +20,11 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-cover object-top"
+              className={
+                imageFit === 'contain'
+                  ? 'w-full h-full object-contain p-4'
+                  : 'w-full h-full object-cover object-top'
+              }
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
