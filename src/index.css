@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,18 +10,22 @@
   }
 
   body {
-    @apply bg-slate-900 text-white antialiased;
+    @apply bg-stone-900 text-white antialiased;
     font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-300 via-amber-200 to-orange-300;
   }
 
   .bg-gradient-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #134e4a 25%, #0e7490 50%, #0f172a 100%);
+    background: linear-gradient(135deg, #1c1917 0%, #44403c 30%, #6d4a3a 55%, #1c1917 100%);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
@@ -33,13 +37,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-800;
+  @apply bg-stone-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-teal-600 rounded-full;
+  @apply bg-rose-400/60 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-teal-500;
+  @apply bg-rose-400;
 }

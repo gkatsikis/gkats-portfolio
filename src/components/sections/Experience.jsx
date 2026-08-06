@@ -14,11 +14,11 @@ function ExperienceCard({ company, role, location, startDate, endDate, descripti
     >
       {/* Timeline connector */}
       {index < experience.length - 1 && (
-        <div className="absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-slate-600 to-transparent hidden md:block" />
+        <div className="absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-stone-600 to-transparent hidden md:block" />
       )}
 
       <div
-        className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 md:p-8 hover:border-opacity-50 transition-all duration-300 relative overflow-hidden group"
+        className="bg-stone-800/50 backdrop-blur-sm border border-stone-700 rounded-2xl p-6 md:p-8 hover:border-opacity-50 transition-all duration-300 relative overflow-hidden group"
         style={{ '--accent-color': color }}
       >
         {/* Accent border */}
@@ -47,10 +47,12 @@ function ExperienceCard({ company, role, location, startDate, endDate, descripti
                 <p className="text-lg font-medium" style={{ color }}>{company}</p>
               </div>
               <div className="flex flex-col sm:items-end gap-1 text-sm text-gray-400">
-                <span className="flex items-center gap-1">
-                  <FiCalendar className="text-gray-500" />
-                  {startDate} - {endDate}
-                </span>
+                {startDate && (
+                  <span className="flex items-center gap-1">
+                    <FiCalendar className="text-gray-500" />
+                    {startDate} - {endDate}
+                  </span>
+                )}
                 <span className="flex items-center gap-1">
                   <FiMapPin className="text-gray-500" />
                   {location}
@@ -79,7 +81,7 @@ function ExperienceCard({ company, role, location, startDate, endDate, descripti
               {technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 text-sm rounded-full bg-slate-700/50 text-gray-300 border border-slate-600"
+                  className="px-3 py-1 text-sm rounded-full bg-stone-700/50 text-gray-300 border border-stone-600"
                 >
                   {tech}
                 </span>
@@ -94,7 +96,7 @@ function ExperienceCard({ company, role, location, startDate, endDate, descripti
 
 function Experience() {
   return (
-    <section id="experience" className="py-20 md:py-32 bg-slate-900">
+    <section id="experience" className="py-20 md:py-32 bg-stone-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Software Engineer Experience"

@@ -15,7 +15,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
     >
       <Card className="h-full flex flex-col" gradient>
         {/* Project preview */}
-        <div className="relative h-48 bg-gradient-to-br from-teal-900/50 to-cyan-900/50 overflow-hidden">
+        <div className="relative h-48 bg-gradient-to-br from-rose-900/50 to-amber-900/50 overflow-hidden">
           {image ? (
             <img
               src={image}
@@ -28,7 +28,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
             </div>
           )}
           {featured && (
-            <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-full">
+            <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium bg-gradient-to-r from-rose-500 to-amber-500 text-white rounded-full">
               Featured
             </span>
           )}
@@ -44,7 +44,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-700/50 text-teal-300 border border-teal-500/20"
+                className="px-2.5 py-1 text-xs font-medium rounded-md bg-stone-700/50 text-rose-300 border border-rose-500/20"
               >
                 {tech}
               </span>
@@ -86,7 +86,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
 
 function Projects() {
   return (
-    <section id="projects" className="py-20 md:py-32 bg-slate-950">
+    <section id="projects" className="py-20 md:py-32 bg-stone-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Projects"

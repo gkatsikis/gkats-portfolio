@@ -17,7 +17,7 @@ function TechIcon({ name, icon, color }) {
       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
     >
       <div
-        className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700 group-hover:border-current transition-all duration-300"
+        className="p-4 rounded-2xl bg-stone-800/50 border border-stone-700 group-hover:border-current transition-all duration-300"
         style={{ '--tw-border-opacity': 0.5 }}
       >
         <IconComponent
@@ -50,7 +50,7 @@ function Technologies() {
   }
 
   return (
-    <section id="technologies" className="py-20 md:py-32 bg-slate-950">
+    <section id="technologies" className="py-20 md:py-32 bg-stone-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Technologies"

@@ -5,7 +5,7 @@ import Button from '../ui/Button'
 
 function About() {
   return (
-    <section id="about" className="py-20 md:py-32 bg-slate-900">
+    <section id="about" className="py-20 md:py-32 bg-stone-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="About Me"
@@ -33,7 +33,7 @@ function About() {
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               When I'm not coding, you can find me training Brazilian jiu jitsu, teaching
               meditation, or reading outside on a sunny day. I'm also a language
-              learner—I speak Greek (B2), Spanish (B2), and Japanese (B1).
+              learner—I speak Greek (B2), Spanish (B2), Japanese (JLPT N4), and Chinese (HSK 1).
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -71,7 +71,7 @@ function About() {
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 text-center hover:border-teal-500/50 transition-colors"
+                className="bg-stone-800/50 backdrop-blur-sm border border-stone-700 rounded-2xl p-6 text-center hover:border-rose-500/50 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

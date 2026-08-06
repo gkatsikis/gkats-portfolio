@@ -45,7 +45,7 @@ function Footer() {
   ]
 
   return (
-    <footer className="bg-slate-950 border-t border-slate-800">
+    <footer className="bg-stone-950 border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo / Brand */}
@@ -64,7 +64,7 @@ function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200 p-2 hover:bg-slate-800 rounded-full"
+                className="text-gray-400 hover:text-white transition-colors duration-200 p-2 hover:bg-stone-800 rounded-full"
                 aria-label={link.name}
               >
                 <link.icon size={20} />
