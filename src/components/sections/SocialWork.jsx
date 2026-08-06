@@ -30,15 +30,14 @@ function SocialWork() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            You won't find a timeline or bullet points here—that's on purpose.
-            This side of me isn't corporate, and it never was. Social work, for
-            me, is less a job history than a way of seeing people.
+            You won't find a timeline or bullet points here, that's on purpose.
+            This side of me isn't corporate, and it never was. Social work, as a mentor once told me,
+            isn't what I do, it's <em>how</em> I do it.
           </p>
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            I'm trained in DBT, mindfulness-based interventions, and emotionally
-            focused therapy (EFT), and I approach care through an attachment
+            I'm trained in mindfulness-based interventions, EFT (Emotionally Focused Therapy), DBT, and I approach care through an attachment
             lens. As a mixed-race child of immigrants, cultural humility isn't a
-            framework I studied—it's the house I grew up in.
+            framework I studied, it's the house I grew up in.
           </p>
           <p className="text-gray-300 text-lg leading-relaxed mb-10">
             These values follow me everywhere, including into the software I
