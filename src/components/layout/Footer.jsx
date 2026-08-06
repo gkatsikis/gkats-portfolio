@@ -50,7 +50,9 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo / Brand */}
           <div className="text-center md:text-left">
-            <span className="text-2xl font-bold text-gradient">GK</span>
+            <span className="text-2xl font-semibold font-display text-stone-100">
+              γκ<span className="text-[#C97064]">.</span>
+            </span>
             <p className="text-gray-400 text-sm mt-2">
               Building digital experiences
             </p>

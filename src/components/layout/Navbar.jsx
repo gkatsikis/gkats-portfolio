@@ -35,12 +35,13 @@ function Navbar() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="text-xl md:text-2xl font-bold text-gradient"
+            className="text-2xl md:text-3xl font-semibold font-display text-stone-100"
+            aria-label="Georgios Katsikis home"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            GK
+            γκ<span className="text-[#C97064]">.</span>
           </motion.a>
 
           {/* Desktop Navigation */}
