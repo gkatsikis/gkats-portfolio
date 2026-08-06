@@ -3,6 +3,7 @@ export const technologies = {
     { name: 'Python', icon: 'SiPython', color: '#3776AB' },
     { name: 'TypeScript', icon: 'SiTypescript', color: '#3178C6' },
     { name: 'Go', icon: 'SiGo', color: '#00ADD8' },
+    { name: 'Swift', icon: 'SiSwift', color: '#F05138' },
   ],
   frameworks: [
     { name: 'Django', icon: 'SiDjango', color: '#092E20' },
@@ -14,6 +15,7 @@ export const technologies = {
   ],
   devops: [
     { name: 'AWS', icon: 'SiAmazonwebservices', color: '#FF9900' },
+    { name: 'GCP', icon: 'SiGooglecloud', color: '#4285F4' },
     { name: 'Docker', icon: 'SiDocker', color: '#2496ED' },
     { name: 'GitHub Actions', icon: 'SiGithubactions', color: '#2088FF' },
     { name: 'Ansible', icon: 'SiAnsible', color: '#EE0000' },
