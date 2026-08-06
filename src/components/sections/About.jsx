@@ -20,9 +20,9 @@ function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I'm a software engineer with a background in clinical social work and training
+              I'm a licensed social worker (LMSW) and software engineer, with training
               as a meditation teacher. This unique combination shapes how I approach
-              building software—with empathy, user-centered thinking, and a focus on
+              both people and software—with empathy, user-centered thinking, and a focus on
               creating tools that genuinely help people.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -32,7 +32,8 @@ function About() {
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               When I'm not coding, you can find me training Brazilian jiu jitsu, teaching
-              meditation, or reading outside on a sunny day.
+              meditation, or reading outside on a sunny day. I'm also a language
+              learner—I speak Greek (B2), Spanish (B2), and Japanese (B1).
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -45,7 +46,7 @@ function About() {
                 Download Resume
               </Button>
               <Button
-                href="mailto:hello@example.com"
+                href="mailto:georgioscabro@gmail.com"
                 icon={FiMail}
                 variant="secondary"
               >

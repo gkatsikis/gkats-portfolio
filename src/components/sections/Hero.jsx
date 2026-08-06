@@ -67,7 +67,7 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Software Engineer
+            Software Engineer · Social Worker, LMSW
           </motion.h2>
 
           <motion.p

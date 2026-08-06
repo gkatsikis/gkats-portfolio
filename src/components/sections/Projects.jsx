@@ -53,26 +53,30 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
 
           {/* Links */}
           <div className="flex gap-3">
-            <Button
-              href={githubUrl}
-              external
-              variant="secondary"
-              size="sm"
-              icon={FaGithub}
-              className="flex-1"
-            >
-              Code
-            </Button>
-            <Button
-              href={liveUrl}
-              external
-              variant="primary"
-              size="sm"
-              icon={FaExternalLinkAlt}
-              className="flex-1"
-            >
-              Live Demo
-            </Button>
+            {githubUrl && (
+              <Button
+                href={githubUrl}
+                external
+                variant="secondary"
+                size="sm"
+                icon={FaGithub}
+                className="flex-1"
+              >
+                Code
+              </Button>
+            )}
+            {liveUrl && (
+              <Button
+                href={liveUrl}
+                external
+                variant="primary"
+                size="sm"
+                icon={FaExternalLinkAlt}
+                className="flex-1"
+              >
+                Live Demo
+              </Button>
+            )}
           </div>
         </div>
       </Card>
