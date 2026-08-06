@@ -15,7 +15,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
     >
       <Card className="h-full flex flex-col" gradient>
         {/* Project preview */}
-        <div className="relative h-48 bg-gradient-to-br from-rose-900/50 to-amber-900/50 overflow-hidden">
+        <div className="relative h-48 bg-gradient-to-br from-terracotta/15 to-stone-900/60 overflow-hidden">
           {image ? (
             <img
               src={image}
@@ -32,7 +32,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
             </div>
           )}
           {featured && (
-            <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium bg-gradient-to-r from-rose-500 to-amber-500 text-white rounded-full">
+            <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium bg-terracotta text-white rounded-full">
               Featured
             </span>
           )}
@@ -41,14 +41,14 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
         {/* Content */}
         <div className="p-6 flex flex-col flex-1">
           <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-          <p className="text-gray-400 mb-4 flex-1">{description}</p>
+          <p className="text-stone-400 mb-4 flex-1">{description}</p>
 
           {/* Tech stack */}
           <div className="flex flex-wrap gap-2 mb-6">
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 text-xs font-medium rounded-md bg-stone-700/50 text-rose-300 border border-rose-500/20"
+                className="px-2.5 py-1 text-xs font-medium rounded-md bg-stone-700/50 text-stone-200 border border-terracotta/30"
               >
                 {tech}
               </span>

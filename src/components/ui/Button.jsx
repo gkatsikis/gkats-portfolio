@@ -14,10 +14,10 @@ function Button({
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-full'
 
   const variants = {
-    primary: 'bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white hover:shadow-lg hover:shadow-rose-500/25',
+    primary: 'bg-terracotta hover:bg-terracotta-light text-white hover:shadow-lg hover:shadow-terracotta/25',
     secondary: 'bg-stone-800 hover:bg-stone-700 text-white border border-stone-700 hover:border-stone-600',
-    outline: 'border-2 border-rose-500 text-rose-400 hover:bg-rose-500/10',
-    ghost: 'text-gray-300 hover:text-white hover:bg-stone-800',
+    outline: 'border-2 border-terracotta text-terracotta-light hover:bg-terracotta/10',
+    ghost: 'text-stone-300 hover:text-white hover:bg-stone-800',
   }
 
   const sizes = {

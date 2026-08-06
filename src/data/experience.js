@@ -30,7 +30,7 @@ export const experience = [
       'Built responsive React.js/TypeScript interfaces for seamless data retrieval',
     ],
     technologies: ['Python', 'Django', 'React', 'TypeScript', 'PostgreSQL', 'Redis', 'Hashicorp Vault', 'AWS'],
-    color: '#D4A373', // Warm tan
+    color: '#7A8FA6', // Dusk blue
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ export const experience = [
       'Implemented CI/CD pipelines reducing deployment time by 60%',
     ],
     technologies: ['React', 'Next.js','Django', 'Recharts', 'Railway'],
-    color: '#8A9B6E', // Sage
+    color: '#C97064', // Terracotta
   },
   {
     id: 3,
@@ -64,6 +64,6 @@ export const experience = [
       'Collaborated with the team to ensure smooth operations during the festival',
     ],
     technologies: ['HTML', 'JavaScript', 'CSS',],
-    color: '#B5838D', // Dusty rose
+    color: '#7A8FA6', // Dusk blue
   },
 ]

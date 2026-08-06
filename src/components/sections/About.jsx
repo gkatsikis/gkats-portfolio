@@ -19,18 +19,18 @@ function About() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-stone-300 text-lg leading-relaxed mb-6">
               I'm a licensed social worker (LMSW) and software engineer, with training
               as a meditation teacher. This unique combination shapes how I approach
               both people and software—with empathy, user-centered thinking, and a focus on
               creating tools that genuinely help people.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-stone-300 text-lg leading-relaxed mb-6">
               Across the full stack, I specialize in Python, Django, FastAPI, React, and
               TypeScript. I'm particularly drawn to health-tech and wellness spaces where
               my technical skills and human services background intersect.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-stone-300 text-lg leading-relaxed mb-8">
               When I'm not coding, you can find me training Brazilian jiu jitsu, teaching
               meditation, or reading outside on a sunny day. I'm also a language
               learner—I speak Greek (B2), Spanish (B2), Japanese (JLPT N4), and Chinese (HSK 1).
@@ -64,23 +64,23 @@ function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {[
-              { number: '5+', label: 'Years Experience' },
+              { number: '5+', label: 'Years Production Experience' },
               { number: '10+', label: 'Projects Shipped' },
               { number: '2', label: 'Products Live Today' },
               { number: '1', label: 'Native macOS App' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="bg-stone-800/50 backdrop-blur-sm border border-stone-700 rounded-2xl p-6 text-center hover:border-rose-500/50 transition-colors"
+                className="bg-stone-800/50 backdrop-blur-sm border border-stone-700 rounded-2xl p-6 text-center hover:border-terracotta/50 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
-                <span className="text-4xl md:text-5xl font-bold text-gradient block mb-2">
+                <span className="text-4xl md:text-5xl font-bold text-terracotta-light block mb-2">
                   {stat.number}
                 </span>
-                <span className="text-gray-400 text-sm">{stat.label}</span>
+                <span className="text-stone-400 text-sm">{stat.label}</span>
               </motion.div>
             ))}
           </motion.div>

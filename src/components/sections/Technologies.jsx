@@ -26,7 +26,7 @@ function TechIcon({ name, icon, color }) {
           className="transition-all duration-300 group-hover:drop-shadow-lg"
         />
       </div>
-      <span className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">
+      <span className="text-stone-400 text-sm font-medium group-hover:text-white transition-colors">
         {name}
       </span>
     </motion.div>
@@ -66,7 +66,7 @@ function Technologies() {
               viewport={{ once: true, margin: '-50px' }}
               variants={containerVariants}
             >
-              <h3 className="text-xl font-semibold text-gray-300 mb-6 text-center">
+              <h3 className="text-xl font-semibold text-stone-300 mb-6 text-center">
                 {category.label}
               </h3>
               <motion.div

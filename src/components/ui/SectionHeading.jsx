@@ -19,11 +19,11 @@ function SectionHeading({ title, subtitle, align = 'center' }) {
         {title}
       </h2>
       {subtitle && (
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="text-stone-400 text-lg md:text-xl max-w-2xl mx-auto">
           {subtitle}
         </p>
       )}
-      <div className={`mt-4 h-1 w-20 bg-gradient-to-r from-rose-500 to-amber-500 rounded-full ${align === 'center' ? 'mx-auto' : ''}`} />
+      <div className={`mt-4 h-1 w-20 bg-terracotta rounded-full ${align === 'center' ? 'mx-auto' : ''}`} />
     </motion.div>
   )
 }

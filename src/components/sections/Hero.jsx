@@ -8,9 +8,9 @@ function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-rose-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" />
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-delayed" />
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 md:w-96 md:h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-slow" />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-terracotta rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" />
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-dusk rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-float-delayed" />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 md:w-96 md:h-96 bg-terracotta-dark rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-slow" />
       </div>
 
       {/* Main content */}
@@ -21,7 +21,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.p
-            className="text-rose-400 text-lg md:text-xl font-medium mb-4"
+            className="text-terracotta-light text-lg md:text-xl font-medium mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -30,11 +30,11 @@ function Hero() {
           </motion.p>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
-            <span className="text-gradient">Georgios Katsikis</span>
+            <span className="text-stone-100">Georgios Katsikis<span className="text-terracotta">.</span></span>
           </h1>
 
           <motion.h2
-            className="text-2xl sm:text-3xl md:text-4xl text-gray-300 font-light mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl text-stone-300 font-light mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -43,7 +43,7 @@ function Hero() {
           </motion.h2>
 
           <motion.p
-            className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10"
+            className="font-display italic text-stone-400 text-lg md:text-xl max-w-2xl mx-auto mb-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
@@ -84,7 +84,7 @@ function Hero() {
       >
         <motion.a
           href="#about"
-          className="flex flex-col items-center text-gray-400 hover:text-white transition-colors"
+          className="flex flex-col items-center text-stone-400 hover:text-white transition-colors"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >

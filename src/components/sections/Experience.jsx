@@ -46,27 +46,27 @@ function ExperienceCard({ company, role, location, startDate, endDate, descripti
                 <h3 className="text-xl md:text-2xl font-bold text-white">{role}</h3>
                 <p className="text-lg font-medium" style={{ color }}>{company}</p>
               </div>
-              <div className="flex flex-col sm:items-end gap-1 text-sm text-gray-400">
+              <div className="flex flex-col sm:items-end gap-1 text-sm text-stone-400">
                 {startDate && (
                   <span className="flex items-center gap-1">
-                    <FiCalendar className="text-gray-500" />
+                    <FiCalendar className="text-stone-500" />
                     {startDate} - {endDate}
                   </span>
                 )}
                 <span className="flex items-center gap-1">
-                  <FiMapPin className="text-gray-500" />
+                  <FiMapPin className="text-stone-500" />
                   {location}
                 </span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-gray-400 mb-4">{description}</p>
+            <p className="text-stone-400 mb-4">{description}</p>
 
             {/* Highlights */}
             <ul className="space-y-2 mb-6">
               {highlights.map((highlight, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-300">
+                <li key={i} className="flex items-start gap-3 text-stone-300">
                   <span
                     className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
                     style={{ backgroundColor: color }}
@@ -81,7 +81,7 @@ function ExperienceCard({ company, role, location, startDate, endDate, descripti
               {technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 text-sm rounded-full bg-stone-700/50 text-gray-300 border border-stone-600"
+                  className="px-3 py-1 text-sm rounded-full bg-stone-700/50 text-stone-300 border border-stone-600"
                 >
                   {tech}
                 </span>

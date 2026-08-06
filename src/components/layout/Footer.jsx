@@ -51,9 +51,9 @@ function Footer() {
           {/* Logo / Brand */}
           <div className="text-center md:text-left">
             <span className="text-2xl font-semibold font-display text-stone-100">
-              γκ<span className="text-[#C97064]">.</span>
+              γκ<span className="text-terracotta">.</span>
             </span>
-            <p className="text-gray-400 text-sm mt-2">
+            <p className="text-stone-400 text-sm mt-2">
               Building digital experiences
             </p>
           </div>
@@ -66,7 +66,7 @@ function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200 p-2 hover:bg-stone-800 rounded-full"
+                className="text-stone-400 hover:text-white transition-colors duration-200 p-2 hover:bg-stone-800 rounded-full"
                 aria-label={link.name}
               >
                 <link.icon size={20} />
@@ -75,13 +75,13 @@ function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-gray-500 text-sm">
+          <p className="text-stone-500 text-sm">
             &copy; {currentYear} All rights reserved.
           </p>
         </div>
 
         {visitCount !== null && (
-          <p className="text-center text-gray-600 text-xs mt-8">
+          <p className="text-center text-stone-600 text-xs mt-8">
             {visitCount.toLocaleString()} {visitCount === 1 ? 'visit' : 'visits'}
           </p>
         )}

@@ -29,17 +29,17 @@ function SocialWork() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+          <p className="text-stone-300 text-lg leading-relaxed mb-6">
             You won't find a timeline or bullet points here, that's on purpose.
             This side of me isn't corporate, and it never was. Social work, as a mentor once told me,
             isn't what I do, it's <em>how</em> I do it.
           </p>
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+          <p className="text-stone-300 text-lg leading-relaxed mb-6">
             I'm trained in mindfulness-based interventions, EFT (Emotionally Focused Therapy), DBT, and I approach care through an attachment
             lens. As a mixed-race child of immigrants, cultural humility isn't a
             framework I studied, it's the house I grew up in.
           </p>
-          <p className="text-gray-300 text-lg leading-relaxed mb-10">
+          <p className="text-stone-300 text-lg leading-relaxed mb-10">
             These values follow me everywhere, including into the software I
             build:
           </p>
@@ -48,7 +48,7 @@ function SocialWork() {
             {values.map((value, index) => (
               <motion.span
                 key={value}
-                className="px-5 py-2.5 rounded-full bg-stone-800/50 text-amber-200 border border-amber-500/20 font-medium"
+                className="px-5 py-2.5 rounded-full bg-stone-800/50 text-stone-200 border border-terracotta/30 font-medium"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

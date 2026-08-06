@@ -41,7 +41,7 @@ function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            γκ<span className="text-[#C97064]">.</span>
+            γκ<span className="text-terracotta">.</span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ function Navbar() {
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                className="text-stone-300 hover:text-white transition-colors duration-200 font-medium"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -60,7 +60,7 @@ function Navbar() {
             ))}
             <motion.a
               href="mailto:georgioscabro@gmail.com"
-              className="flex items-center gap-2 bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-rose-500/25"
+              className="flex items-center gap-2 bg-terracotta hover:bg-terracotta-light text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-terracotta/25"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -72,7 +72,7 @@ function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300 hover:text-white p-2"
+            className="md:hidden text-stone-300 hover:text-white p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -96,7 +96,7 @@ function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium py-2"
+                  className="block text-stone-300 hover:text-white transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -104,7 +104,7 @@ function Navbar() {
               ))}
               <a
                 href="mailto:georgioscabro@gmail.com"
-                className="flex items-center gap-2 text-rose-400 hover:text-rose-300 transition-colors duration-200 font-medium py-2"
+                className="flex items-center gap-2 text-terracotta-light hover:text-terracotta transition-colors duration-200 font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
                 <FiMail />
