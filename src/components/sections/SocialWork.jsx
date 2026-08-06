@@ -7,6 +7,14 @@ const values = [
   'Restorative Justice',
   'Cultural Humility',
   'LGBTQIA+ Affirming',
+  'Person-Centered',
+  'Relational',
+  'Non-Pathologizing',
+  'Somatic-Aware',
+  'Mutual Aid',
+  'Community Care',
+  'Abolitionist-Leaning',
+  'Decolonizing Practice',
 ]
 
 function SocialWork() {
