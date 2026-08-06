@@ -46,7 +46,7 @@ export const experience = [
       'Reduced page load times by 40% through performance optimization',
       'Implemented CI/CD pipelines reducing deployment time by 60%',
     ],
-    technologies: ['React', 'Next.js','Django', 'Recharts', 'Railways'],
+    technologies: ['React', 'Next.js','Django', 'Recharts', 'Railway'],
     color: '#8A9B6E', // Sage
   },
   {

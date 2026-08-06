@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiMenu, FiX } from 'react-icons/fi'
-import { FaGithub } from 'react-icons/fa'
+import { FiMenu, FiX, FiMail } from 'react-icons/fi'
 
 const navLinks = [
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#technologies' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'Social Work', href: '#social-work' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Skills', href: '#technologies' },
 ]
 
 function Navbar() {
@@ -58,16 +58,14 @@ function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="https://github.com/gkatsikis"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:georgioscabro@gmail.com"
               className="flex items-center gap-2 bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-rose-500/25"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <FaGithub className="text-lg" />
-              GitHub
+              <FiMail className="text-lg" />
+              Get in Touch
             </motion.a>
           </div>
 
@@ -104,14 +102,12 @@ function Navbar() {
                 </a>
               ))}
               <a
-                href="https://github.com/gkatsikis"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:georgioscabro@gmail.com"
                 className="flex items-center gap-2 text-rose-400 hover:text-rose-300 transition-colors duration-200 font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
-                <FaGithub />
-                GitHub
+                <FiMail />
+                Get in Touch
               </a>
             </div>
           </motion.div>

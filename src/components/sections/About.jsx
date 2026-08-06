@@ -64,10 +64,10 @@ function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {[
-              { number: '4+', label: 'Years Experience' },
+              { number: '5+', label: 'Years Experience' },
               { number: '10+', label: 'Projects Shipped' },
-              { number: '✓', label: 'Stack Agnostic' },
-              { number: '✓', label: 'Architecture First' },
+              { number: '2', label: 'Products Live Today' },
+              { number: '1', label: 'Native macOS App' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

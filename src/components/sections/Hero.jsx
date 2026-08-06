@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaChevronDown } from 'react-icons/fa'
+import { FaChevronDown } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi'
 import Button from '../ui/Button'
 
 function Hero() {
@@ -57,19 +58,18 @@ function Hero() {
             transition={{ delay: 0.9 }}
           >
             <Button
-              href="https://github.com/gkatsikis"
-              external
-              icon={FaGithub}
-              size="lg"
-            >
-              View GitHub
-            </Button>
-            <Button
               href="#projects"
-              variant="outline"
               size="lg"
             >
               See My Work
+            </Button>
+            <Button
+              href="mailto:georgioscabro@gmail.com"
+              variant="outline"
+              size="lg"
+              icon={FiMail}
+            >
+              Get in Touch
             </Button>
           </motion.div>
         </motion.div>

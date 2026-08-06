@@ -2,6 +2,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
+import SocialWork from './components/sections/SocialWork'
 import Technologies from './components/sections/Technologies'
 import Experience from './components/sections/Experience'
 import Projects from './components/sections/Projects'
@@ -13,9 +14,10 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Technologies />
-        <Experience />
+        <SocialWork />
         <Projects />
+        <Experience />
+        <Technologies />
       </main>
       <Footer />
     </div>

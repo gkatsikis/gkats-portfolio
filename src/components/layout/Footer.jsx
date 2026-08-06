@@ -39,7 +39,7 @@ function Footer() {
     },
     {
       name: 'Email',
-      href: 'georgioscabro@gmail.com',
+      href: 'mailto:georgioscabro@gmail.com',
       icon: FaEnvelope,
     },
   ]
