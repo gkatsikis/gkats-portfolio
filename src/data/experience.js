@@ -41,15 +41,15 @@ export const experience = [
     logo: null,
     role: 'Software Engineer',
     location: 'Remote',
-    // startDate: 'Oct 2025',
-    // endDate: 'Present',
-    description: 'Full-stack development of marketing analytics dashboards and automation tools for data-driven campaign management.',
+    // startDate: 'Nov 2025',
+    // endDate: 'Feb 2026',
+    description: 'Contract build of a multi-tenant marketing analytics platform managing campaigns across web, email, print, and social media for four client businesses.',
     highlights: [
-      'Built RESTful APIs serving 500K+ daily requests with 99.9% uptime',
-      'Reduced page load times by 40% through performance optimization',
-      'Implemented CI/CD pipelines reducing deployment time by 60%',
+      'Designed role-based access control with per-client data isolation, while parent companies keep visibility across their brands',
+      'Automated Excel ingestion with Pandas, transforming thousands of advertising records into campaign insights and reporting',
+      'Shipped real-time Recharts dashboards for campaign performance, deployed on Railway behind Cloudflare with CI/CD',
     ],
-    technologies: ['React', 'Next.js','Django', 'Recharts', 'Railway'],
+    technologies: ['React', 'Flask', 'Pandas', 'Recharts', 'Railway', 'Cloudflare'],
     color: '#C97064', // Terracotta
   },
   {

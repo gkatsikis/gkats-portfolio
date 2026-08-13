@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiDownload, FiMail } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi'
 import SectionHeading from '../ui/SectionHeading'
 import Button from '../ui/Button'
 
@@ -39,17 +39,9 @@ function About() {
 
             <div className="flex flex-wrap gap-4">
               <Button
-                href="/resume.pdf"
-                external
-                icon={FiDownload}
-                variant="primary"
-              >
-                Download Resume
-              </Button>
-              <Button
                 href="mailto:georgioscabro@gmail.com"
                 icon={FiMail}
-                variant="secondary"
+                variant="primary"
               >
                 Get in Touch
               </Button>

@@ -1,9 +1,23 @@
 import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FiCopy, FiCheck } from 'react-icons/fi'
+
+const EMAIL = 'georgioscabro@gmail.com'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
   const [visitCount, setVisitCount] = useState(null)
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = () => {
+    navigator.clipboard
+      .writeText(EMAIL)
+      .then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      })
+      .catch(() => {})
+  }
 
   useEffect(() => {
     const cached = sessionStorage.getItem('portfolio-visit-count')
@@ -39,7 +53,7 @@ function Footer() {
     },
     {
       name: 'Email',
-      href: 'mailto:georgioscabro@gmail.com',
+      href: `mailto:${EMAIL}`,
       icon: FaEnvelope,
     },
   ]
@@ -56,6 +70,24 @@ function Footer() {
             <p className="text-stone-400 text-sm mt-2">
               Building digital experiences
             </p>
+            <div className="flex items-center gap-2 mt-3 justify-center md:justify-start">
+              <a
+                href={`mailto:${EMAIL}`}
+                className="text-stone-300 hover:text-white text-sm transition-colors"
+              >
+                {EMAIL}
+              </a>
+              <button
+                onClick={copyEmail}
+                aria-label="Copy email address"
+                className="text-stone-400 hover:text-white p-1.5 hover:bg-stone-800 rounded-md transition-colors"
+              >
+                {copied ? <FiCheck className="text-terracotta-light" /> : <FiCopy />}
+              </button>
+              {copied && (
+                <span className="text-terracotta-light text-xs">Copied!</span>
+              )}
+            </div>
           </div>
 
           {/* Social Links */}
