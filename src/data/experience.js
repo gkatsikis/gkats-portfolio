@@ -2,6 +2,7 @@ export const experience = [
   {
     id: 4,
     company: 'Ocean Labs',
+    url: 'https://tryocean.io',
     logo: null,
     role: 'CTO',
     location: 'Remote',
@@ -35,6 +36,8 @@ export const experience = [
   {
     id: 2,
     company: 'Mercury Marketing',
+    // ponytail: apex only — www.mercurymediatools.us is unbound in Railway and 404s
+    url: 'https://mercurymediatools.us',
     logo: null,
     role: 'Software Engineer',
     location: 'Remote',

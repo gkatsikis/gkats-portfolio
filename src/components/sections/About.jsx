@@ -27,8 +27,9 @@ function About() {
             </p>
             <p className="text-stone-300 text-lg leading-relaxed mb-6">
               Across the full stack, I specialize in Python, Django, FastAPI, React, and
-              TypeScript. I'm particularly drawn to health-tech and wellness spaces where
-              my technical skills and human services background intersect.
+              TypeScript. I build custom software for non-profits and healthcare
+              organizations—spaces where my technical skills and human services
+              background intersect.
             </p>
             <p className="text-stone-300 text-lg leading-relaxed mb-8">
               When I'm not coding, you can find me training Brazilian jiu jitsu, teaching

@@ -5,7 +5,7 @@ import Card from '../ui/Card'
 import Button from '../ui/Button'
 import { projects } from '../../data/projects'
 
-function ProjectCard({ title, description, technologies, githubUrl, liveUrl, featured, image, imageFit, index }) {
+function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liveLabel, featured, image, imageFit, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -78,7 +78,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, fea
                 icon={FaExternalLinkAlt}
                 className="flex-1"
               >
-                Live Demo
+                {liveLabel || 'Live Demo'}
               </Button>
             )}
           </div>

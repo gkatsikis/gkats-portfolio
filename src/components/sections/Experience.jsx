@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import { FiMapPin, FiCalendar } from 'react-icons/fi'
+import { FiMapPin, FiCalendar, FiExternalLink } from 'react-icons/fi'
 import SectionHeading from '../ui/SectionHeading'
 import { experience } from '../../data/experience'
 
-function ExperienceCard({ company, role, location, startDate, endDate, description, highlights, technologies, color, index }) {
+function ExperienceCard({ company, url, role, location, startDate, endDate, description, highlights, technologies, color, index }) {
   return (
     <motion.div
       className="relative"
@@ -44,7 +44,20 @@ function ExperienceCard({ company, role, location, startDate, endDate, descripti
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-white">{role}</h3>
-                <p className="text-lg font-medium" style={{ color }}>{company}</p>
+                {url ? (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-medium inline-flex items-center gap-1.5 hover:underline"
+                    style={{ color }}
+                  >
+                    {company}
+                    <FiExternalLink className="text-sm" />
+                  </a>
+                ) : (
+                  <p className="text-lg font-medium" style={{ color }}>{company}</p>
+                )}
               </div>
               <div className="flex flex-col sm:items-end gap-1 text-sm text-stone-400">
                 {startDate && (

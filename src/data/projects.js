@@ -18,7 +18,8 @@ export const projects = [
     imageFit: 'contain',
     technologies: ['Swift', 'SwiftUI', 'AppKit', 'macOS'],
     githubUrl: null,
-    liveUrl: 'https://gkatsikis.github.io/citekitten/',
+    liveUrl: 'https://apps.apple.com/app/id6795632972',
+    liveLabel: 'App Store',
     featured: true,
   },
   {

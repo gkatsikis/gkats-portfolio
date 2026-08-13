@@ -20,6 +20,12 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <img
+            src="/headshot.jpg"
+            alt="Georgios Katsikis"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover mx-auto mb-8 border-2 border-terracotta/40 shadow-lg"
+          />
+
           <motion.p
             className="text-terracotta-light text-lg md:text-xl font-medium mb-4"
             initial={{ opacity: 0 }}
@@ -48,7 +54,7 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            Engineer with a social worker's heart and a collaborator's mindset. I believe the best systems are built by teams who care about the people on the other end.
+            Engineer with a social worker's heart. I build custom software for non-profits and healthcare organizations—tools shaped by years of working with the people on the other end.
           </motion.p>
 
           <motion.div
