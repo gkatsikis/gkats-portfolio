@@ -1,10 +1,27 @@
 import { motion } from 'framer-motion'
-import * as Si from 'react-icons/si'
+import {
+  SiPython, SiTypescript, SiGo, SiSwift,
+  SiDjango, SiFastapi, SiFlask, SiReact, SiPostgresql, SiRedis,
+  SiAmazonwebservices, SiGooglecloud, SiDocker, SiGithubactions,
+  SiAnsible, SiVagrant,
+  SiCelery, SiPydantic, SiPytest, SiPandas, SiSqlalchemy,
+} from 'react-icons/si'
 import SectionHeading from '../ui/SectionHeading'
 import { technologies, technologyCategories } from '../../data/technologies'
 
+// ponytail: static map instead of `import * as Si` — the namespace import kept
+// all ~3,200 si icons in the bundle (5 MB). New icons in technologies.js must
+// be added here too.
+const icons = {
+  SiPython, SiTypescript, SiGo, SiSwift,
+  SiDjango, SiFastapi, SiFlask, SiReact, SiPostgresql, SiRedis,
+  SiAmazonwebservices, SiGooglecloud, SiDocker, SiGithubactions,
+  SiAnsible, SiVagrant,
+  SiCelery, SiPydantic, SiPytest, SiPandas, SiSqlalchemy,
+}
+
 function TechIcon({ name, icon, color }) {
-  const IconComponent = Si[icon]
+  const IconComponent = icons[icon]
 
   if (!IconComponent) {
     return null

@@ -68,7 +68,7 @@ function Footer() {
               γκ<span className="text-terracotta">.</span>
             </span>
             <p className="text-stone-400 text-sm mt-2">
-              Building digital experiences
+              Custom software for non-profits &amp; healthcare
             </p>
             <div className="flex items-center gap-2 mt-3 justify-center md:justify-start">
               <a
@@ -108,7 +108,7 @@ function Footer() {
 
           {/* Copyright */}
           <p className="text-stone-500 text-sm">
-            &copy; {currentYear} All rights reserved.
+            &copy; {currentYear} Georgios Katsikis. All rights reserved.
           </p>
         </div>
 

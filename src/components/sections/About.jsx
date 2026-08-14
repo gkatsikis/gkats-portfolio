@@ -59,7 +59,7 @@ function About() {
             {[
               { number: '5+', label: 'Years Production Experience' },
               { number: '10+', label: 'Projects Shipped' },
-              { number: '2', label: 'Products Live Today' },
+              { number: 'LMSW', label: 'Licensed Social Worker' },
               { number: '1', label: 'Native macOS App' },
             ].map((stat, index) => (
               <motion.div

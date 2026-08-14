@@ -6,11 +6,7 @@
 
 ## Bugs/Fixes
 
-- [ ] Add `og:image` (absolute URL, e.g. https://gkats.dev/headshot.jpg) + `twitter:card` meta — link previews on LinkedIn/Slack/iMessage currently have no image.
-- [ ] Footer polish: tagline "Building digital experiences" → positioning line; "© All rights reserved" → add name.
-
-- [ ] Verify the About stat "2 Products Live Today" — Cite Kitten is now live on the App Store; bump the number if it wasn't already counted.
-- [ ] Pre-existing: the JS bundle is 5.2 MB (2 MB gzip) — likely react-icons/framer-motion imports; worth code-splitting or trimming icon imports for first-load speed.
+_(clear)_
 
 ## MVP Features
 
@@ -19,3 +15,4 @@
 ## IceBox Features
 
 - [ ] Cite Kitten card now links to the App Store; the old landing page (https://gkatsikis.github.io/citekitten/) is no longer linked from the site — decide whether it should reappear anywhere.
+- [ ] HL7 Converter demo sleeps on Render's free tier — first visit after idle takes ~30–60s to wake. Fine for a demo; move to an always-on host if it ever matters.
