@@ -32,7 +32,8 @@ function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      {/* pt clears the fixed navbar, pb reserves the scroll-indicator zone on short screens */}
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pt-24 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,12 +77,15 @@ function Hero() {
           </motion.p>
 
           <motion.p
-            className="flex items-center justify-center gap-2 text-stone-300 text-sm md:text-base mb-10"
+            className="text-stone-300 text-sm md:text-base mb-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <span className="w-2 h-2 rounded-full bg-green-400" aria-hidden="true" />
+            <span
+              className="inline-block w-2 h-2 rounded-full bg-green-400 mr-2 align-middle"
+              aria-hidden="true"
+            />
             Taking on projects for {nextSeason()} · I reply within a day
           </motion.p>
 
