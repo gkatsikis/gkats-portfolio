@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { FiCopy, FiCheck } from 'react-icons/fi'
+import { useContact } from '../ui/ContactModal'
 
 const EMAIL = 'georgioscabro@gmail.com'
 
@@ -8,6 +9,7 @@ function Footer() {
   const currentYear = new Date().getFullYear()
   const [visitCount, setVisitCount] = useState(null)
   const [copied, setCopied] = useState(false)
+  const openContact = useContact()
 
   const copyEmail = () => {
     navigator.clipboard
@@ -51,11 +53,6 @@ function Footer() {
       href: 'https://linkedin.com/in/georgios-katsikis',
       icon: FaLinkedin,
     },
-    {
-      name: 'Email',
-      href: `mailto:${EMAIL}`,
-      icon: FaEnvelope,
-    },
   ]
 
   return (
@@ -71,12 +68,7 @@ function Footer() {
               Custom software for non-profits &amp; healthcare
             </p>
             <div className="flex items-center gap-2 mt-3 justify-center md:justify-start">
-              <a
-                href={`mailto:${EMAIL}`}
-                className="text-stone-300 hover:text-white text-sm transition-colors"
-              >
-                {EMAIL}
-              </a>
+              <span className="text-stone-300 text-sm">{EMAIL}</span>
               <button
                 onClick={copyEmail}
                 aria-label="Copy email address"
@@ -104,11 +96,18 @@ function Footer() {
                 <link.icon size={20} />
               </a>
             ))}
+            <button
+              onClick={openContact}
+              className="text-stone-400 hover:text-white transition-colors duration-200 p-2 hover:bg-stone-800 rounded-full"
+              aria-label="Contact form"
+            >
+              <FaEnvelope size={20} />
+            </button>
           </div>
 
           {/* Copyright */}
           <p className="text-stone-500 text-sm">
-            &copy; {currentYear} Georgios Katsikis. All rights reserved.
+            &copy; {currentYear} Georgios Katsikis · Cabro Insight LLC. All rights reserved.
           </p>
         </div>
 

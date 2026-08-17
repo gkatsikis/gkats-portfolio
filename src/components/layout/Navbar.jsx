@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiX, FiMail } from 'react-icons/fi'
+import { useContact } from '../ui/ContactModal'
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -14,6 +15,7 @@ const navLinks = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const openContact = useContact()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,8 +61,8 @@ function Navbar() {
                 {link.name}
               </motion.a>
             ))}
-            <motion.a
-              href="mailto:georgioscabro@gmail.com"
+            <motion.button
+              onClick={openContact}
               className="flex items-center gap-2 bg-terracotta hover:bg-terracotta-light text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-terracotta/25"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -68,7 +70,7 @@ function Navbar() {
             >
               <FiMail className="text-lg" />
               Get in Touch
-            </motion.a>
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,14 +105,16 @@ function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <a
-                href="mailto:georgioscabro@gmail.com"
+              <button
                 className="flex items-center gap-2 text-terracotta-light hover:text-terracotta transition-colors duration-200 font-medium py-2"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false)
+                  openContact()
+                }}
               >
                 <FiMail />
                 Get in Touch
-              </a>
+              </button>
             </div>
           </motion.div>
         )}

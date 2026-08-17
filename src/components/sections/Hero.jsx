@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { FaChevronDown } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import Button from '../ui/Button'
+import { useContact } from '../ui/ContactModal'
 
 // ponytail: "next season" = nearest upcoming of Mar/Jun/Sep/Dec, so the
 // availability line always advertises the season ahead (Jul → "fall 2026",
@@ -20,6 +21,7 @@ function nextSeason() {
 }
 
 function Hero() {
+  const openContact = useContact()
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Animated gradient orbs */}
@@ -96,7 +98,7 @@ function Hero() {
               See My Work
             </Button>
             <Button
-              href="mailto:georgioscabro@gmail.com"
+              onClick={openContact}
               variant="outline"
               size="lg"
               icon={FiMail}

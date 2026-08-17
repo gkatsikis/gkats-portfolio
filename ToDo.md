@@ -11,6 +11,8 @@ _(clear)_
 ## MVP Features
 
 - [ ] Write one real case study (problem → build → outcome); Mercury's multi-tenant story is the strongest candidate. Testimonial quote when one exists.
+- [ ] Work through SEO.md — deploy the four credit lines, Search Console, then the technical batch.
+- [ ] **After deploying the contact form:** submit it once yourself — FormSubmit sends a one-time activation email to georgioscabro@gmail.com; until you click it, submissions are not delivered.
 
 ## IceBox Features
 

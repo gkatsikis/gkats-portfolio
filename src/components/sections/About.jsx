@@ -2,8 +2,10 @@ import { motion } from 'framer-motion'
 import { FiMail } from 'react-icons/fi'
 import SectionHeading from '../ui/SectionHeading'
 import Button from '../ui/Button'
+import { useContact } from '../ui/ContactModal'
 
 function About() {
+  const openContact = useContact()
   return (
     <section id="about" className="py-20 md:py-32 bg-stone-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +41,7 @@ function About() {
 
             <div className="flex flex-wrap gap-4">
               <Button
-                href="mailto:georgioscabro@gmail.com"
+                onClick={openContact}
                 icon={FiMail}
                 variant="primary"
               >

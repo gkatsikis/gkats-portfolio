@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { FiClipboard, FiBarChart2, FiRefreshCw, FiLayers, FiMail } from 'react-icons/fi'
 import SectionHeading from '../ui/SectionHeading'
 import Button from '../ui/Button'
+import { useContact } from '../ui/ContactModal'
 
 const offerings = [
   {
@@ -49,6 +50,7 @@ const steps = [
 ]
 
 function Services() {
+  const openContact = useContact()
   return (
     <section id="services" className="py-20 md:py-32 bg-stone-950">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,9 +111,12 @@ function Services() {
         </div>
 
         <div className="text-center">
-          <Button href="mailto:georgioscabro@gmail.com" icon={FiMail} size="lg">
+          <Button onClick={openContact} icon={FiMail} size="lg">
             Start a Conversation
           </Button>
+          <p className="text-stone-500 text-sm mt-4">
+            Engagements contract through Cabro Insight LLC.
+          </p>
         </div>
       </div>
     </section>
