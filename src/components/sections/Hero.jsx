@@ -3,6 +3,22 @@ import { FaChevronDown } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import Button from '../ui/Button'
 
+// ponytail: "next season" = nearest upcoming of Mar/Jun/Sep/Dec, so the
+// availability line always advertises the season ahead (Jul → "fall 2026",
+// Sep → "winter 2026", Dec → "spring 2027").
+function nextSeason() {
+  const now = new Date()
+  const starts = [
+    [2, 'spring'],
+    [5, 'summer'],
+    [8, 'fall'],
+    [11, 'winter'],
+  ]
+  const next = starts.find(([month]) => month > now.getMonth())
+  const [, name] = next || starts[0]
+  return `${name} ${next ? now.getFullYear() : now.getFullYear() + 1}`
+}
+
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
@@ -49,12 +65,22 @@ function Hero() {
           </motion.h2>
 
           <motion.p
-            className="font-display italic text-stone-400 text-lg md:text-xl max-w-2xl mx-auto mb-10"
+            className="font-display italic text-stone-400 text-lg md:text-xl max-w-2xl mx-auto mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
             Engineer with a social worker's heart. I build custom software for non-profits and healthcare organizations—tools shaped by years of working with the people on the other end.
+          </motion.p>
+
+          <motion.p
+            className="flex items-center justify-center gap-2 text-stone-300 text-sm md:text-base mb-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            <span className="w-2 h-2 rounded-full bg-green-400" aria-hidden="true" />
+            Taking on projects for {nextSeason()} · I reply within a day
           </motion.p>
 
           <motion.div

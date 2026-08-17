@@ -10,7 +10,7 @@ _(clear)_
 
 ## MVP Features
 
-- [ ] Consider a short services blurb ("What I build for non-profits & healthcare") to back the new positioning with concrete offerings.
+- [ ] Write one real case study (problem → build → outcome); Mercury's multi-tenant story is the strongest candidate. Testimonial quote when one exists.
 
 ## IceBox Features
 

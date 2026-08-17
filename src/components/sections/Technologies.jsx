@@ -67,7 +67,7 @@ function Technologies() {
   }
 
   return (
-    <section id="technologies" className="py-20 md:py-32 bg-stone-900">
+    <section id="technologies" className="py-20 md:py-32 bg-stone-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Technologies"
