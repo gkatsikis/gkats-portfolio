@@ -33,18 +33,21 @@ function Hero() {
 
       {/* Main content */}
       {/* pt clears the fixed navbar, pb reserves the scroll-indicator zone on short screens */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pt-24 pb-32">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-24 pb-32">
         <motion.div
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-14 text-center md:text-left"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {/* edges feather into the ground via radial mask — no ring, no border */}
           <img
             src="/headshot.jpg"
             alt="Georgios Katsikis"
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover mx-auto mb-8 border-2 border-terracotta/40 shadow-lg"
+            className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 flex-shrink-0 object-cover [mask-image:radial-gradient(circle,black_55%,transparent_72%)] [-webkit-mask-image:radial-gradient(circle,black_55%,transparent_72%)]"
           />
 
+          <div className="min-w-0">
           <motion.p
             className="text-terracotta-light text-lg md:text-xl font-medium mb-4"
             initial={{ opacity: 0 }}
@@ -54,7 +57,7 @@ function Hero() {
             Hello, I'm
           </motion.p>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-stone-100">Georgios Katsikis<span className="text-terracotta">.</span></span>
           </h1>
 
@@ -68,7 +71,7 @@ function Hero() {
           </motion.h2>
 
           <motion.p
-            className="font-display italic text-stone-400 text-lg md:text-xl max-w-2xl mx-auto mb-6"
+            className="font-display italic text-stone-400 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
@@ -90,7 +93,7 @@ function Hero() {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
@@ -110,6 +113,7 @@ function Hero() {
               Get in Touch
             </Button>
           </motion.div>
+          </div>
         </motion.div>
       </div>
 
