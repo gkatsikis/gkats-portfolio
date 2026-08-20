@@ -44,7 +44,7 @@ function Hero() {
           <img
             src="/headshot.jpg"
             alt="Georgios Katsikis"
-            className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 flex-shrink-0 object-cover [mask-image:radial-gradient(circle,black_55%,transparent_72%)] [-webkit-mask-image:radial-gradient(circle,black_55%,transparent_72%)]"
+            className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 flex-shrink-0 object-cover [mask-image:radial-gradient(circle_closest-side,black_72%,transparent_98%)] [-webkit-mask-image:radial-gradient(circle_closest-side,black_72%,transparent_98%)]"
           />
 
           <div className="min-w-0">
