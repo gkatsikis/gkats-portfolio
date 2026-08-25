@@ -33,6 +33,16 @@ export const projects = [
     featured: true,
   },
   {
+    id: 7,
+    title: 'Xrisos',
+    description: 'Live gold and silver tracking — real-time COMEX prices, candlestick charts back to 2000, and a purchase log with live P&L. Its gold/silver-ratio signal measures against a trailing five-year window, backtested as a large improvement over all-history comparisons. Xrisos is Greek for gold.',
+    image: '/xrisos.png',
+    technologies: ['Flask', 'JavaScript', 'Lightweight Charts', 'Docker', 'GCS', 'Cloud Run'],
+    githubUrl: null,
+    liveUrl: 'https://xrisos.org',
+    featured: false,
+  },
+  {
     id: 3,
     title: 'HL7 Converter',
     description: 'A FastAPI-based tool that converts HL7 messages into structured JSON format, enabling seamless integration with modern healthcare applications and improving data interoperability.',
