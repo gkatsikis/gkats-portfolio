@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaChevronDown } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
@@ -22,6 +23,10 @@ function nextSeason() {
 
 function Hero() {
   const openContact = useContact()
+  // computed client-side only, so the prerendered HTML never bakes in a
+  // season that goes stale between deploys (would cause a hydration mismatch)
+  const [season, setSeason] = useState(null)
+  useEffect(() => setSeason(nextSeason()), [])
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Animated gradient orbs */}
@@ -44,6 +49,8 @@ function Hero() {
           <img
             src="/headshot.jpg"
             alt="Georgios Katsikis"
+            width="1600"
+            height="1067"
             className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 flex-shrink-0 object-cover [mask-image:radial-gradient(circle_closest-side,black_72%,transparent_98%)] [-webkit-mask-image:radial-gradient(circle_closest-side,black_72%,transparent_98%)]"
           />
 
@@ -91,7 +98,7 @@ function Hero() {
               className="inline-block w-2 h-2 rounded-full bg-green-400 mr-2 align-middle"
               aria-hidden="true"
             />
-            Taking on projects for {nextSeason()} · I reply within a day
+            Taking on projects{season ? ` for ${season}` : ''} · I reply within a day
           </motion.p>
 
           <motion.div

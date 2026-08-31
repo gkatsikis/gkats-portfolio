@@ -20,6 +20,8 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
             <img
               src={image}
               alt={title}
+              loading="lazy"
+              decoding="async"
               className={
                 imageFit === 'contain'
                   ? 'w-full h-full object-contain p-4'

@@ -15,6 +15,21 @@ npm run dev
 npm run deploy
 ```
 
+`npm run build` prerenders the page: after the normal Vite build, it renders
+the React app to static HTML ([scripts/prerender.mjs](scripts/prerender.mjs))
+and injects it into `dist/index.html`, so crawlers and non-JS clients see the
+full content. The browser then hydrates that markup (`src/main.jsx`); `npm run
+dev` still serves the plain client-rendered app.
+
+## Essays
+
+`the-process/index.html` and `case-study/index.html` are plain static HTML
+pages (no React) built as extra Vite entries — they share the site's
+CSS/fonts and deploy as real URLs (`gkats.dev/the-process/`,
+`gkats.dev/case-study/`). To add another essay: copy one, add its path to
+`vite.config.js` (`rollupOptions.input`), `tailwind.config.js` (`content`),
+and `public/sitemap.xml`.
+
 ## Customize
 
 Edit the data files in `src/data/`:

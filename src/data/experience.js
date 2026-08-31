@@ -8,11 +8,11 @@ export const experience = [
     location: 'Remote',
     description: 'Leading the technical vision for a HIPAA-regulated patient–clinician matching platform that pairs people with the right therapist, live at tryocean.io.',
     highlights: [
-      'Architected the platform end to end: Django REST API, PostgreSQL with pgvector, Celery/Redis async workers, and a Next.js/TypeScript frontend',
+      'Architected the platform end to end: Django REST API, PostgreSQL, Cloud Tasks async workers, and a Next.js/TypeScript frontend',
       'Designed an LLM-driven retrieve-and-rank matching engine scoring therapeutic alliance and patient–clinician compatibility',
       'Implemented security and compliance for PHI: WebAuthn passkey MFA, column-level encryption, and field-level audit history',
     ],
-    technologies: ['Django', 'PostgreSQL', 'pgvector', 'Celery', 'Redis', 'Next.js', 'TypeScript', 'Claude API'],
+    technologies: ['Django', 'PostgreSQL', 'GCP', 'Next.js', 'TypeScript', 'Claude API'],
     color: '#C97064', // Terracotta
   },
   {
@@ -47,9 +47,9 @@ export const experience = [
     highlights: [
       'Designed role-based access control with per-client data isolation, while parent companies keep visibility across their brands',
       'Automated Excel ingestion with Pandas, transforming thousands of advertising records into campaign insights and reporting',
-      'Shipped real-time Recharts dashboards for campaign performance, deployed on Railway behind Cloudflare with CI/CD',
+      'Shipped real-time Recharts dashboards for campaign performance, deployed on Railway behind Cloudflare with migrations applied automatically on every deploy',
     ],
-    technologies: ['React', 'Flask', 'Pandas', 'Recharts', 'Railway', 'Cloudflare'],
+    technologies: ['Next.js', 'TypeScript', 'Flask', 'Pandas', 'Recharts', 'Railway', 'Cloudflare'],
     color: '#C97064', // Terracotta
   },
   {

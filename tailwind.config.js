@@ -2,6 +2,8 @@
 export default {
   content: [
     "./index.html",
+    "./the-process/index.html",
+    "./case-study/index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

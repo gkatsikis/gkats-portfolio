@@ -105,6 +105,16 @@ function Footer() {
             </button>
           </div>
 
+          {/* Writing */}
+          <div className="flex flex-col items-center md:items-start gap-1 text-sm">
+            <a href="/the-process/" className="text-stone-400 hover:text-white transition-colors">
+              The Process: How I Built Ocean
+            </a>
+            <a href="/case-study/" className="text-stone-400 hover:text-white transition-colors">
+              Case Study: Mercury Analytics
+            </a>
+          </div>
+
           {/* Copyright */}
           <p className="text-stone-500 text-sm">
             &copy; {currentYear} Georgios Katsikis · Cabro Insight LLC. All rights reserved.

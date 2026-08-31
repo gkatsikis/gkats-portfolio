@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How HIPAA-compliant software actually gets built: the process behind Ocean, a patient–therapist matching platform — from clinical evidence to encryption, audit trails, and an explainable AI matching engine."
+    />
+    <meta property="og:title" content="How HIPAA-Compliant Software Gets Built: The Process Behind Ocean" />
+    <meta
+      property="og:description"
+      content="A software engineer and licensed social worker walks through building a regulated healthcare platform — compliance as architecture, boring technology, and evidence over cleverness."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gkats.dev/the-process/" />
+    <link rel="canonical" href="https://gkats.dev/the-process/" />
+    <title>How HIPAA-Compliant Software Gets Built: The Process Behind Ocean</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How HIPAA-Compliant Software Gets Built: The Process Behind Ocean",
+      "url": "https://gkats.dev/the-process/",
+      "author": {
+        "@type": "Person",
+        "name": "Georgios Katsikis",
+        "jobTitle": "Software Engineer",
+        "url": "https://gkats.dev"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="../src/index.css" />
+  </head>
+  <body>
+    <nav class="border-b border-stone-800">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="text-2xl font-semibold font-display text-stone-100" aria-label="Georgios Katsikis home">
+          γκ<span class="text-terracotta">.</span>
+        </a>
+        <a href="/" class="text-stone-400 hover:text-white transition-colors text-sm font-medium">← gkats.dev</a>
+      </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+      <article>
+        <p class="text-terracotta-light font-medium mb-3">The Process</p>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
+          How HIPAA-compliant software gets built: the process behind Ocean
+        </h1>
+        <p class="text-stone-400 mb-12">
+          By Georgios Katsikis — software engineer &amp; licensed social worker (LMSW)
+        </p>
+
+        <div class="space-y-6 text-stone-300 leading-relaxed text-lg">
+          <p>
+            Most healthcare software projects don't fail on technology. They
+            fail because compliance was treated as a launch checklist, or
+            because the product optimized for the wrong outcome from day one.
+          </p>
+          <p>
+            I built <a href="https://tryocean.io" class="text-terracotta-light hover:text-terracotta underline">Ocean</a>
+            — a HIPAA-regulated platform that matches patients with the right
+            therapist — end to end as CTO. This is the process behind it, and
+            the same process I bring to every healthcare and non-profit
+            engagement. If you're evaluating a developer for software that
+            touches sensitive data, this is what "done right" looks like from
+            the inside.
+          </p>
+
+          <h2 class="text-2xl font-bold text-white pt-6">Start from the clinical outcome, not the feature list</h2>
+          <p>
+            Before I was an engineer I was a social worker, and it changes the
+            first question I ask on any project: <strong class="text-white">what does a good
+            outcome look like for the person on the other side of the
+            screen?</strong>
+          </p>
+          <p>
+            For Ocean, a good outcome isn't "a match was made." It's a
+            therapeutic relationship that holds. Decades of therapy-outcome
+            research point at the <em>alliance</em> between patient and
+            clinician as the thing that predicts whether treatment works — so
+            that became what the software optimizes for, and every technical
+            decision downstream had to serve it.
+          </p>
+
+          <h2 class="text-2xl font-bold text-white pt-6">Treat HIPAA compliance as architecture, not paperwork</h2>
+          <p>
+            When software handles protected health information (PHI), HIPAA
+            shapes the data model on day one — retrofitting it later costs
+            multiples more. In Ocean, compliance is built into the code paths
+            themselves:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Column-level encryption</strong> on sensitive fields — and decryption failures fail closed, never open.</li>
+            <li><strong class="text-white">An append-only audit trail</strong> written in the same database transaction as every read or write of patient data. The invariant is simple: PHI cannot leave the system without an audit row.</li>
+            <li><strong class="text-white">Mandatory multi-factor authentication with passkeys</strong> for every user — patients and clinicians included, not just staff.</li>
+            <li><strong class="text-white">A compliant AI boundary:</strong> language-model calls run only on infrastructure covered by a Business Associate Agreement, request bodies are never logged, and background-job payloads carry identifiers — never health information.</li>
+          </ul>
+          <p>
+            None of this is visible in a product demo. All of it is what an
+            auditor, an insurer, or a breach investigation will ask about.
+          </p>
+
+          <h2 class="text-2xl font-bold text-white pt-6">Choose boring technology — and test the seams</h2>
+          <p>
+            Ocean runs on a deliberately unexciting stack: a Django REST API on
+            PostgreSQL, a Next.js/TypeScript frontend, cloud-managed queues for
+            background work. Mature technology means fast security patches,
+            easy hiring, and a platform that's still maintainable in five
+            years. <strong class="text-white">Novelty is a cost</strong> — I spend it in exactly one
+            place per project: the part that is genuinely the product.
+          </p>
+          <p>
+            The discipline lives in the tests: hundreds on the backend,
+            including tests that assert the compliance behaviors themselves —
+            the fail-closed encryption, the no-PHI-in-reports rule — with
+            deploys gated on the suite passing. When the architecture evolved,
+            the heaviest testing landed on the seams the migration created,
+            because that's where systems actually break.
+          </p>
+
+          <h2 class="text-2xl font-bold text-white pt-6">Let evidence beat cleverness — even your own</h2>
+          <p>
+            The first version of Ocean's matching engine was the kind engineers
+            love: vector embeddings, linguistic-style similarity, weighted
+            composite scores. Building it taught me the domain. Then the
+            evidence taught me something uncomfortable: <strong class="text-white">alliance
+            quality is driven more by the clinician's skill</strong> — cultural
+            humility, detecting and repairing ruptures, responsiveness to
+            feedback — than by how similar a patient and clinician look on
+            paper.
+          </p>
+          <p>
+            So the live system inverts the usual recommender design. Each
+            clinician is scored once at onboarding on those alliance
+            competencies. Matching then retrieves on hard requirements —
+            licensure in the patient's state, insurance, availability, language
+            — and a ranking pass blends that skill score with patient-specific
+            fit, producing reasons a human can read rather than an opaque
+            score. The embeddings didn't survive contact with the evidence.
+            Deleting a clever system you built is painful. It's also the job.
+          </p>
+
+          <h2 class="text-2xl font-bold text-white pt-6">What this means if you're hiring a developer</h2>
+          <p>
+            The process transfers to any organization whose software touches
+            sensitive data — community health, behavioral health, case
+            management, non-profit services:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Define the <strong class="text-white">human outcome</strong> before the feature list.</li>
+            <li>Treat your <strong class="text-white">regulatory reality as architecture</strong>, not a pre-launch task.</li>
+            <li>Buy <strong class="text-white">boring technology</strong> everywhere except the one place your product is genuinely novel.</li>
+            <li>Demand that the novel part be <strong class="text-white">explainable</strong> — in healthcare, a recommendation you can't explain is one you can't trust.</li>
+          </ul>
+          <p>
+            If you run a non-profit or a healthcare organization and this
+            sounds like how you'd want your software built,
+            <a href="/#contact" class="text-terracotta-light hover:text-terracotta underline">tell me what you're working on</a> —
+            or read the <a href="/case-study/" class="text-terracotta-light hover:text-terracotta underline">case study on turning years of spreadsheets into a client-facing analytics platform</a>.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="border-t border-stone-800 mt-8">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-stone-500">
+        <a href="/" class="font-display text-stone-300 text-lg">γκ<span class="text-terracotta">.</span></a>
+        <div class="flex gap-6">
+          <a href="/case-study/" class="hover:text-white transition-colors">Case study: Mercury</a>
+          <a href="https://github.com/gkatsikis" class="hover:text-white transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/georgios-katsikis" class="hover:text-white transition-colors">LinkedIn</a>
+        </div>
+        <p>© Georgios Katsikis · Cabro Insight LLC</p>
+      </div>
+    </footer>
+  </body>
+</html>
