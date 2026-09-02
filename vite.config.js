@@ -9,6 +9,15 @@ export default defineConfig(({ isSsrBuild }) => ({
     // essay pages are plain HTML entries; the SSR pass builds only the prerender entry
     rollupOptions: isSsrBuild
       ? {}
-      : { input: ['index.html', 'the-process/index.html', 'case-study/index.html'] },
+      : {
+          input: [
+            'index.html',
+            'the-process/index.html',
+            'case-study/index.html',
+            'pricing-transparency/index.html',
+            'do-you-need-custom-software/index.html',
+            'outgrown-your-spreadsheet/index.html',
+          ],
+        },
   },
 }))

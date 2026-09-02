@@ -113,6 +113,15 @@ function Footer() {
             <a href="/case-study/" className="text-stone-400 hover:text-white transition-colors">
               Case Study: Mercury Analytics
             </a>
+            <a href="/pricing-transparency/" className="text-stone-400 hover:text-white transition-colors">
+              Pricing &amp; Sliding Scale
+            </a>
+            <a href="/do-you-need-custom-software/" className="text-stone-400 hover:text-white transition-colors">
+              Do You Need Custom Software?
+            </a>
+            <a href="/outgrown-your-spreadsheet/" className="text-stone-400 hover:text-white transition-colors">
+              7 Signs You've Outgrown Your Spreadsheet
+            </a>
           </div>
 
           {/* Copyright */}

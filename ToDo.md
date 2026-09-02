@@ -12,11 +12,16 @@
 
 ## MVP Features
 
-- [ ] Write one real case study (problem → build → outcome); Mercury's multi-tenant story is the strongest candidate. Testimonial quote when one exists.
+- [ ] **Review the three new essays before deploying** — `/pricing-transparency/`, `/do-you-need-custom-software/`, `/outgrown-your-spreadsheet/`. Pricing ranges approved 2026-09-02; sliding scale is explicitly non-profits-only.
+- [ ] Site-name fix (WebSite JSON-LD + og:site_name) needs a Google recrawl to show — register Search Console (personal account) and request indexing of the homepage; expect days-to-weeks.
+
+- [x] Write one real case study (problem → build → outcome) — done: `/case-study/` (Mercury).
 - [ ] Work through SEO.md — remaining items are all yours: Search Console (submit the now-live sitemap.xml), essays, App Store URL, NTEN, location mention. Full technical batch (prerender, JSON-LD, canonical, robots/sitemap, self-hosted fonts, image attrs, title tune) is done.
 - [ ] **After deploying the contact form:** submit it once yourself — FormSubmit sends a one-time activation email to georgioscabro@gmail.com; until you click it, submissions are not delivered.
 
 ## IceBox Features
+
+- [ ] **Mercury testimonial quote** — on ice while the quote is being worked on (as of Sept 2026); drop it into the case study's "The result" section when it lands.
 
 - [ ] Cite Kitten card now links to the App Store; the old landing page (https://gkatsikis.github.io/citekitten/) is no longer linked from the site — decide whether it should reappear anywhere.
 - [ ] HL7 Converter demo sleeps on Render's free tier — first visit after idle takes ~30–60s to wake. Fine for a demo; move to an always-on host if it ever matters.

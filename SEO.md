@@ -23,14 +23,28 @@ not meta tags. Items in rough order of impact.
 - Headshot `width`/`height`; project images `loading="lazy"` + `decoding="async"`
   (project cards already sit in fixed-height boxes, so no per-image dims needed).
 - Title: "Georgios Katsikis — Custom Software for Non-Profits & Healthcare".
+- **Site name in Google results** — `WebSite` JSON-LD (name "Georgios
+  Katsikis", alternateName "Software for Non-Profits & Healthcare") +
+  `og:site_name` on the homepage, so the SERP shows the name instead of the
+  bare "gkats.dev" domain. Google picks it up after a homepage recrawl —
+  request one in Search Console once registered.
+- **Three commercial-intent essays** — `/pricing-transparency/` (ranges +
+  sliding scale), `/do-you-need-custom-software/` (build-vs-buy guide),
+  `/outgrown-your-spreadsheet/` (7-signs listicle). Static routes in the
+  sitemap, cross-linked with the two original essays and the homepage footer;
+  closing CTAs added to both older essays.
 
 ## High impact — only you can do these
 
-- **Review the essays.** Two are drafted and live as real static routes —
-  `/the-process/` (Ocean) and `/case-study/` (Mercury) — written from the
-  actual repos, linked from the homepage footer, in the sitemap. Read them
-  before deploying: the voice and any judgment calls are Claude's draft, and
-  a client quote or outcome number in the Mercury piece would strengthen it.
+- **Review the essays.** Five are drafted as real static routes —
+  `/the-process/` (Ocean), `/case-study/` (Mercury), `/pricing-transparency/`,
+  `/do-you-need-custom-software/`, `/outgrown-your-spreadsheet/` — linked from
+  the homepage footer and in the sitemap. Read them before deploying: the
+  voice and judgment calls are Claude's draft, and a client quote or outcome
+  number in the Mercury piece would strengthen it.
+- Pricing ranges (discovery $1.5–3k, focused build $6–18k, platform $20–60k)
+  approved 2026-09-02; sliding scale is stated as non-profits-only. Mercury
+  testimonial quote is in progress (tracked in ToDo IceBox).
 - **Google Search Console** — register gkats.dev under `geo.bjj.kat@gmail.com`
   (personal account, never the ocean one); submit the now-live sitemap.xml.
 - **Cite Kitten's App Store listing** — set its marketing/support URL to
