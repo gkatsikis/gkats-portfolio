@@ -23,12 +23,26 @@ dev` still serves the plain client-rendered app.
 
 ## Essays
 
-`the-process/index.html` and `case-study/index.html` are plain static HTML
-pages (no React) built as extra Vite entries — they share the site's
-CSS/fonts and deploy as real URLs (`gkats.dev/the-process/`,
-`gkats.dev/case-study/`). To add another essay: copy one, add its path to
-`vite.config.js` (`rollupOptions.input`), `tailwind.config.js` (`content`),
-and `public/sitemap.xml`.
+The essay pages (`the-process/`, `case-study/`, `pricing-transparency/`,
+`do-you-need-custom-software/`, `outgrown-your-spreadsheet/`) are plain
+static HTML pages (no React) built as extra Vite entries — they share the
+site's CSS/fonts and deploy as real URLs (e.g. `gkats.dev/the-process/`).
+To add another essay: copy one, add its path to `vite.config.js`
+(`rollupOptions.input`), `tailwind.config.js` (`content`), and
+`public/sitemap.xml`.
+
+## Domain email
+
+`hello@gkats.dev` forwards to georgioscabro@gmail.com via Squarespace email
+forwarding (Domains → gkats.dev → Email tab; runs on Mailgun MX records —
+don't delete the MX/SPF/DMARC records in Squarespace DNS). Gmail is
+configured to "send as" hello@gkats.dev through smtp.gmail.com:587 with an
+app password. The site shows only hello@ (footer + contact form target).
+
+The contact form posts to `formsubmit.co/ajax/hello@gkats.dev` — after the
+first deployed submission, FormSubmit emails a one-time activation link to
+hello@ (arrives via the forwarding); until it's clicked, submissions are
+not delivered.
 
 ## Customize
 

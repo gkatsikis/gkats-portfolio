@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiX, FiSend } from 'react-icons/fi'
 import Button from './Button'
 
-const EMAIL = 'georgioscabro@gmail.com'
+// FormSubmit target — changing this requires re-activating FormSubmit (one-time email click)
+const EMAIL = 'hello@gkats.dev'
 
 const ContactContext = createContext(() => {})
 

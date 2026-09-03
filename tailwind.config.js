@@ -4,6 +4,9 @@ export default {
     "./index.html",
     "./the-process/index.html",
     "./case-study/index.html",
+    "./pricing-transparency/index.html",
+    "./do-you-need-custom-software/index.html",
+    "./outgrown-your-spreadsheet/index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

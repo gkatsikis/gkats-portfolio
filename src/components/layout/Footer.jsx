@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { FiCopy, FiCheck } from 'react-icons/fi'
 import { useContact } from '../ui/ContactModal'
 
-const EMAIL = 'georgioscabro@gmail.com'
+const EMAIL = 'hello@gkats.dev'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
