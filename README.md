@@ -35,9 +35,12 @@ To add another essay: copy one, add its path to `vite.config.js`
 
 `hello@gkats.dev` forwards to georgioscabro@gmail.com via Squarespace email
 forwarding (Domains → gkats.dev → Email tab; runs on Mailgun MX records —
-don't delete the MX/SPF/DMARC records in Squarespace DNS). Gmail is
-configured to "send as" hello@gkats.dev through smtp.gmail.com:587 with an
-app password. The site shows only hello@ (footer + contact form target).
+don't delete the MX/SPF/DMARC records in Squarespace DNS). The site shows
+only hello@ (footer + contact form target). **Receive-only:** Squarespace
+force-adds a locked `p=reject` DMARC record, so sending *as* hello@ (Gmail
+send-as is configured but unused) bounces at strict receivers — replies go
+out from the personal Gmail. The fix, if ever wanted, is iceboxed in
+`ToDo.md` (move to Cloudflare Email Routing).
 
 The contact form posts to `formsubmit.co/ajax/hello@gkats.dev` — after the
 first deployed submission, FormSubmit emails a one-time activation link to
