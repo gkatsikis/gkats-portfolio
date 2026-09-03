@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Case study: replacing years of Excel campaign reports with a multi-tenant analytics dashboard — secure client data isolation, automated spreadsheet ingestion, and live Recharts reporting for a marketing agency."
+      content="A case study in replacing years of Excel campaign reports with a multi-tenant analytics dashboard, secure client data isolation, automated spreadsheet ingestion, and live Recharts reporting for a marketing agency."
     />
-    <meta property="og:title" content="Case Study: From Excel Spreadsheets to a Client Analytics Dashboard" />
+    <meta property="og:title" content="Case Study | From Excel Spreadsheets to a Client Analytics Dashboard" />
     <meta
       property="og:description"
-      content="How a marketing agency's campaign spreadsheets became a multi-tenant analytics platform its clients log into — without changing how the agency works."
+      content="How a marketing agency's campaign spreadsheets became a multi-tenant analytics platform its clients log into, without changing how the agency works."
     />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://gkats.dev/case-study/" />
     <link rel="canonical" href="https://gkats.dev/case-study/" />
-    <title>Case Study: From Excel Spreadsheets to a Client Analytics Dashboard</title>
+    <title>Case Study | From Excel Spreadsheets to a Client Analytics Dashboard</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Case Study: From Excel Spreadsheets to a Client Analytics Dashboard",
+      "headline": "Case Study | From Excel Spreadsheets to a Client Analytics Dashboard",
       "url": "https://gkats.dev/case-study/",
       "author": {
         "@type": "Person",
@@ -41,7 +41,7 @@
           "name": "Do we have to stop using our spreadsheets?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. The spreadsheet stays the source of truth — the platform ingests it, validates it, and turns it into dashboards. Re-uploading a corrected workbook updates records instead of duplicating them."
+            "text": "No. The spreadsheet stays the source of truth, the platform ingests it, validates it, and turns it into dashboards. Re-uploading a corrected workbook updates records instead of duplicating them."
           }
         },
         {
@@ -57,25 +57,25 @@
           "name": "What happens when someone uploads a bad file?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The upload is rejected whole, with the reason. A workbook missing a required column never gets half-imported, and every batch is written in a single transaction — the database never holds a partial import."
+            "text": "The upload is rejected whole, with the reason. A workbook missing a required column never gets half-imported, and every batch is written in a single transaction, the database never holds a partial import."
           }
         }
       ]
     }
     </script>
-    <link rel="stylesheet" crossorigin href="/assets/index-u3_QFda4.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-Di5rBETu.css">
   </head>
   <body>
     <nav class="border-b border-stone-800">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <a href="/" class="text-2xl font-semibold font-display text-stone-100" aria-label="Georgios Katsikis home">
           γκ<span class="text-terracotta">.</span>
         </a>
-        <a href="/" class="text-stone-400 hover:text-white transition-colors text-sm font-medium">← gkats.dev</a>
+        <a href="/" class="liquid-glass px-3 py-1.5 text-stone-400 hover:text-white text-sm font-medium">← gkats.dev</a>
       </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <main class="ambient-glow max-w-4xl mx-auto px-4 sm:px-6 py-16">
       <article>
         <p class="text-terracotta-light font-medium mb-3">Case Study</p>
         <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
@@ -87,10 +87,10 @@
         </p>
 
         <div class="space-y-6 text-stone-300 leading-relaxed text-lg">
-          <h2 class="text-2xl font-bold text-white pt-2">The problem: years of campaign data trapped in Excel</h2>
+          <h2 class="text-2xl font-bold text-white pt-2">Years of campaign data trapped in Excel</h2>
           <p>
             Mercury Marketing runs advertising campaigns for its client
-            businesses across eight channels — print, e-blasts, e-newsletters,
+            businesses across eight channels, print, e-blasts, e-newsletters,
             banner ads, sponsored content, webinars, social media, and
             continuing-education placements. The complete record of that work
             lived in Excel workbooks: <strong class="text-white">thousands of campaign line
@@ -98,52 +98,52 @@
           </p>
           <p>
             Spreadsheets are where this story starts for most small
-            organizations, and they carry the same costs everywhere: answering
+            organizations, and they carry the same costs everywhere. Answering
             a client question means opening workbooks, clients can't see their
             own results, and nobody gets a live view across the whole
             portfolio.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">The solution: a multi-tenant dashboard that meets the spreadsheet where it is</h2>
+          <h2 class="text-2xl font-bold text-white pt-6">The fix, a multi-tenant dashboard that meets the spreadsheet where it is</h2>
           <p>
             Instead of forcing a new workflow, the platform ingests the
             workbooks the agency already produces. An admin uploads a workbook;
             each client logs in and sees live dashboards of their own
-            campaigns — nothing else. <strong class="text-white">The spreadsheet stays the
+            campaigns, nothing else. <strong class="text-white">The spreadsheet stays the
             source of truth; the platform makes it queryable, visual, and
             shareable.</strong>
           </p>
           <p>
-            Under the hood: a Flask and PostgreSQL backend, a
+            Under the hood, a Flask and PostgreSQL backend, a
             Next.js/TypeScript frontend, deployed on Railway behind Cloudflare
-            with database migrations applied automatically on every deploy — so every
+            with database migrations applied automatically on every deploy, so every
             environment heals itself instead of drifting.
           </p>
 
           <h2 class="text-2xl font-bold text-white pt-6">Client data isolation, enforced by the server</h2>
           <p>
             Every campaign record belongs to a company, and every data route
-            checks that boundary on the server before returning a byte:
+            checks that boundary on the server before returning a byte.
           </p>
           <ul class="list-disc pl-6 space-y-2">
             <li><strong class="text-white">Client users</strong> see only their own company's campaigns.</li>
-            <li><strong class="text-white">The agency's users</strong> get cross-brand visibility over the whole portfolio — each brand stays sealed off from the others.</li>
+            <li><strong class="text-white">The agency's users</strong> get cross-brand visibility over the whole portfolio, each brand stays sealed off from the others.</li>
             <li><strong class="text-white">Admins</strong> alone can upload data, create companies, or grant access. Self-registration can only join an existing company and can never grant admin.</li>
           </ul>
           <p>
             The frontend mirrors the same rule, but only to decide what to
-            show. The server is the enforcement point — client-side checks are
+            show. The server is the enforcement point, client-side checks are
             advice, never security.
           </p>
 
           <h2 class="text-2xl font-bold text-white pt-6">Spreadsheet ingestion that doesn't trust the spreadsheet</h2>
           <p>
             Real client workbooks are messy, so the Pandas pipeline is strict
-            at the border: a nineteen-column contract is validated up front,
+            at the border. A nineteen-column contract is validated up front,
             and a workbook missing a column is <strong class="text-white">rejected whole rather
             than half-imported</strong>. Rows are cleaned, de-duplicated, and
             type-coerced, then routed by ad type and upserted on the
-            insertion-order number — re-uploading a corrected workbook updates
+            insertion-order number, re-uploading a corrected workbook updates
             records instead of duplicating them. Each batch commits in a single
             transaction with rollback on failure, so the database never holds a
             partial import. The test suite runs the agency's actual workbooks
@@ -154,11 +154,11 @@
           <h2 class="text-2xl font-bold text-white pt-6">Dashboards clients actually open</h2>
           <p>
             The reporting layer answers the questions clients were emailing
-            about: financial time-series with monthly, quarterly, and yearly
+            about. Financial time-series with monthly, quarterly, and yearly
             views; spend-by-channel and cost-per-lead breakdowns; year-over-year
             comparisons; an engagement funnel; publication-level share charts.
-            Derived metrics — open rate, click-through, CPM, CPC, cost per lead
-            — are computed from the ingested records, with the heavy
+            Derived metrics, open rate, click-through, CPM, CPC, cost per lead
+           , are computed from the ingested records, with the heavy
             aggregation done in SQL rather than application loops. Admins can
             attach proof-of-run images to any campaign, so a client reviewing a
             line item sees the actual ad that ran.
@@ -174,7 +174,7 @@
 
           <h2 class="text-2xl font-bold text-white pt-6">Is this your organization?</h2>
           <p>
-            Most small organizations — non-profits very much included — run on
+            Most small organizations, non-profits very much included, run on
             spreadsheets that one person understands. You don't need an
             eighteen-month "digital transformation" to fix that.
             <strong class="text-white">Meeting your spreadsheet where it is, and putting a
@@ -183,22 +183,22 @@
           </p>
           <p>
             Not sure if you're there yet? Check the
-            <a href="/outgrown-your-spreadsheet/" class="text-terracotta-light hover:text-terracotta underline">seven signs you've outgrown your spreadsheet</a> —
+            <a href="/outgrown-your-spreadsheet/" class="text-terracotta-light hover:text-terracotta underline">seven signs you've outgrown your spreadsheet</a>,
             and <a href="/pricing-transparency/" class="text-terracotta-light hover:text-terracotta underline">what a build like this costs</a>,
             published openly, sliding scale included.
           </p>
 
           <h2 class="text-2xl font-bold text-white pt-6">Common questions</h2>
           <div class="space-y-4">
-            <div>
+            <div class="glass-panel rounded-xl p-4">
               <h3 class="font-bold text-white">Do we have to stop using our spreadsheets?</h3>
-              <p>No. The spreadsheet stays the source of truth — the platform ingests, validates, and visualizes it. Corrected re-uploads update records instead of duplicating them.</p>
+              <p>No. The spreadsheet stays the source of truth, the platform ingests, validates, and visualizes it. Corrected re-uploads update records instead of duplicating them.</p>
             </div>
-            <div>
+            <div class="glass-panel rounded-xl p-4">
               <h3 class="font-bold text-white">Can clients see each other's data?</h3>
               <p>No. Every record belongs to a company and the server enforces that boundary on every request. Only the agency's own users see across brands.</p>
             </div>
-            <div>
+            <div class="glass-panel rounded-xl p-4">
               <h3 class="font-bold text-white">What happens when someone uploads a bad file?</h3>
               <p>It's rejected whole, with the reason. Nothing half-imports, ever.</p>
             </div>
@@ -206,7 +206,7 @@
 
           <p class="pt-4">
             If your organization's story also starts with a spreadsheet,
-            <a href="/#contact" class="text-terracotta-light hover:text-terracotta underline">tell me about it</a> —
+            <a href="/#contact" class="text-terracotta-light hover:text-terracotta underline">tell me about it</a>,
             the first conversation is free, and so is an honest opinion on
             whether you need a build at all.
           </p>
@@ -215,13 +215,13 @@
     </main>
 
     <footer class="border-t border-stone-800 mt-8">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-stone-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-stone-500">
         <a href="/" class="font-display text-stone-300 text-lg">γκ<span class="text-terracotta">.</span></a>
         <div class="flex gap-6">
-          <a href="/the-process/" class="hover:text-white transition-colors">The Process: Ocean</a>
-          <a href="/pricing-transparency/" class="hover:text-white transition-colors">Pricing &amp; sliding scale</a>
-          <a href="https://github.com/gkatsikis" class="hover:text-white transition-colors">GitHub</a>
-          <a href="https://linkedin.com/in/georgios-katsikis" class="hover:text-white transition-colors">LinkedIn</a>
+          <a href="/the-process/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">How I built Ocean</a>
+          <a href="/pricing-transparency/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">Pricing &amp; sliding scale</a>
+          <a href="https://github.com/gkatsikis" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/georgios-katsikis" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">LinkedIn</a>
         </div>
         <p>© Georgios Katsikis · Cabro Insight LLC</p>
       </div>
