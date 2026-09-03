@@ -40,6 +40,40 @@
       @media (prefers-reduced-motion: reduce) {
         .zen-orb { animation: none; }
       }
+      /* favorites: a staggered deck that fans into a 3x2 spread on hover/focus */
+      .book-stack {
+        position: relative;
+        width: 19.8rem;
+        height: 22.5rem;
+        outline: none;
+      }
+      .book-stack img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 11.2rem;
+        border-radius: 6px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.3, 1.15);
+      }
+      /* a criss-cross pile, alternating ~45deg like books dropped on a table */
+      .book-stack img:nth-child(1) { z-index: 16; transform: translate(-4.25rem, 2.65rem) rotate(0deg); }
+      .book-stack img:nth-child(2) { z-index: 15; transform: translate(-4.5rem, 2.35rem) rotate(45deg); }
+      .book-stack img:nth-child(3) { z-index: 14; transform: translate(-3.95rem, 2.9rem) rotate(-7deg); }
+      .book-stack img:nth-child(4) { z-index: 13; transform: translate(-4.6rem, 2.55rem) rotate(38deg); }
+      .book-stack img:nth-child(5) { z-index: 12; transform: translate(-4.05rem, 2.75rem) rotate(8deg); }
+      .book-stack img:nth-child(6) { z-index: 11; transform: translate(-4.35rem, 2.65rem) rotate(-42deg); }
+      .book-stack:hover, .book-stack:focus-visible { z-index: 50; }
+      .book-stack:hover img, .book-stack:focus-visible img { box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6); }
+      .book-stack:hover img:nth-child(1), .book-stack:focus-visible img:nth-child(1) { transform: translate(0, 0) rotate(0deg); }
+      .book-stack:hover img:nth-child(2), .book-stack:focus-visible img:nth-child(2) { transform: translate(-12.6rem, 0) rotate(0deg); }
+      .book-stack:hover img:nth-child(3), .book-stack:focus-visible img:nth-child(3) { transform: translate(-25.2rem, 0) rotate(0deg); }
+      .book-stack:hover img:nth-child(4), .book-stack:focus-visible img:nth-child(4) { transform: translate(0, 18.2rem) rotate(0deg); }
+      .book-stack:hover img:nth-child(5), .book-stack:focus-visible img:nth-child(5) { transform: translate(-12.6rem, 18.2rem) rotate(0deg); }
+      .book-stack:hover img:nth-child(6), .book-stack:focus-visible img:nth-child(6) { transform: translate(-25.2rem, 18.2rem) rotate(0deg); }
+      @media (prefers-reduced-motion: reduce) {
+        .book-stack img { transition: none; }
+      }
       /* polaroids: deliberately NOT glass; physical objects against the glass world */
       .polaroid {
         background: linear-gradient(160deg, rgba(255, 255, 255, 0.94), rgba(240, 237, 233, 0.90));
@@ -85,7 +119,7 @@
         .polaroid, .polaroid:hover { transition: none; transform: none; }
       }
     </style>
-    <link rel="stylesheet" crossorigin href="/assets/index-Di5rBETu.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-Dpt6G6Si.css">
   </head>
   <body>
     <nav class="border-b border-stone-800">
@@ -103,8 +137,8 @@
       <div class="grid md:grid-cols-[1fr,240px] gap-10 items-start mb-20">
         <div>
           <p class="text-stone-300 text-lg sm:text-xl leading-relaxed max-w-2xl mb-4">
-            Four practices that nourish me, and that made me. Falling well,
-            sitting still, reading slowly, eating together. Underneath, they
+            Four practices that nourish me, and that made me. Reading slowly,
+            eating together, falling well, sitting still. Underneath, they
             have always been one practice, connection.          </p>
           <p class="text-stone-400 leading-relaxed max-w-2xl mt-4">
             The Greeks had a word for the journey home, <span lang="el">νόστος</span>.
@@ -115,10 +149,10 @@
             Luffy brings his along.
           </p>
           <nav class="flex flex-wrap gap-2 mt-6" aria-label="Page chapters">
-            <a href="#mats" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">01 · On the mats</a>
-            <a href="#cushion" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">02 · On the cushion</a>
-            <a href="#book" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">03 · In a book</a>
-            <a href="#table" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">04 · At the table</a>
+            <a href="#book" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">01 · Immersed in a story</a>
+            <a href="#table" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">02 · Sharing the table</a>
+            <a href="#mats" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">03 · Training on the mats</a>
+            <a href="#cushion" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">04 · Sitting with stillness</a>
           </nav>
         </div>
         <figure class="polaroid tilt-r w-56 justify-self-center md:justify-self-end">
@@ -128,10 +162,103 @@
         </figure>
       </div>
 
+      <!-- ===== The bookshelf ===== -->
+      <section id="book" class="mb-24 scroll-mt-24">
+        <p class="font-display italic text-stone-500 mb-2">01</p>
+        <h2 class="text-3xl font-bold text-white mb-6">Immersed in a story</h2>
+
+        <div class="grid md:grid-cols-5 gap-8 items-start">
+          <div class="md:col-span-3 glass-panel rounded-2xl p-6 sm:p-8">
+            <p class="text-stone-300 text-lg leading-relaxed mb-8">
+              Before my day starts, my me time is a book, and a cup of coffee
+              or green tea. I read
+              widely, from psychology and philosophy to science
+              fiction, fantasy, memoirs, and most any fiction that holds me
+              still for a while.
+            </p>
+
+            <p class="text-stone-500 text-sm mb-3">On the nightstand right now</p>
+            <ul class="space-y-2 text-stone-300">
+              <li class="glass-panel rounded-xl px-4 py-2.5">The Courage To Be Disliked</li>
+              <li class="glass-panel rounded-xl px-4 py-2.5">Dear Friend, From My Life I Write to You in Your Life</li>
+              <li class="glass-panel rounded-xl px-4 py-2.5">Nevernight</li>
+              <li class="glass-panel rounded-xl px-4 py-2.5">The Rings of Saturn</li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-2">
+            <p class="text-stone-500 text-sm mb-3 text-center">All-time favorites · hover over the stack</p>
+            <div class="book-stack mx-auto" tabindex="0" aria-label="Six favorite book covers, stacked. Hover or focus to spread them out.">
+              <img src="/books/one-piece.jpg" alt="Cover of One Piece Volume 1, Romance Dawn, by Eiichiro Oda" loading="lazy" decoding="async" />
+              <img src="/books/odyssey.jpg" alt="Cover of The Odyssey by Homer, translated by Emily Wilson" loading="lazy" decoding="async" />
+              <img src="/books/certain-dark-things.jpg" alt="Cover of Certain Dark Things by Silvia Moreno-Garcia" loading="lazy" decoding="async" />
+              <img src="/books/red-rising.jpg" alt="Cover of Red Rising by Pierce Brown" loading="lazy" decoding="async" />
+              <img src="/books/tao-te-ching.jpg" alt="Cover of the Tao Te Ching by Lao Tzu" loading="lazy" decoding="async" />
+              <img src="/books/book-of-hours.jpg" alt="Cover of Rilke's Book of Hours, Love Poems to God" loading="lazy" decoding="async" />
+            </div>
+            <p class="font-display italic text-stone-500 text-sm text-center mt-8">
+              And yes, One Piece counts as literature.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== the table ===== -->
+      <section id="table" class="mb-24 scroll-mt-24">
+        <p class="font-display italic text-stone-500 mb-2">02</p>
+        <h2 class="text-3xl font-bold text-white mb-6">Sharing the table</h2>
+
+        <div class="grid md:grid-cols-5 gap-8 items-start mb-6">
+        <div class="md:col-span-2 order-last md:order-first flex md:flex-col items-center justify-center gap-6 md:gap-2">
+          <figure class="polaroid tilt-r w-48 md:w-52">
+            <img src="/photos/table-1.jpg" alt="Enmoladas under a pool of dark mole, topped with herbs and pickled onion" loading="lazy" decoding="async" class="!aspect-[4/3]" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
+            <div class="ph">drop table-1.jpg into public/photos/</div>
+            <figcaption>I can't explain how happy this makes me</figcaption>
+          </figure>
+          <figure class="polaroid tilt-l w-48 md:w-52 md:mr-10 md:-mt-3">
+            <img src="/photos/table-2.jpg" alt="A banana-leaf tamal on a clay plate, beside a bowl of caldo and fresh limes" loading="lazy" decoding="async" class="!aspect-[4/3]" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
+            <div class="ph">drop table-2.jpg into public/photos/</div>
+            <figcaption>Minutes before this all disappeared</figcaption>
+          </figure>
+        </div>
+
+        <div class="md:col-span-3 glass-panel rounded-2xl p-6 sm:p-8">
+          <p class="text-stone-300 text-lg leading-relaxed mb-4">
+            Mexican food is both my favorite cuisine and my culture. I
+            take real pride in it and its mix of complexity and history. Oaxaca has my whole heart, the moles, the
+            markets, the idea that a dish can carry centuries and still be
+            dinner.
+          </p>
+          <p class="text-stone-400 leading-relaxed mb-6">
+            I come from two cultures that agree on one thing above all.
+            Nobody leaves the table hungry. Greek <em>philoxenia</em> and
+            Mexican hospitality are the same instinct wearing different
+            aprons; the guest is sacred, and the food is how you say so.
+            That belief runs deep in me. Food is warmth, food is love, and
+            food is a human right, not a privilege.
+          </p>
+
+          <div class="border-l-4 border-terracotta pl-5 py-1">
+            <p class="font-display italic text-stone-300 text-lg leading-relaxed mb-2">
+              Nobody taught this better than Anthony Bourdain. Sit down, eat
+              what you are served, listen. Half of understanding anyone is
+              sharing their table.
+            </p>
+          </div>
+        </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Favorite dish · Caldo de Camaron</span>
+          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Dessert I love · Anything Chocolate</span>
+          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Appetite Level · Luffy</span>
+        </div>
+      </section>
+
       <!-- ===== The mats ===== -->
       <section id="mats" class="mb-24 scroll-mt-24">
-        <p class="font-display italic text-stone-500 mb-2">01</p>
-        <h2 class="text-3xl font-bold text-white mb-6">On the mats</h2>
+        <p class="font-display italic text-stone-500 mb-2">03</p>
+        <h2 class="text-3xl font-bold text-white mb-6">Training on the mats</h2>
 
         <div class="grid md:grid-cols-5 gap-8 items-start mb-6">
         <!-- black belt, red rank bar left plain; add degree stripes if/when he says so -->
@@ -181,8 +308,8 @@
           </div>
 
           <div>
-            <p class="font-display italic text-stone-500 mb-2">02</p>
-            <h2 class="text-3xl font-bold text-white mb-6">On the cushion</h2>
+            <p class="font-display italic text-stone-500 mb-2">04</p>
+            <h2 class="text-3xl font-bold text-white mb-6">Sitting with stillness</h2>
 
             <div class="glass-panel rounded-2xl p-6 sm:p-8">
             <p class="text-stone-300 text-lg leading-relaxed mb-4">
@@ -202,99 +329,6 @@
             </p>
           </div>
         </div>
-        </div>
-      </section>
-
-      <!-- ===== The bookshelf ===== -->
-      <section id="book" class="mb-24 scroll-mt-24">
-        <p class="font-display italic text-stone-500 mb-2">03</p>
-        <h2 class="text-3xl font-bold text-white mb-6">In a book</h2>
-
-        <div class="grid md:grid-cols-5 gap-8 items-start">
-          <div class="md:col-span-3 glass-panel rounded-2xl p-6 sm:p-8">
-            <p class="text-stone-300 text-lg leading-relaxed mb-8">
-              Before my day starts, my me time is a book, and a cup of coffee
-              or green tea. I read
-              widely, from psychology and philosophy to science
-              fiction, fantasy, memoirs, and most any fiction that holds me
-              still for a while.
-            </p>
-
-            <p class="text-stone-500 text-sm mb-3">On the nightstand right now</p>
-            <ul class="space-y-2 text-stone-300">
-              <li class="glass-panel rounded-xl px-4 py-2.5">The Courage To Be Disliked</li>
-              <li class="glass-panel rounded-xl px-4 py-2.5">Dear Friend, From My Life I Write to You in Your Life</li>
-              <li class="glass-panel rounded-xl px-4 py-2.5">Nevernight</li>
-              <li class="glass-panel rounded-xl px-4 py-2.5">The Rings of Saturn</li>
-            </ul>
-          </div>
-
-          <div class="md:col-span-2">
-            <p class="text-stone-500 text-sm mb-3 text-center md:text-left">All-time favorites</p>
-            <div class="grid grid-cols-2 gap-4">
-              <img src="/books/one-piece.jpg" alt="Cover of One Piece Volume 1, Romance Dawn, by Eiichiro Oda" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300" />
-              <img src="/books/red-rising.jpg" alt="Cover of Red Rising by Pierce Brown" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 mt-6" />
-              <img src="/books/certain-dark-things.jpg" alt="Cover of Certain Dark Things by Silvia Moreno-Garcia" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 -mt-2" />
-              <img src="/books/odyssey.jpg" alt="Cover of The Odyssey by Homer, translated by Emily Wilson" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 mt-4" />
-              <img src="/books/tao-te-ching.jpg" alt="Cover of the Tao Te Ching by Lao Tzu" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 -mt-1" />
-              <img src="/books/book-of-hours.jpg" alt="Cover of Rilke's Book of Hours, Love Poems to God" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 mt-3" />
-            </div>
-            <p class="font-display italic text-stone-500 text-sm text-center mt-4">
-              And yes, One Piece counts as literature.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== the table ===== -->
-      <section id="table" class="mb-24 scroll-mt-24">
-        <p class="font-display italic text-stone-500 mb-2">04</p>
-        <h2 class="text-3xl font-bold text-white mb-6">At the table</h2>
-
-        <div class="grid md:grid-cols-5 gap-8 items-start mb-6">
-        <div class="md:col-span-2 order-last md:order-first flex md:flex-col items-center justify-center gap-6 md:gap-2">
-          <figure class="polaroid tilt-r w-48 md:w-52">
-            <img src="/photos/table-1.jpg" alt="Enmoladas under a pool of dark mole, topped with herbs and pickled onion" loading="lazy" decoding="async" class="!aspect-[4/3]" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
-            <div class="ph">drop table-1.jpg into public/photos/</div>
-            <figcaption>I can't explain how happy this makes me</figcaption>
-          </figure>
-          <figure class="polaroid tilt-l w-48 md:w-52 md:mr-10 md:-mt-3">
-            <img src="/photos/table-2.jpg" alt="A banana-leaf tamal on a clay plate, beside a bowl of caldo and fresh limes" loading="lazy" decoding="async" class="!aspect-[4/3]" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
-            <div class="ph">drop table-2.jpg into public/photos/</div>
-            <figcaption>Minutes before this all disappeared</figcaption>
-          </figure>
-        </div>
-
-        <div class="md:col-span-3 glass-panel rounded-2xl p-6 sm:p-8">
-          <p class="text-stone-300 text-lg leading-relaxed mb-4">
-            Mexican food is both my favorite cuisine and my culture. I
-            take real pride in it and its mix of complexity and history. Oaxaca has my whole heart, the moles, the
-            markets, the idea that a dish can carry centuries and still be
-            dinner.
-          </p>
-          <p class="text-stone-400 leading-relaxed mb-6">
-            I come from two cultures that agree on one thing above all.
-            Nobody leaves the table hungry. Greek <em>philoxenia</em> and
-            Mexican hospitality are the same instinct wearing different
-            aprons; the guest is sacred, and the food is how you say so.
-            That belief runs deep in me. Food is warmth, food is love, and
-            food is a human right, not a privilege.
-          </p>
-
-          <div class="border-l-4 border-terracotta pl-5 py-1">
-            <p class="font-display italic text-stone-300 text-lg leading-relaxed mb-2">
-              Nobody taught this better than Anthony Bourdain. Sit down, eat
-              what you are served, listen. Half of understanding anyone is
-              sharing their table.
-            </p>
-          </div>
-        </div>
-        </div>
-
-        <div class="flex flex-wrap gap-3">
-          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Favorite dish · Caldo de Camaron</span>
-          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Dessert I love · Anything Chocolate</span>
-          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Appetite Level · Luffy</span>
         </div>
       </section>
 
@@ -324,5 +358,15 @@
       </div>
     </footer>
 
+    <script>
+      // cursor-tracking specular for glass panels (same as the homepage)
+      document.addEventListener('mousemove', (e) => {
+        const el = e.target.closest?.('.glass-panel')
+        if (!el) return
+        const r = el.getBoundingClientRect()
+        el.style.setProperty('--mx', `${e.clientX - r.left}px`)
+        el.style.setProperty('--my', `${e.clientY - r.top}px`)
+      })
+    </script>
   </body>
 </html>
