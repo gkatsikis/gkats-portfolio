@@ -12,6 +12,9 @@
 
 ## MVP Features
 
+- [ ] **/coming-home/** (final name after several renames): all placeholders are filled; page is 100% real content. Review once in the browser before deploying.
+- [x] **Photos on /coming-home/** (Sept 3, 2026): all five slots filled. Originals were 15MB Pixel photos **with GPS EXIF; stripped** (resized to ~1000px, ~570KB total, metadata removed; originals backed up in the session scratchpad, not the repo). Captions and alt text are Claude drafts from the photo contents; review before deploying.
+
 - [ ] **Review the three new essays before deploying** — `/pricing-transparency/`, `/do-you-need-custom-software/`, `/outgrown-your-spreadsheet/`. Pricing ranges approved 2026-09-02; sliding scale is explicitly non-profits-only.
 - [ ] Site-name fix (WebSite JSON-LD + og:site_name) needs a Google recrawl to show — register Search Console (personal account) and request indexing of the homepage; expect days-to-weeks.
 - [x] **Domain email — hello@gkats.dev → georgioscabro@gmail.com** (Sept 3, 2026): Squarespace email forwarding LIVE (verified end-to-end); site shows hello@ only (footer + FormSubmit target); documented in README. **Receive-only for now** — replies go out from the personal Gmail; sending *as* hello@ is iceboxed (see below). Small leftover: Gmail filter `deliveredto:hello@gkats.dev` → label "gkats.dev" for the separate-tab view.

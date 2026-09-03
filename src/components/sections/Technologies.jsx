@@ -9,7 +9,7 @@ import {
 import SectionHeading from '../ui/SectionHeading'
 import { technologies, technologyCategories } from '../../data/technologies'
 
-// ponytail: static map instead of `import * as Si` — the namespace import kept
+// ponytail: static map instead of `import * as Si`, the namespace import kept
 // all ~3,200 si icons in the bundle (5 MB). New icons in technologies.js must
 // be added here too.
 const icons = {
@@ -34,7 +34,7 @@ function TechIcon({ name, icon, color }) {
       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
     >
       <div
-        className="p-4 rounded-2xl bg-stone-800/50 border border-stone-700 group-hover:border-current transition-all duration-300"
+        className="glass-panel glass-panel-bright p-4 rounded-2xl group-hover:border-current transition-all duration-300"
         style={{ '--tw-border-opacity': 0.5 }}
       >
         <IconComponent
@@ -67,7 +67,7 @@ function Technologies() {
   }
 
   return (
-    <section id="technologies" className="py-20 md:py-32 bg-stone-950">
+    <section id="technologies" className="ambient-glow py-20 md:py-32 bg-stone-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Technologies"

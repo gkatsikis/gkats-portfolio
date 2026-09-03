@@ -18,7 +18,7 @@ function ExperienceCard({ company, url, role, location, startDate, endDate, desc
       )}
 
       <div
-        className="bg-stone-800/50 backdrop-blur-sm border border-stone-700 rounded-2xl p-6 md:p-8 hover:border-opacity-50 transition-all duration-300 relative overflow-hidden group"
+        className="glass-panel glass-panel-hover rounded-2xl p-6 md:p-8 transition-all duration-300 relative overflow-hidden group"
         style={{ '--accent-color': color }}
       >
         {/* Accent border */}
@@ -94,7 +94,7 @@ function ExperienceCard({ company, url, role, location, startDate, endDate, desc
               {technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 text-sm rounded-full bg-stone-700/50 text-stone-300 border border-stone-600"
+                  className="glass-panel rounded-full px-3 py-1 text-sm text-stone-300"
                 >
                   {tech}
                 </span>
@@ -109,8 +109,8 @@ function ExperienceCard({ company, url, role, location, startDate, endDate, desc
 
 function Experience() {
   return (
-    <section id="experience" className="py-20 md:py-32 bg-stone-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="ambient-glow py-20 md:py-32 bg-stone-900">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Software Engineer Experience"
         />

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiX, FiSend } from 'react-icons/fi'
 import Button from './Button'
 
-// FormSubmit target — changing this requires re-activating FormSubmit (one-time email click)
+// FormSubmit target, changing this requires re-activating FormSubmit (one-time email click)
 const EMAIL = 'hello@gkats.dev'
 
 const ContactContext = createContext(() => {})
@@ -23,7 +23,7 @@ export function ContactProvider({ children }) {
 }
 
 const inputClasses =
-  'w-full bg-stone-800/50 border border-stone-700 rounded-xl px-4 py-3 text-stone-100 placeholder-stone-500 focus:outline-none focus:border-terracotta transition-colors'
+  'w-full glass-panel rounded-xl px-4 py-3 text-stone-100 placeholder-stone-500 focus:outline-none focus:border-terracotta transition-colors'
 
 function ContactModal({ open, onClose }) {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
@@ -101,7 +101,7 @@ function ContactModal({ open, onClose }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="contact-modal-title"
-            className="bg-stone-900 border border-stone-700 rounded-2xl p-6 md:p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto"
+            className="glass-panel bg-stone-900/70 rounded-2xl p-6 md:p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto"
             initial={{ opacity: 0, scale: 0.96, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 8 }}
@@ -115,7 +115,7 @@ function ContactModal({ open, onClose }) {
               <button
                 onClick={handleClose}
                 aria-label="Close"
-                className="text-stone-400 hover:text-white p-1.5 hover:bg-stone-800 rounded-md transition-colors"
+                className="liquid-glass p-1.5 text-stone-400 hover:text-white"
               >
                 <FiX size={20} />
               </button>
@@ -123,16 +123,17 @@ function ContactModal({ open, onClose }) {
 
             {status === 'sent' ? (
               <div className="py-8 text-center">
-                <p className="text-stone-100 text-lg mb-2">Message sent.</p>
-                <p className="text-stone-400">I'll get back to you within a day.</p>
+                <p className="text-stone-100 text-lg mb-2">Message sent. Take a breath.</p>
+                <p className="text-stone-400">It's in my inbox now; you'll hear from me within a day.</p>
               </div>
             ) : (
               <>
                 <p className="text-stone-400 mb-6">
-                  Tell me a bit about what you're working on — I reply within a day.
+                  Tell me a bit about what you're working on. No pitch, no
+                  pressure; I read everything and reply within a day.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* honeypot — hidden from humans, bots fill it */}
+                  {/* honeypot, hidden from humans, bots fill it */}
                   <input
                     type="text"
                     name="_honey"

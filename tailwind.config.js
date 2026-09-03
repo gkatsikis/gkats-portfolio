@@ -7,6 +7,7 @@ export default {
     "./pricing-transparency/index.html",
     "./do-you-need-custom-software/index.html",
     "./outgrown-your-spreadsheet/index.html",
+    "./coming-home/index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

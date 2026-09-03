@@ -13,7 +13,7 @@ export const projects = [
   {
     id: 6,
     title: 'Cite Kitten',
-    description: 'A native macOS menu-bar app bridging Zotero and Scrivener — search your reference library from a Spotlight-style popup and insert citekeys, quotes, or bibliography entries, then compile in whatever academic format is required.',
+    description: 'A native macOS menu-bar app bridging Zotero and Scrivener, search your reference library from a Spotlight-style popup and insert citekeys, quotes, or bibliography entries, then compile in whatever academic format is required.',
     image: '/citekitten.png',
     imageFit: 'contain',
     technologies: ['Swift', 'SwiftUI', 'AppKit', 'macOS'],
@@ -35,7 +35,7 @@ export const projects = [
   {
     id: 7,
     title: 'Xrisos',
-    description: 'Live gold and silver tracking — real-time COMEX prices, candlestick charts back to 2000, and a purchase log with live P&L. Its gold/silver-ratio signal measures against a trailing five-year window, backtested as a large improvement over all-history comparisons. Xrisos is Greek for gold.',
+    description: 'Live gold and silver tracking, real-time COMEX prices, candlestick charts back to 2000, and a purchase log with live P&L. Its gold/silver-ratio signal measures against a trailing five-year window, backtested as a large improvement over all-history comparisons. Xrisos is Greek for gold.',
     image: '/xrisos.png',
     technologies: ['Flask', 'JavaScript', 'Lightweight Charts', 'Docker', 'GCS', 'Cloud Run'],
     githubUrl: null,

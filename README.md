@@ -24,7 +24,8 @@ dev` still serves the plain client-rendered app.
 ## Essays
 
 The essay pages (`the-process/`, `case-study/`, `pricing-transparency/`,
-`do-you-need-custom-software/`, `outgrown-your-spreadsheet/`) are plain
+`do-you-need-custom-software/`, `outgrown-your-spreadsheet/`) and the
+personal `coming-home/` page are plain
 static HTML pages (no React) built as extra Vite entries — they share the
 site's CSS/fonts and deploy as real URLs (e.g. `gkats.dev/the-process/`).
 To add another essay: copy one, add its path to `vite.config.js`
@@ -46,6 +47,13 @@ The contact form posts to `formsubmit.co/ajax/hello@gkats.dev` — after the
 first deployed submission, FormSubmit emails a one-time activation link to
 hello@ (arrives via the forwarding); until it's clicked, submissions are
 not delivered.
+
+## Photos
+
+Personal photos for `/coming-home/` live in `public/photos/` (served at
+`/photos/<name>.jpg`). The page expects `hero-1.jpg`, `mats-1.jpg`,
+`mats-2.jpg`, `table-1.jpg`, `table-2.jpg`; a missing file renders as a
+dashed placeholder polaroid instead of a broken image.
 
 ## Customize
 

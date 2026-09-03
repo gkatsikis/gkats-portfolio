@@ -6,11 +6,11 @@ export const experience = [
     logo: null,
     role: 'CTO',
     location: 'Remote',
-    description: 'Leading the technical vision for a HIPAA-regulated patient–clinician matching platform that pairs people with the right therapist, live at tryocean.io.',
+    description: 'Leading the technical vision for a HIPAA-regulated patient-clinician matching platform that pairs people with the right therapist, live at tryocean.io.',
     highlights: [
-      'Architected the platform end to end: Django REST API, PostgreSQL, Cloud Tasks async workers, and a Next.js/TypeScript frontend',
-      'Designed an LLM-driven retrieve-and-rank matching engine scoring therapeutic alliance and patient–clinician compatibility',
-      'Implemented security and compliance for PHI: WebAuthn passkey MFA, column-level encryption, and field-level audit history',
+      'Architected the platform end to end with a Django REST API, PostgreSQL, Cloud Tasks async workers, and a Next.js/TypeScript frontend',
+      'Designed an LLM-driven retrieve-and-rank matching engine scoring therapeutic alliance and patient-clinician compatibility',
+      'Implemented security and compliance for PHI, including WebAuthn passkey MFA, column-level encryption, and field-level audit history',
     ],
     technologies: ['Django', 'PostgreSQL', 'GCP', 'Next.js', 'TypeScript', 'Claude API'],
     color: '#C97064', // Terracotta
@@ -36,7 +36,7 @@ export const experience = [
   {
     id: 2,
     company: 'Mercury Marketing',
-    // ponytail: apex only — www.mercurymediatools.us is unbound in Railway and 404s
+    // ponytail: apex only, www.mercurymediatools.us is unbound in Railway and 404s
     url: 'https://mercurymediatools.us',
     logo: null,
     role: 'Software Engineer',

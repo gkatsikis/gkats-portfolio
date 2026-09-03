@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The non-billable hours. Brazilian jiu-jitsu, meditation, Oaxacan food, and a serious reading habit. The human side of Georgios Katsikis."
+    />
+    <meta property="og:title" content="Coming Home | Georgios Katsikis" />
+    <meta
+      property="og:description"
+      content="The mats, the cushion, the table, the bookshelf. None of it bills by the hour; all of it shows up in the work anyway."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gkats.dev/coming-home/" />
+    <link rel="canonical" href="https://gkats.dev/coming-home/" />
+    <title>Coming Home | Georgios Katsikis</title>
+    <link rel="stylesheet" href="../src/index.css" />
+    <style>
+      /* page-only flourishes; the glass system comes from index.css */
+      /* breathing over 14s: in ~4.2s, hold ~1.8s, out ~6.2s (long exhale), hold ~1.8s */
+      @keyframes breathe-hold {
+        0% { transform: scale(1); }
+        30% { transform: scale(1.45); }
+        43% { transform: scale(1.45); }
+        87% { transform: scale(1); }
+        100% { transform: scale(1); }
+      }
+      .zen-orb {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 9999px;
+        background: radial-gradient(circle at 35% 30%, #E2987A, #C97064 60%, #A85847 100%);
+        box-shadow:
+          inset 0 2px 3px rgba(255, 255, 255, 0.45),
+          0 0 60px rgba(201, 112, 100, 0.55);
+        animation: breathe-hold 14s ease-in-out infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .zen-orb { animation: none; }
+      }
+      /* polaroids: deliberately NOT glass; physical objects against the glass world */
+      .polaroid {
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.94), rgba(240, 237, 233, 0.90));
+        border-radius: 6px;
+        padding: 10px 10px 0;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .polaroid img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: 2px;
+        display: block;
+        background: #292524;
+      }
+      .polaroid figcaption {
+        font-family: 'Fraunces', Georgia, serif;
+        font-style: italic;
+        color: #44403c;
+        text-align: center;
+        padding: 8px 4px 10px;
+        font-size: 0.9rem;
+      }
+      .polaroid .ph { display: none; }
+      .polaroid.is-empty .ph {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 4 / 5;
+        border: 2px dashed #a8a29e;
+        border-radius: 2px;
+        color: #78716c;
+        font-size: 0.75rem;
+        text-align: center;
+        padding: 1rem;
+      }
+      .tilt-l { transform: rotate(-3.5deg); }
+      .tilt-r { transform: rotate(2.5deg); }
+      .polaroid:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 18px 36px rgba(0, 0, 0, 0.55); }
+      @media (prefers-reduced-motion: reduce) {
+        .polaroid, .polaroid:hover { transition: none; transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="border-b border-stone-800">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="text-2xl font-semibold font-display text-stone-100" aria-label="Georgios Katsikis home">
+          γκ<span class="text-terracotta">.</span>
+        </a>
+        <a href="/" class="liquid-glass px-3 py-1.5 text-stone-400 hover:text-white text-sm font-medium">← gkats.dev</a>
+      </div>
+    </nav>
+
+    <main class="ambient-glow max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <h1 class="text-4xl sm:text-6xl font-bold mb-2 leading-tight">Coming home</h1>
+      <p class="font-display italic text-terracotta-light text-lg mb-8"><span lang="el">νόστος</span> · nostos, the journey home</p>
+      <div class="grid md:grid-cols-[1fr,240px] gap-10 items-start mb-20">
+        <div>
+          <p class="text-stone-300 text-lg sm:text-xl leading-relaxed max-w-2xl mb-4">
+            Four practices that nourish me, and that made me. Falling well,
+            sitting still, reading slowly, eating together. Underneath, they
+            have always been one practice, connection.          </p>
+          <p class="text-stone-400 leading-relaxed max-w-2xl mt-4">
+            The Greeks had a word for the journey home, <span lang="el">νόστος</span>.
+            Homer built the Odyssey around it. The Odyssey and One Piece
+            share a shelf here for a reason. Both stories epitomize fighting for
+            your dreams, keeping your friends close, and doing what is
+            right. Odysseus crossed the world to get back to his people.
+            Luffy brings his along.
+          </p>
+          <nav class="flex flex-wrap gap-2 mt-6" aria-label="Page chapters">
+            <a href="#mats" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">01 · On the mats</a>
+            <a href="#cushion" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">02 · On the cushion</a>
+            <a href="#book" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">03 · In a book</a>
+            <a href="#table" class="liquid-glass liquid-glass-neutral px-4 py-2 text-sm text-stone-300 hover:text-white">04 · At the table</a>
+          </nav>
+        </div>
+        <figure class="polaroid tilt-r w-56 justify-self-center md:justify-self-end">
+          <img src="/photos/hero-1.jpg" alt="Georgios smiling with a very happy corgi in his arms, under summer trees" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
+          <div class="ph">drop hero-1.jpg into public/photos/</div>
+          <figcaption>Me, and a very good dog (not mine)</figcaption>
+        </figure>
+      </div>
+
+      <!-- ===== The mats ===== -->
+      <section id="mats" class="mb-24 scroll-mt-24">
+        <p class="font-display italic text-stone-500 mb-2">01</p>
+        <h2 class="text-3xl font-bold text-white mb-6">On the mats</h2>
+
+        <div class="grid md:grid-cols-5 gap-8 items-start mb-6">
+        <!-- black belt, red rank bar left plain; add degree stripes if/when he says so -->
+        <div class="md:col-span-3 glass-panel rounded-2xl p-6 sm:p-8">
+          <div class="flex items-center gap-0 h-6 overflow-hidden max-w-md border border-stone-600/60" aria-hidden="true">
+            <div class="h-full flex-1 bg-gradient-to-r from-stone-950 to-black"></div>
+            <div class="h-full w-16 bg-gradient-to-r from-red-900 to-red-700"></div>
+            <div class="h-full w-3 bg-black"></div>
+          </div>
+          <p class="text-stone-500 text-sm mt-3 mb-6">Black belt, earned the slow way.</p>
+
+          <p class="text-stone-300 text-lg leading-relaxed mb-4">
+            The story starts in 2009, in a Royce Gracie affiliated gym, and
+            the blue belt came from Royce himself. A year in Japan followed,
+            training judo at International Budo University and learning how
+            to fall before anything else. Back home, Marcio Stambowsky at
+            Gracie Sports tied on my purple and brown belts, and Luis
+            Figueroa at Ronin Jiu Jitsu tied on my black.
+          </p>
+          <p class="text-stone-400 leading-relaxed">
+            I still train at Ronin today, my current focus is takedowns and leglocks
+          </p>
+        </div>
+
+        <div class="md:col-span-2 flex md:flex-col items-center justify-center gap-6 md:gap-2">
+          <figure class="polaroid tilt-l w-48 md:w-52">
+            <img src="/photos/mats-1.jpg" alt="A jiu-jitsu class lined up on the mats, listening to two instructors" loading="lazy" decoding="async" class="!aspect-square" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
+            <div class="ph">drop mats-1.jpg into public/photos/</div>
+            <figcaption>Teaching night</figcaption>
+          </figure>
+          <figure class="polaroid tilt-r w-48 md:w-52 md:ml-10 md:-mt-3">
+            <img src="/photos/mats-2.jpg" alt="Georgios and a training partner grinning after class" loading="lazy" decoding="async" class="!aspect-square" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
+            <div class="ph">drop mats-2.jpg into public/photos/</div>
+            <figcaption>Nothing boosts my mood like rolling with friends</figcaption>
+          </figure>
+        </div>
+        </div>
+      </section>
+
+      <!-- ===== The cushion ===== -->
+      <section id="cushion" class="mb-24 scroll-mt-24">
+        <div class="grid md:grid-cols-[16rem,1fr] gap-10 items-center">
+          <!-- breathes on its own: in, hold, out, hold; sized to the section -->
+          <div class="relative flex items-center justify-center h-64 md:h-full" aria-hidden="true">
+            <div class="absolute w-52 h-52 rounded-full bg-terracotta/25 blur-3xl"></div>
+            <div class="zen-orb"></div>
+          </div>
+
+          <div>
+            <p class="font-display italic text-stone-500 mb-2">02</p>
+            <h2 class="text-3xl font-bold text-white mb-6">On the cushion</h2>
+
+            <div class="glass-panel rounded-2xl p-6 sm:p-8">
+            <p class="text-stone-300 text-lg leading-relaxed mb-4">
+              This orb breathes the way I practice. In, hold, out, hold.
+              You are welcome to borrow it for a minute; the page is not
+              going anywhere.
+            </p>
+            <p class="text-stone-400 leading-relaxed mb-4">
+              Meditation has been the anchor of my life. It has helped me
+              weather many storms, and it is where my peace comes from. It
+              shows up as a daily sit, and as a hundred small moments
+              woven through the day, a breath before a hard conversation, a
+              pause before I answer.
+            </p>
+            <p class="text-stone-500 text-sm">
+              Trained as a meditation teacher; still very much a student.
+            </p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- ===== The bookshelf ===== -->
+      <section id="book" class="mb-24 scroll-mt-24">
+        <p class="font-display italic text-stone-500 mb-2">03</p>
+        <h2 class="text-3xl font-bold text-white mb-6">In a book</h2>
+
+        <div class="grid md:grid-cols-5 gap-8 items-start">
+          <div class="md:col-span-3 glass-panel rounded-2xl p-6 sm:p-8">
+            <p class="text-stone-300 text-lg leading-relaxed mb-8">
+              Before my day starts, my me time is a book, and a cup of coffee
+              or green tea. I read
+              widely, from psychology and philosophy to science
+              fiction, fantasy, memoirs, and most any fiction that holds me
+              still for a while.
+            </p>
+
+            <p class="text-stone-500 text-sm mb-3">On the nightstand right now</p>
+            <ul class="space-y-2 text-stone-300">
+              <li class="glass-panel rounded-xl px-4 py-2.5">The Courage To Be Disliked</li>
+              <li class="glass-panel rounded-xl px-4 py-2.5">Dear Friend, From My Life I Write to You in Your Life</li>
+              <li class="glass-panel rounded-xl px-4 py-2.5">Nevernight</li>
+              <li class="glass-panel rounded-xl px-4 py-2.5">The Rings of Saturn</li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-2">
+            <p class="text-stone-500 text-sm mb-3 text-center md:text-left">All-time favorites</p>
+            <div class="grid grid-cols-2 gap-4">
+              <img src="/books/one-piece.jpg" alt="Cover of One Piece Volume 1, Romance Dawn, by Eiichiro Oda" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300" />
+              <img src="/books/red-rising.jpg" alt="Cover of Red Rising by Pierce Brown" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 mt-6" />
+              <img src="/books/certain-dark-things.jpg" alt="Cover of Certain Dark Things by Silvia Moreno-Garcia" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 -mt-2" />
+              <img src="/books/odyssey.jpg" alt="Cover of The Odyssey by Homer, translated by Emily Wilson" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 mt-4" />
+              <img src="/books/tao-te-ching.jpg" alt="Cover of the Tao Te Ching by Lao Tzu" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 -mt-1" />
+              <img src="/books/book-of-hours.jpg" alt="Cover of Rilke's Book of Hours, Love Poems to God" loading="lazy" decoding="async" class="w-full rounded-md shadow-lg shadow-black/40 hover:-translate-y-1.5 transition-transform duration-300 mt-3" />
+            </div>
+            <p class="font-display italic text-stone-500 text-sm text-center mt-4">
+              And yes, One Piece counts as literature.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== the table ===== -->
+      <section id="table" class="mb-24 scroll-mt-24">
+        <p class="font-display italic text-stone-500 mb-2">04</p>
+        <h2 class="text-3xl font-bold text-white mb-6">At the table</h2>
+
+        <div class="grid md:grid-cols-5 gap-8 items-start mb-6">
+        <div class="md:col-span-2 order-last md:order-first flex md:flex-col items-center justify-center gap-6 md:gap-2">
+          <figure class="polaroid tilt-r w-48 md:w-52">
+            <img src="/photos/table-1.jpg" alt="Enmoladas under a pool of dark mole, topped with herbs and pickled onion" loading="lazy" decoding="async" class="!aspect-[4/3]" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
+            <div class="ph">drop table-1.jpg into public/photos/</div>
+            <figcaption>I can't explain how happy this makes me</figcaption>
+          </figure>
+          <figure class="polaroid tilt-l w-48 md:w-52 md:mr-10 md:-mt-3">
+            <img src="/photos/table-2.jpg" alt="A banana-leaf tamal on a clay plate, beside a bowl of caldo and fresh limes" loading="lazy" decoding="async" class="!aspect-[4/3]" onerror="this.closest('figure').classList.add('is-empty');this.remove()" />
+            <div class="ph">drop table-2.jpg into public/photos/</div>
+            <figcaption>Minutes before this all disappeared</figcaption>
+          </figure>
+        </div>
+
+        <div class="md:col-span-3 glass-panel rounded-2xl p-6 sm:p-8">
+          <p class="text-stone-300 text-lg leading-relaxed mb-4">
+            Mexican food is both my favorite cuisine and my culture. I
+            take real pride in it and its mix of complexity and history. Oaxaca has my whole heart, the moles, the
+            markets, the idea that a dish can carry centuries and still be
+            dinner.
+          </p>
+          <p class="text-stone-400 leading-relaxed mb-6">
+            I come from two cultures that agree on one thing above all.
+            Nobody leaves the table hungry. Greek <em>philoxenia</em> and
+            Mexican hospitality are the same instinct wearing different
+            aprons; the guest is sacred, and the food is how you say so.
+            That belief runs deep in me. Food is warmth, food is love, and
+            food is a human right, not a privilege.
+          </p>
+
+          <div class="border-l-4 border-terracotta pl-5 py-1">
+            <p class="font-display italic text-stone-300 text-lg leading-relaxed mb-2">
+              Nobody taught this better than Anthony Bourdain. Sit down, eat
+              what you are served, listen. Half of understanding anyone is
+              sharing their table.
+            </p>
+          </div>
+        </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Favorite dish · Caldo de Camaron</span>
+          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Dessert I love · Anything Chocolate</span>
+          <span class="glass-panel rounded-full px-4 py-2 text-sm text-stone-300">Appetite Level · Luffy</span>
+        </div>
+      </section>
+
+      <!-- ===== sign-off ===== -->
+      <section class="text-center">
+        <p class="font-display italic text-stone-400 text-lg mb-2">
+          Also in progress, four languages. Greek (B2), Spanish (B2), Japanese (N4), Chinese (HSK 1).
+        </p>
+        <p class="text-stone-500 mb-10">
+          Slowly, calmly, in that order.
+        </p>
+        <a href="/#contact" class="liquid-glass liquid-glass-tinted inline-block px-6 py-3 text-white font-medium">
+          Back to work? Say hello
+        </a>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-800 mt-8">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-stone-500">
+        <a href="/" class="font-display text-stone-300 text-lg">γκ<span class="text-terracotta">.</span></a>
+        <div class="flex gap-6">
+          <a href="/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">Home</a>
+          <a href="/the-process/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">The Process</a>
+          <a href="https://github.com/gkatsikis" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">GitHub</a>
+        </div>
+        <p>© Georgios Katsikis · Cabro Insight LLC</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

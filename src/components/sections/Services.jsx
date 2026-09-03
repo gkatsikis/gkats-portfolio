@@ -9,7 +9,7 @@ const offerings = [
     icon: FiClipboard,
     title: 'Case management & intake',
     description:
-      'Client records, referrals, and intake flows built around how your team actually works — not the other way around.',
+      'Client records, referrals, and intake flows built around how your team actually works, not the other way around.',
   },
   {
     icon: FiBarChart2,
@@ -21,13 +21,13 @@ const offerings = [
     icon: FiRefreshCw,
     title: 'Integrations & automation',
     description:
-      "Connect the systems you're stuck with — EHRs, spreadsheets, email — and automate the copy-paste in between.",
+      "Connect the systems you're stuck with, EHRs, spreadsheets, email, and automate the copy-paste in between.",
   },
   {
     icon: FiLayers,
     title: 'Web apps, end to end',
     description:
-      'From first conversation to deployed product: design, build, hosting, and the unglamorous essentials like backups and secure logins.',
+      'From first conversation to deployed product. Design, build, hosting, and the unglamorous essentials like backups and secure logins.',
   },
 ]
 
@@ -35,12 +35,12 @@ const steps = [
   {
     title: 'A short discovery call',
     description:
-      "Thirty minutes, plain language, free. You describe the problem; I'll tell you honestly whether custom software is the right answer — sometimes it isn't.",
+      "Thirty minutes, plain language, free. You describe the problem; I'll tell you honestly whether custom software is the right answer, sometimes it isn't.",
   },
   {
     title: 'A fixed-scope proposal',
     description:
-      'What gets built, what it costs, and when it ships — in writing, before any money moves.',
+      'What gets built, what it costs, and when it ships, in writing, before any money moves.',
   },
   {
     title: 'Build, with weekly check-ins',
@@ -52,18 +52,18 @@ const steps = [
 function Services() {
   const openContact = useContact()
   return (
-    <section id="services" className="py-20 md:py-32 bg-stone-950">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="ambient-glow py-20 md:py-32 bg-stone-950">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="What I Build"
-          subtitle="Custom software for non-profits and healthcare teams — scoped in plain language, shipped with care."
+          subtitle="Custom software for non-profits and healthcare teams, scoped in plain language, shipped with care."
         />
 
         <div className="grid sm:grid-cols-2 gap-6 mb-12">
           {offerings.map((offer, index) => (
             <motion.div
               key={offer.title}
-              className="bg-stone-800/50 backdrop-blur-sm border border-stone-700 rounded-2xl p-6 hover:border-terracotta/50 transition-colors"
+              className="glass-panel glass-panel-hover rounded-2xl p-6 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -83,14 +83,17 @@ function Services() {
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
         >
-          I've built systems that handle protected health information — column-level
+          I've built systems that handle protected health information, column-level
           encryption, audit trails, passkey login. HIPAA isn't an afterthought here;
           it's a starting assumption.
         </motion.p>
 
-        <h3 className="text-xl font-semibold text-stone-300 mb-8 text-center">
+        <h3 className="text-xl font-semibold text-stone-300 mb-3 text-center">
           How an engagement runs
         </h3>
+        <p className="text-stone-500 text-center mb-8">
+          Position before submission, as jiu-jitsu teaches. Understand fully, then build.
+        </p>
         <div className="grid md:grid-cols-3 gap-6 mb-14">
           {steps.map((step, index) => (
             <motion.div

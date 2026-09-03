@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
-import { FiMail } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 import SectionHeading from '../ui/SectionHeading'
 import Button from '../ui/Button'
-import { useContact } from '../ui/ContactModal'
 
 function About() {
-  const openContact = useContact()
   return (
-    <section id="about" className="py-20 md:py-32 bg-stone-900">
+    <section id="about" className="ambient-glow py-20 md:py-32 bg-stone-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="About Me"
@@ -24,28 +22,29 @@ function About() {
             <p className="text-stone-300 text-lg leading-relaxed mb-6">
               I'm a licensed social worker (LMSW) and software engineer, with training
               as a meditation teacher. This unique combination shapes how I approach
-              both people and software—with empathy, user-centered thinking, and a focus on
+              both people and software, with empathy, user-centered thinking, and a focus on
               creating tools that genuinely help people.
             </p>
             <p className="text-stone-300 text-lg leading-relaxed mb-6">
               Across the full stack, I specialize in Python, Django, FastAPI, React, and
               TypeScript. I build custom software for non-profits and healthcare
-              organizations—spaces where my technical skills and human services
+              organizations, spaces where my technical skills and human services
               background intersect.
             </p>
             <p className="text-stone-300 text-lg leading-relaxed mb-8">
-              When I'm not coding, you can find me training Brazilian jiu jitsu, teaching
-              meditation, or reading outside on a sunny day. I'm also a language
-              learner—I speak Greek (B2), Spanish (B2), Japanese (JLPT N4), and Chinese (HSK 1).
+              There's also a whole side of me that doesn't fit in a work
+              section. The mats, the cushion, the table, and the bookshelf
+              have a page of their own.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Button
-                onClick={openContact}
-                icon={FiMail}
-                variant="primary"
+                href="/coming-home/"
+                icon={FiArrowRight}
+                iconPosition="right"
+                variant="outline"
               >
-                Get in Touch
+                Me as a Human
               </Button>
             </div>
           </motion.div>
@@ -66,7 +65,7 @@ function About() {
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="bg-stone-800/50 backdrop-blur-sm border border-stone-700 rounded-2xl p-6 text-center hover:border-terracotta/50 transition-colors"
+                className="glass-panel glass-panel-hover rounded-2xl p-6 text-center transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

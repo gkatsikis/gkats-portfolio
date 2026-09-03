@@ -34,7 +34,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
             </div>
           )}
           {featured && (
-            <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium bg-terracotta text-white rounded-full">
+            <span className="liquid-glass liquid-glass-tinted absolute top-4 right-4 px-3 py-1 text-xs font-medium text-white">
               Featured
             </span>
           )}
@@ -50,7 +50,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 text-xs font-medium rounded-md bg-stone-700/50 text-stone-200 border border-terracotta/30"
+                className="glass-panel rounded-md px-2.5 py-1 text-xs font-medium text-stone-200 border-terracotta/30"
               >
                 {tech}
               </span>
@@ -92,7 +92,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
 
 function Projects() {
   return (
-    <section id="projects" className="py-20 md:py-32 bg-stone-900">
+    <section id="projects" className="ambient-glow py-20 md:py-32 bg-stone-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Projects"

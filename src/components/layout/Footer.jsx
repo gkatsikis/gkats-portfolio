@@ -67,12 +67,18 @@ function Footer() {
             <p className="text-stone-400 text-sm mt-2">
               Custom software for non-profits &amp; healthcare
             </p>
+            <a
+              href="/coming-home/"
+              className="text-stone-500 text-sm mt-1 hover:text-stone-200 transition-colors block"
+            >
+              Home is the mats, the cushion, the table, and a good book →
+            </a>
             <div className="flex items-center gap-2 mt-3 justify-center md:justify-start">
               <span className="text-stone-300 text-sm">{EMAIL}</span>
               <button
                 onClick={copyEmail}
                 aria-label="Copy email address"
-                className="text-stone-400 hover:text-white p-1.5 hover:bg-stone-800 rounded-md transition-colors"
+                className="liquid-glass p-1.5 text-stone-400 hover:text-white"
               >
                 {copied ? <FiCheck className="text-terracotta-light" /> : <FiCopy />}
               </button>
@@ -90,7 +96,7 @@ function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-stone-400 hover:text-white transition-colors duration-200 p-2 hover:bg-stone-800 rounded-full"
+                className="liquid-glass p-2 text-stone-400 hover:text-white"
                 aria-label={link.name}
               >
                 <link.icon size={20} />
@@ -98,7 +104,7 @@ function Footer() {
             ))}
             <button
               onClick={openContact}
-              className="text-stone-400 hover:text-white transition-colors duration-200 p-2 hover:bg-stone-800 rounded-full"
+              className="liquid-glass p-2 text-stone-400 hover:text-white"
               aria-label="Contact form"
             >
               <FaEnvelope size={20} />
@@ -108,10 +114,10 @@ function Footer() {
           {/* Writing */}
           <div className="flex flex-col items-center md:items-start gap-1 text-sm">
             <a href="/the-process/" className="text-stone-400 hover:text-white transition-colors">
-              The Process: How I Built Ocean
+              How I Built Ocean
             </a>
             <a href="/case-study/" className="text-stone-400 hover:text-white transition-colors">
-              Case Study: Mercury Analytics
+              The Mercury Case Study
             </a>
             <a href="/pricing-transparency/" className="text-stone-400 hover:text-white transition-colors">
               Pricing &amp; Sliding Scale
@@ -131,7 +137,7 @@ function Footer() {
         </div>
 
         {visitCount !== null && (
-          <p className="text-center text-stone-600 text-xs mt-8">
+          <p className="text-center text-stone-400 text-xs mt-8">
             {visitCount.toLocaleString()} {visitCount === 1 ? 'visit' : 'visits'}
           </p>
         )}

@@ -14,10 +14,10 @@ function Button({
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-full'
 
   const variants = {
-    primary: 'bg-terracotta hover:bg-terracotta-light text-white hover:shadow-lg hover:shadow-terracotta/25',
-    secondary: 'bg-stone-800 hover:bg-stone-700 text-white border border-stone-700 hover:border-stone-600',
-    outline: 'border-2 border-terracotta text-terracotta-light hover:bg-terracotta/10',
-    ghost: 'text-stone-300 hover:text-white hover:bg-stone-800',
+    primary: 'liquid-glass liquid-glass-tinted text-white',
+    secondary: 'liquid-glass liquid-glass-neutral text-white',
+    outline: 'liquid-glass liquid-glass-outline text-terracotta-light hover:text-white',
+    ghost: 'liquid-glass text-stone-300 hover:text-white',
   }
 
   const sizes = {

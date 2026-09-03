@@ -38,14 +38,14 @@ function Hero() {
 
       {/* Main content */}
       {/* pt clears the fixed navbar, pb reserves the scroll-indicator zone on short screens */}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-24 pb-32">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto pt-24 pb-32">
         <motion.div
           className="flex flex-col md:flex-row items-center gap-8 md:gap-14 text-center md:text-left"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* edges feather into the ground via radial mask — no ring, no border */}
+          {/* edges feather into the ground via radial mask, no ring, no border */}
           <img
             src="/headshot.jpg"
             alt="Georgios Katsikis"
@@ -85,7 +85,7 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            Engineer with a social worker's heart. I build custom software for non-profits and healthcare organizations—tools shaped by years of working with the people on the other end.
+            Engineer with a social worker's heart. I build custom software for non-profits and healthcare organizations, tools shaped by years of working with the people on the other end.
           </motion.p>
 
           <motion.p
@@ -139,7 +139,7 @@ function Hero() {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <span className="text-sm mb-2">Scroll</span>
+          <span className="text-sm mb-2">Breathe, then scroll</span>
           <FaChevronDown />
         </motion.a>
       </motion.div>

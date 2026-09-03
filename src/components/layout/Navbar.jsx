@@ -26,15 +26,19 @@ function Navbar() {
   }, [])
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-stone-900/90 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4">
+      <div
+        className={`max-w-7xl mx-auto transition-all duration-300 ${
+          scrolled
+            ? 'mt-3 glass-panel bg-stone-900/60 rounded-2xl px-4 sm:px-6 shadow-lg'
+            : 'px-1 sm:px-2 lg:px-4'
+        }`}
+      >
+        <div
+          className={`flex items-center justify-between transition-all duration-300 ${
+            scrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
+          }`}
+        >
           {/* Logo */}
           <motion.a
             href="#"
@@ -48,12 +52,12 @@ function Navbar() {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-stone-300 hover:text-white transition-colors duration-200 font-medium"
+                className="liquid-glass px-4 py-2 text-stone-300 hover:text-white font-medium"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -63,7 +67,7 @@ function Navbar() {
             ))}
             <motion.button
               onClick={openContact}
-              className="flex items-center gap-2 bg-terracotta hover:bg-terracotta-light text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-terracotta/25"
+              className="liquid-glass liquid-glass-tinted ml-3 flex items-center gap-2 text-white px-4 py-2 font-medium"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -92,7 +96,7 @@ function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-stone-900/95 backdrop-blur-md border-t border-stone-800"
+            className="md:hidden glass-panel bg-stone-900/85 rounded-2xl mt-2 max-w-7xl mx-auto overflow-hidden"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
