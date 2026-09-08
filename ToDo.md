@@ -25,7 +25,7 @@
 
 ## IceBox Features
 
-- [ ] **Mercury testimonial quote** — on ice while the quote is being worked on (as of Sept 2026); drop it into the case study's "The result" section when it lands.
+- [x] **Mercury testimonial quote** (Sept 8, 2026): landed. Brian's full quote sits in `/case-study/` under "The result" as a glass-panel `<figure>` with a terracotta left accent, attributed "Brian · Mercury Marketing". **Confirm with Brian that he's fine being named before deploying.** Deliberately not repeated on the homepage.
 - [ ] **Send email AS hello@gkats.dev** — currently bounces: Squarespace email forwarding force-adds a locked `p=reject` DMARC record (can't edit/delete while forwarding rules exist; known issue, 9-page Squarespace forum thread). Gmail send-as via smtp.gmail.com:587 + app password is already configured and verified — it starts working once DMARC is sane. Fix when wanted: delete the Squarespace forwarding rules (their DNS records auto-remove), move nameservers to Cloudflare (personal account, free) per the original runbook, use Cloudflare Email Routing for hello@ → Gmail, add own `p=none` DMARC. Alternative: paid mailbox (Zoho ~$1/mo) for fully aligned DKIM.
 
 - [ ] Cite Kitten card now links to the App Store; the old landing page (https://gkatsikis.github.io/citekitten/) is no longer linked from the site — decide whether it should reappear anywhere.
