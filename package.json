@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "sh scripts/cultivar-sources.sh",
     "build": "vite build && vite build --ssr src/entry-prerender.jsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",

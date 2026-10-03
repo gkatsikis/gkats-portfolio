@@ -21,6 +21,20 @@ and injects it into `dist/index.html`, so crawlers and non-JS clients see the
 full content. The browser then hydrates that markup (`src/main.jsx`); `npm run
 dev` still serves the plain client-rendered app.
 
+## Seedling pages
+
+`public/seedling/` (the landing page Google's sign-in screen links to) and `public/seedling/privacy/` are hand-written.
+Their facts follow `../Seedling/ARCHITECTURE.md` (Rules 12 and 13); change them there first.
+
+## Cultivar pages
+
+`public/cultivar/` (the landing page) and `public/cultivar/privacy/` are hand-written. `public/cultivar/sources/` is generated from
+`../Cultivar/Habits.md` by [scripts/cultivar-sources.sh](scripts/cultivar-sources.sh), which runs
+before every `npm run build` (so `npm run deploy` always ships the current evidence). It needs
+`pandoc` and the Cultivar repo next to this one, and fails the build without either. To change
+the page, edit Habits.md or [scripts/cultivar-sources.html](scripts/cultivar-sources.html), never
+the generated file.
+
 ## Essays
 
 The essay pages (`the-process/`, `case-study/`, `pricing-transparency/`,
