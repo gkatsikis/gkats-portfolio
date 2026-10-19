@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Draft words: the author's to rewrite. The facts are Seedling's ARCHITECTURE.md, Rules 12 and 13: change them there first. -->
-<title>Seedling — Privacy and Support</title>
+<!-- Draft words: the author's to rewrite. The facts are the app's ARCHITECTURE.md, Rules 12 and 13: change them there first. -->
+<title>Understory — Privacy and Support</title>
 <link rel="canonical" href="https://gkats.dev/seedling/privacy/">
 <style>
   body { max-width: 38em; margin: 3em auto; padding: 0 1.25em; font: 17px/1.55 Georgia, serif; color: #111111; background: #f7f7f5; }
@@ -13,19 +13,20 @@
 </style>
 </head>
 <body>
-<h1>Seedling</h1>
+<h1>Understory</h1>
 <p>A meditation timer that counts up and asks for nothing, a meditation teacher's writings and guided meditations, and friends to sit with.</p>
 
 <h2>Privacy policy</h2>
 
 <h3>Without an account</h3>
-<p>Seedling works without an account, and without one nothing about you leaves your phone. Your sits, your settings, the writings you keep and the guided meditations you have heard are stored in a database on your phone. You can save a copy of it as a file from Settings → Save a copy, and restore from that file; the file goes wherever you put it and nowhere else.</p>
+<p>Understory works without an account, and without one nothing about you leaves your phone. Your sits, your settings, the writings you keep and the guided meditations you have heard are stored in a database on your phone. You can save a copy of it as a file from Settings → Save a copy, and restore from that file; the file goes wherever you put it and nowhere else.</p>
 <p>The app downloads writings and recordings from its own site. Nothing about you is sent with those requests.</p>
 <p>If Android backup is turned on, the database is included in your phone's backup to your Google account. Downloaded recordings and pages are left out; they come back from the site.</p>
-<p>Seedling has no analytics and no ads, does not use an advertising identifier, location, contacts, the microphone or the camera, and does not track you across apps or websites.</p>
+<p>On an iPhone, the database and the downloaded writings and recordings are part of the phone's iCloud or computer backup, if you have one turned on.</p>
+<p>Understory has no analytics and no ads, does not use an advertising identifier, location, contacts, the microphone or the camera, and does not track you across apps or websites.</p>
 
 <h3>Together</h3>
-<p>Together is optional. If you sign in to it, Seedling's server keeps:</p>
+<p>Together is optional. If you sign in to it, Understory's server keeps:</p>
 <ul>
 <li>your name, your pronouns if you give them, your three-word code, and a photo if you choose one. Your friends see them; the members of a circle you are in see your code;</li>
 <li>your latest sit: its date, when it started and how long it was, which your friends see, and whether you are sitting right now;</li>
@@ -39,18 +40,19 @@
 <h3>Signing in</h3>
 <p>By email: the address is sent to Brevo, which delivers your sign-in code. The server keeps a one-way fingerprint of the address, so that the next sign-in finds the same account, and never the address itself.</p>
 <p>With Google: Google tells the server which Google account you are. The server keeps that account's id and the same fingerprint of its address.</p>
+<p>With Apple: Apple tells the server which Apple account you are. The server keeps that account's id and, if Apple shares an address (it may be a private relay address), the same fingerprint of it.</p>
 
 <h3>Who handles your data</h3>
-<p>Nobody buys or is given your data. These services handle it for Seedling and for nothing else: Cloudflare runs the server and its database, Brevo sends the sign-in emails, and Google delivers invitations to your phone (Firebase Cloud Messaging) and, if you use it, the Google sign-in. Everything travels encrypted.</p>
+<p>Nobody buys or is given your data. These services handle it for Understory and for nothing else: Cloudflare runs the server and its database, Brevo sends the sign-in emails, and Google delivers invitations to Android phones (Firebase Cloud Messaging) and, if you use it, the Google sign-in, and Apple delivers invitations to iPhones (Apple Push Notification service) and, if you use it, Sign in with Apple. Everything travels encrypted.</p>
 
 <h3>Notifications</h3>
-<p>The only notifications come from Together: a friend asking you to sit, a friend joining you, and the time you agreed to sit. The app sends none of its own, apart from the notice Android requires while a sit or a recording is running.</p>
+<p>The only notifications come from Together: a friend asking you to sit, a friend joining you, a word ten minutes before a sit you agreed, and someone asking to be your friend. The app sends none of its own, apart from the notice Android requires while a sit or a recording is running. On an iPhone, the word before an agreed sit is set on the phone itself.</p>
 
 <h3>Giving</h3>
-<p>Seedling is free, and stays free. If you choose to give something each month, the subscription is handled by Google Play. We never see your payment details, and nothing in the app changes whether you give or not.</p>
+<p>Understory is free, and stays free. If you choose to give something each month, the subscription is handled by Google Play on Android and by the App Store on iPhone. We never see your payment details, and nothing in the app changes whether you give or not.</p>
 
 <h3>Deleting your account</h3>
-<p>In the app: Together, your photo or initial at the top right, then Delete account. Or on the web, at <a href="https://seedling-together.gkats.workers.dev/delete">seedling-together.gkats.workers.dev/delete</a>. Everything the server holds about you is deleted at once: your name, pronouns, photo and code, your friendships and circles, the times you agreed, your latest sit and the copy of your phone. What is on your phone stays until you remove the app.</p>
+<p>In the app: Together, your photo or initial at the top right, Manage account, then Delete account. Or on the web, at <a href="https://seedling-together.gkats.workers.dev/delete">seedling-together.gkats.workers.dev/delete</a>. Everything the server holds about you is deleted at once: your name, pronouns, photo and code, your friendships and circles, the times you agreed, your latest sit and the copy of your phone. What is on your phone stays until you remove the app.</p>
 
 <p>If this policy changes, the change appears on this page.</p>
 
