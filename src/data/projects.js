@@ -1,5 +1,33 @@
 export const projects = [
   {
+    id: 8,
+    title: 'Live Donation Tracker',
+    description: "Custom software for a community center's fundraising gala. A big-screen total that polls the event's ClickBid platform every two seconds, a jellyfish thermometer that regains its color as the room climbs toward the goal, donor thank-yous in rotation, a golden ticket raffle draw, and silent auction winner slides. One Python file with no dependencies, so the venue laptop needs nothing installed.",
+    image: '/donation-tracker/donations.webp',
+    technologies: ['Python', 'Zero dependencies', 'ClickBid API', 'Vanilla JS', 'CSS animation', 'Docker'],
+    githubUrl: null,
+    liveUrl: null,
+    // Not deployed anywhere public; the card opens these screens instead of a live link
+    screens: [
+      {
+        src: '/donation-tracker/donations.webp',
+        alt: 'Donations raised screen with a $43,750 total, a donor thank-you, and a jellyfish thermometer',
+        caption: 'Donations raised, in demo mode. Polls ClickBid every two seconds, thanks each donor by first name and last initial, and the jellyfish regains its color toward the $100K goal.',
+      },
+      {
+        src: '/donation-tracker/raffle.webp',
+        alt: 'Golden ticket raffle screen announcing the winner',
+        caption: 'Golden ticket raffle. One entry per ticket, drawn from a presenter clicker, and the winner is saved so a refresh or restart never redraws.',
+      },
+      {
+        src: '/donation-tracker/auction.webp',
+        alt: 'Silent auction winners slide naming an item and its winner',
+        caption: 'Silent auction winners. One slide per item, looping every eight seconds, with bid amounts kept off the screen.',
+      },
+    ],
+    featured: true,
+  },
+  {
     id: 1,
     title: 'Wisely',
     description: 'A platform where licensed clinicians review and recommend books on anxiety, grief, relationships, and personal growth, helping clients find the right read backed by professional insight.',

@@ -69,12 +69,35 @@ Personal photos for `/coming-home/` live in `public/photos/` (served at
 `mats-2.jpg`, `table-1.jpg`, `table-2.jpg`; a missing file renders as a
 dashed placeholder polaroid instead of a broken image.
 
+## Project screenshots
+
+A project with no public URL carries a `screens` array in `projects.js` instead
+of `liveUrl`; the card then opens a lightbox. The Live Donation Tracker's screens
+live in `public/donation-tracker/` and come from its demo mode (`../DonationLiveTracker`).
+To regenerate them, start the demo, draw the raffle so a winner shows, then
+screenshot each page with headless Chrome. The compositor flags are needed or
+the thermometer's CSS fill transition never runs and the jellyfish stays grey:
+
+```bash
+(cd ../DonationLiveTracker && python3 tracker.py demo &)
+curl -s -X POST -H "X-Raffle: draw" http://localhost:8078/raffle/draw
+for p in "donations:/" "raffle:/raffle" "auction:/auction"; do
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+    --hide-scrollbars --window-size=1920,1080 --virtual-time-budget=20000 \
+    --run-all-compositor-stages-before-draw --disable-threaded-animation \
+    --user-data-dir=/tmp/chrome-shot --screenshot=/tmp/${p%%:*}.png "http://localhost:8078${p#*:}"
+  cwebp -q 82 -resize 1600 0 /tmp/${p%%:*}.png -o public/donation-tracker/${p%%:*}.webp
+done
+```
+
+Stop the demo with `python3 tracker.py stop` in its folder, or it exits on its own after 30 minutes.
+
 ## Customize
 
 Edit the data files in `src/data/`:
 - `technologies.js` - tech stack
 - `experience.js` - work history
-- `projects.js` - portfolio projects
+- `projects.js` - portfolio projects (`screens` for a project shown via lightbox)
 
 ## Brand
 
