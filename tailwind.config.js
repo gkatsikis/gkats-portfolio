@@ -13,6 +13,14 @@ export default {
   theme: {
     extend: {
       colors: {
+        // The site's ground and voice (Nov 2026): obsidian replaced the dark stone steps,
+        // bone replaced white. Stone 100 to 700 stay for text greys and lines.
+        obsidian: {
+          DEFAULT: '#0D0D0D',   // ground, was stone-900
+          deep: '#060606',      // deep bands and backdrops, was stone-950
+          raised: '#1A1A1A',    // cards, borders, scrollbar track, was stone-800
+        },
+        bone: '#E3DAC9',
         terracotta: {
           light: '#D98A6C',
           DEFAULT: '#C97064',

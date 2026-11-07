@@ -1,11 +1,12 @@
 <title>γκ. Brand Kit</title>
 <style>
-  /* Single-theme by design: the brand lives on warm dark stone, so the packet
+  /* Single-theme by design: the brand lives on obsidian, so the packet
      commits to that world on every host ground. All colors painted explicitly. */
   :root {
-    --ground: #1c1917;   /* stone-900 */
-    --panel:  #0c0a09;   /* stone-950 */
-    --card:   #292524;   /* stone-800 */
+    --ground: #0D0D0D;   /* obsidian */
+    --panel:  #060606;   /* obsidian deep */
+    --card:   #1A1A1A;   /* obsidian raised */
+    --bone:   #E3DAC9;   /* the voice: titles, button labels, glass highlights */
     --line:   #44403c;   /* stone-700 */
     --ink:    #e7e5e4;   /* stone-200 */
     --body:   #d6d3d1;   /* stone-300 */
@@ -148,29 +149,29 @@
     border-radius: 999px; padding: 12px 24px; border: none; cursor: pointer;
     transition: background 0.2s, border-color 0.2s, color 0.2s;
   }
-  .btn-primary { background: var(--terra); color: #fff; }
+  .btn-primary { background: var(--terra); color: var(--bone); }
   .btn-primary:hover { background: var(--terra-l); }
-  .btn-secondary { background: var(--card); color: #fff; border: 1px solid var(--line); }
+  .btn-secondary { background: var(--card); color: var(--bone); border: 1px solid var(--line); }
   .btn-secondary:hover { border-color: #57534e; }
   .btn-outline { background: transparent; border: 2px solid var(--terra); color: var(--terra-l); }
   .btn-outline:hover { background: rgba(201, 112, 100, 0.1); }
   .btn-ghost { background: transparent; color: var(--body); }
-  .btn-ghost:hover { background: var(--card); color: #fff; }
+  .btn-ghost:hover { background: var(--card); color: var(--bone); }
   .demo-cap { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 32px; }
   .chips { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
   .chip-pill {
-    padding: 10px 20px; border-radius: 999px; background: rgba(41, 37, 36, 0.5);
+    padding: 10px 20px; border-radius: 999px; background: rgba(26, 26, 26, 0.5);
     border: 1px solid rgba(201, 112, 100, 0.3); color: var(--ink); font-weight: 500; font-size: 14px;
   }
   .stat-tile {
-    background: rgba(41, 37, 36, 0.5); border: 1px solid var(--line); border-radius: 16px;
+    background: rgba(26, 26, 26, 0.5); border: 1px solid var(--line); border-radius: 16px;
     padding: 24px; text-align: center; max-width: 200px;
   }
   .stat-tile .n { font-family: "Inter", system-ui, sans-serif; font-size: 40px; font-weight: 700; color: var(--terra-l); display: block; margin-bottom: 6px; }
   .stat-tile .l { font-size: 13px; color: var(--muted); }
   .gradient-strip {
     height: 96px; border-radius: 16px; border: 1px solid var(--line);
-    background: linear-gradient(135deg, #1c1917 0%, #44403c 30%, #6d4a3a 55%, #1c1917 100%);
+    background: linear-gradient(135deg, #0D0D0D 0%, #44403c 30%, #6d4a3a 55%, #0D0D0D 100%);
     background-size: 400% 400%; animation: drift 15s ease infinite;
   }
   @keyframes drift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
@@ -203,11 +204,11 @@
 <div class="wrap">
 
   <header class="cover">
-    <div class="eyebrow">Brand guidelines · <b>v1.0</b> · August 2026</div>
+    <div class="eyebrow">Brand guidelines · <b>v1.1</b> · November 2026</div>
     <div class="cover-row">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="γκ. logo mark">
-        <rect width="100" height="100" rx="20" fill="#1c1917"/>
-        <text x="44" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text>
+        <rect width="100" height="100" rx="20" fill="#0D0D0D"/>
+        <text x="44" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text>
         <circle cx="83" cy="63" r="7" fill="#c97064"/>
       </svg>
       <h1 class="wordmark">Georgios Katsikis<span class="dot">.</span></h1>
@@ -219,14 +220,14 @@
   <section>
     <div class="sec-label"><span class="idx">01</span><h2>The Mark</h2></div>
     <div class="sec-bar"></div>
-    <p class="lede">Three parts, nothing else: a warm dark tile, the initials <strong style="color:var(--ink)">γκ</strong> set in serif (Georgios Katsikis, in Greek lowercase), and a terracotta period. The period is the signature — it is the full stop from the wordmark "Georgios Katsikis<span style="color:var(--terra)">.</span>" and it is always terracotta.</p>
+    <p class="lede">Three parts, nothing else: an obsidian tile, the initials <strong style="color:var(--ink)">γκ</strong> set in serif (Georgios Katsikis, in Greek lowercase), and a terracotta period. The period is the signature — it is the full stop from the wordmark "Georgios Katsikis<span style="color:var(--terra)">.</span>" and it is always terracotta.</p>
 
     <div class="grid2" style="margin-top:40px">
       <div>
         <h3 style="font-size:18px; margin-bottom:16px">Construction</h3>
         <ul class="spec-list">
           <li>Tile: 100 × 100, corner radius 20 — the radius is the construction unit.</li>
-          <li>Tile fill <span class="mono">#1c1917</span> (stone-900), glyphs <span class="mono">#e7e5e4</span> (stone-200).</li>
+          <li>Tile fill <span class="mono">#0D0D0D</span> (obsidian), glyphs <span class="mono">#E3DAC9</span> (bone).</li>
           <li>Period: circle r 7 at the glyph baseline, always <span class="mono">#C97064</span>.</li>
           <li>Clearspace: one corner radius (20%) on all sides.</li>
           <li>Minimum size 16 px — it ships as the favicon, so it is favicon-proven.</li>
@@ -243,39 +244,39 @@
         <h3 style="font-size:18px; margin-bottom:16px">Scale</h3>
         <div class="sizes">
           <figure>
-            <svg width="96" height="96" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1c1917"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
+            <svg width="96" height="96" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0D0D0D"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
             <figcaption class="hex">96</figcaption>
           </figure>
           <figure>
-            <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1c1917"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
+            <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0D0D0D"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
             <figcaption class="hex">48</figcaption>
           </figure>
           <figure>
-            <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1c1917"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
+            <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0D0D0D"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
             <figcaption class="hex">24</figcaption>
           </figure>
           <figure>
-            <svg width="16" height="16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1c1917"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
+            <svg width="16" height="16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0D0D0D"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
             <figcaption class="hex">16</figcaption>
           </figure>
         </div>
         <h3 style="font-size:18px; margin:24px 0 16px">Grounds</h3>
         <div class="grounds">
           <div>
-            <div class="ground-tile" style="background:#0c0a09">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1c1917" stroke="#44403c" stroke-width="1"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
+            <div class="ground-tile" style="background:#060606">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0D0D0D" stroke="#44403c" stroke-width="1"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
             </div>
             <p class="ground-cap"><span class="ok">✓</span> On brand dark — add a stone-700 hairline so the tile doesn't dissolve, or use the bare wordmark.</p>
           </div>
           <div>
             <div class="ground-tile" style="background:#fafaf9">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1c1917"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0D0D0D"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
             </div>
             <p class="ground-cap"><span class="ok">✓</span> On light — the tile carries its own ground; use as-is on white, paper, invoices.</p>
           </div>
           <div>
             <div class="ground-tile" style="background:#C97064">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1c1917"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#e7e5e4" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0D0D0D"/><text x="44" y="70" font-family="Georgia, serif" font-size="58" fill="#E3DAC9" text-anchor="middle">γκ</text><circle cx="83" cy="63" r="7" fill="#c97064"/></svg>
             </div>
             <p class="ground-cap"><span class="no">✕</span> On terracotta — the period disappears into the ground. Don't.</p>
           </div>
@@ -289,9 +290,13 @@
   <section>
     <div class="sec-label"><span class="idx">02</span><h2>Color</h2></div>
     <div class="sec-bar"></div>
-    <p class="lede">The grays are Tailwind's <strong style="color:var(--ink)">stone</strong> scale — warm, brown-biased neutrals. Never substitute slate, zinc, or pure gray: if it looks gray, it should still feel warm. Terracotta is the only voice of action and emphasis; dusk is its quiet, cool counterpoint.</p>
+    <p class="lede"><strong style="color:var(--ink)">Obsidian</strong> is the ground and <strong style="color:var(--bone)">bone</strong> is the voice: titles, button labels and the glass highlights that used to be white. The grays between them are Tailwind's <strong style="color:var(--ink)">stone</strong> scale, warm and brown-biased; never substitute slate, zinc, or pure gray for them. Terracotta is the only voice of action and emphasis; dusk is its quiet, cool counterpoint.</p>
 
     <div class="swatches" style="margin-top:36px">
+      <div class="swatch"><div class="chip" style="background:#0D0D0D; border:1px solid var(--line)"></div><div class="meta"><b>Obsidian</b><span class="mono">#0D0D0D · the ground, page and section bands</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#060606; border:1px solid var(--line)"></div><div class="meta"><b>Obsidian Deep</b><span class="mono">#060606 · alternating bands, modal backdrops</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#1A1A1A; border:1px solid var(--line)"></div><div class="meta"><b>Obsidian Raised</b><span class="mono">#1A1A1A · cards, card borders, scrollbar track</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#E3DAC9"></div><div class="meta"><b>Bone</b><span class="mono">#E3DAC9 · titles, button labels, glass highlights</span></div></div>
       <div class="swatch"><div class="chip" style="background:#D98A6C"></div><div class="meta"><b>Terracotta Light</b><span class="mono">#D98A6C · hover, links on dark</span></div></div>
       <div class="swatch"><div class="chip" style="background:#C97064"></div><div class="meta"><b>Terracotta</b><span class="mono">#C97064 · primary actions, the period</span></div></div>
       <div class="swatch"><div class="chip" style="background:#A85847"></div><div class="meta"><b>Terracotta Dark</b><span class="mono">#A85847 · pressed, depth</span></div></div>
@@ -321,9 +326,9 @@
         <div><span class="hex">500</span><span class="role">&nbsp;</span></div>
         <div><span class="hex">600</span><span class="role">&nbsp;</span></div>
         <div><span class="hex">700</span><span class="role">borders</span></div>
-        <div><span class="hex">800</span><span class="role">cards</span></div>
-        <div><span class="hex">900</span><span class="role">ground</span></div>
-        <div><span class="hex">950</span><span class="role">deep</span></div>
+        <div><span class="hex">800</span><span class="role">retired</span></div>
+        <div><span class="hex">900</span><span class="role">retired</span></div>
+        <div><span class="hex">950</span><span class="role">retired</span></div>
       </div>
       <div class="ramp-caps" style="margin-top:4px">
         <div><span class="hex">#f5f5f4</span></div>
@@ -339,7 +344,7 @@
       </div>
     </div>
 
-    <div class="note"><strong>Proportions.</strong> Stone does almost all the work; terracotta appears only where something matters — a primary button, the period, a heading's underline bar. If everything is terracotta, nothing is. Dusk never carries text or actions; it lives in ambient backgrounds and alternating accents.</div>
+    <div class="note"><strong>Proportions.</strong> Obsidian carries the ground and bone the voice; stone does the quiet work in between, as headings, body, muted text and lines. Stone 800 to 950 are retired as surfaces since the obsidian steps replaced them (November 2026). Terracotta appears only where something matters — a primary button, the period, a heading's underline bar. If everything is terracotta, nothing is. Dusk never carries text or actions; it lives in ambient backgrounds and alternating accents.</div>
   </section>
 
   <section>
@@ -402,7 +407,7 @@
   <section>
     <div class="sec-label"><span class="idx">05</span><h2>In Use</h2></div>
     <div class="sec-bar"></div>
-    <p class="lede">The components as implemented on gkats.dev. Everything interactive is a fully rounded pill; cards are 16 px radius stone-800 at half opacity with stone-700 borders.</p>
+    <p class="lede">The components as implemented on gkats.dev. Everything interactive is a fully rounded pill; cards are 16 px radius obsidian-raised at half opacity with stone-700 borders.</p>
 
     <h3 style="font-size:18px; margin:32px 0 16px">Buttons</h3>
     <div class="demo-row">
@@ -421,7 +426,7 @@
           <span class="chip-pill">Person-Centered</span>
           <span class="chip-pill">Community Care</span>
         </div>
-        <div class="demo-cap">stone-800/50 fill · terracotta/30 border</div>
+        <div class="demo-cap">obsidian-raised/50 fill · terracotta/30 border</div>
       </div>
       <div>
         <h3 style="font-size:18px; margin:0 0 16px">Stat tile</h3>
@@ -430,12 +435,12 @@
     </div>
 
     <h3 style="font-size:18px; margin:32px 0 16px">Hero gradient</h3>
-    <div class="gradient-strip" role="img" aria-label="Animated hero gradient from dark stone through ember and back"></div>
+    <div class="gradient-strip" role="img" aria-label="Animated hero gradient from obsidian through ember and back"></div>
     <div class="stops">
-      <span><i style="background:#1c1917"></i>#1c1917 · 0%</span>
+      <span><i style="background:#0D0D0D"></i>#0D0D0D · 0%</span>
       <span><i style="background:#44403c"></i>#44403c · 30%</span>
       <span><i style="background:#6d4a3a"></i>#6d4a3a · 55% — "ember", gradient-only, never a UI color</span>
-      <span><i style="background:#1c1917"></i>#1c1917 · 100%</span>
+      <span><i style="background:#0D0D0D"></i>#0D0D0D · 100%</span>
     </div>
   </section>
 
@@ -456,16 +461,16 @@
       </table>
     </div>
     <pre>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"&gt;
-  &lt;rect width="100" height="100" rx="20" fill="#1c1917"/&gt;
+  &lt;rect width="100" height="100" rx="20" fill="#0D0D0D"/&gt;
   &lt;text x="44" y="70" font-family="Georgia, 'Times New Roman', serif"
-        font-size="58" fill="#e7e5e4" text-anchor="middle"&gt;γκ&lt;/text&gt;
+        font-size="58" fill="#E3DAC9" text-anchor="middle"&gt;γκ&lt;/text&gt;
   &lt;circle cx="83" cy="63" r="7" fill="#c97064"/&gt;
 &lt;/svg&gt;</pre>
   </section>
 
   <footer>
-    <span>γκ<span style="color:var(--terra)">.</span> — brand guidelines v1.0</span>
-    <span>Prepared August 2026 · <a href="https://gkats.dev">gkats.dev</a></span>
+    <span>γκ<span style="color:var(--terra)">.</span> — brand guidelines v1.1</span>
+    <span>Prepared August 2026, revised November 2026 · <a href="https://gkats.dev">gkats.dev</a></span>
   </footer>
 
 </div>

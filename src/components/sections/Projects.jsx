@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt, FaImages } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaImages, FaGooglePlay } from 'react-icons/fa'
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import SectionHeading from '../ui/SectionHeading'
 import Card from '../ui/Card'
 import Button from '../ui/Button'
 import { projects } from '../../data/projects'
 
-function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liveLabel, featured, image, imageFit, screens, onOpenScreens, index }) {
+function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liveLabel, comingSoon, featured, image, imageFit, screens, onOpenScreens, index }) {
   const preview = image ? (
     <img
       src={image}
@@ -22,7 +23,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
     />
   ) : (
     <div className="absolute inset-0 flex items-center justify-center">
-      <span className="text-6xl font-bold text-white/10">{title.charAt(0)}</span>
+      <span className="text-6xl font-bold text-bone/10">{title.charAt(0)}</span>
     </div>
   )
 
@@ -35,7 +36,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
     >
       <Card className="h-full flex flex-col" gradient>
         {/* Project preview */}
-        <div className="relative h-48 bg-gradient-to-br from-terracotta/15 to-stone-900/60 overflow-hidden">
+        <div className="relative h-48 bg-gradient-to-br from-terracotta/15 to-obsidian/60 overflow-hidden">
           {screens ? (
             <button
               type="button"
@@ -49,15 +50,20 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
             preview
           )}
           {featured && (
-            <span className="liquid-glass liquid-glass-tinted absolute top-4 right-4 px-3 py-1 text-xs font-medium text-white">
+            <span className="liquid-glass liquid-glass-tinted absolute top-4 right-4 px-3 py-1 text-xs font-medium text-bone">
               Featured
+            </span>
+          )}
+          {screens && (
+            <span className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-obsidian/75 backdrop-blur-sm px-2.5 py-1 text-xs font-medium text-bone pointer-events-none">
+              <FaImages /> {screens.length} screens
             </span>
           )}
         </div>
 
         {/* Content */}
         <div className="p-6 flex flex-col flex-1">
-          <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+          <h3 className="text-xl font-bold text-bone mb-3">{title}</h3>
           <p className="text-stone-400 mb-4 flex-1">{description}</p>
 
           {/* Tech stack */}
@@ -73,8 +79,8 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
           </div>
 
           {/* Links */}
-          <div className="flex gap-3">
-            {screens && (
+          <div className="flex flex-wrap gap-3">
+            {screens && !liveUrl && (
               <Button
                 onClick={onOpenScreens}
                 variant="primary"
@@ -107,6 +113,17 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
                 className="flex-1"
               >
                 {liveLabel || 'Live Demo'}
+              </Button>
+            )}
+            {comingSoon && (
+              <Button
+                variant="secondary"
+                size="sm"
+                icon={FaGooglePlay}
+                className="flex-1 opacity-60 pointer-events-none"
+                disabled
+              >
+                {comingSoon}
               </Button>
             )}
           </div>
@@ -157,11 +174,14 @@ function ScreensModal({ project, onClose }) {
 
   const screen = screens[index]
 
-  return (
+  // Portal: the section's ancestors form a stacking context, which would put the nav above the
+  // overlay and anchor `fixed` to the section instead of the viewport. Nothing renders on the server.
+  if (typeof document === 'undefined') return null
+  return createPortal(
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-stone-950/80 backdrop-blur-sm"
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-obsidian-deep/80 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -181,11 +201,11 @@ function ScreensModal({ project, onClose }) {
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-lg md:text-xl font-bold text-white">{project.title}</h3>
+              <h3 className="text-lg md:text-xl font-bold text-bone">{project.title}</h3>
               <button
                 onClick={onClose}
                 aria-label="Close"
-                className="liquid-glass p-1.5 text-stone-400 hover:text-white"
+                className="liquid-glass p-1.5 text-stone-400 hover:text-bone"
               >
                 <FiX size={20} />
               </button>
@@ -196,7 +216,7 @@ function ScreensModal({ project, onClose }) {
                 key={screen.src}
                 src={screen.src}
                 alt={screen.alt}
-                className="w-full aspect-video object-cover"
+                className="w-full max-h-[70vh] object-contain"
               />
             </div>
 
@@ -204,7 +224,7 @@ function ScreensModal({ project, onClose }) {
               <button
                 onClick={() => step(-1)}
                 aria-label="Previous screen"
-                className="liquid-glass p-2 text-stone-300 hover:text-white flex-shrink-0"
+                className="liquid-glass p-2 text-stone-300 hover:text-bone flex-shrink-0"
               >
                 <FiChevronLeft size={22} />
               </button>
@@ -217,7 +237,7 @@ function ScreensModal({ project, onClose }) {
               <button
                 onClick={() => step(1)}
                 aria-label="Next screen"
-                className="liquid-glass p-2 text-stone-300 hover:text-white flex-shrink-0"
+                className="liquid-glass p-2 text-stone-300 hover:text-bone flex-shrink-0"
               >
                 <FiChevronRight size={22} />
               </button>
@@ -225,7 +245,8 @@ function ScreensModal({ project, onClose }) {
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   )
 }
 
@@ -233,7 +254,7 @@ function Projects() {
   const [open, setOpen] = useState(null)
 
   return (
-    <section id="projects" className="ambient-glow py-20 md:py-32 bg-stone-900">
+    <section id="projects" className="ambient-glow py-20 md:py-32 bg-obsidian">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Projects"

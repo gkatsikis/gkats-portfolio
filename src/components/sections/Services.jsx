@@ -52,7 +52,7 @@ const steps = [
 function Services() {
   const openContact = useContact()
   return (
-    <section id="services" className="ambient-glow py-20 md:py-32 bg-stone-950">
+    <section id="services" className="ambient-glow py-20 md:py-32 bg-obsidian-deep">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="What I Build"
@@ -70,14 +70,14 @@ function Services() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <offer.icon className="text-terracotta-light mb-4" size={28} aria-hidden="true" />
-              <h3 className="text-lg font-bold text-white mb-2">{offer.title}</h3>
+              <h3 className="text-lg font-bold text-bone mb-2">{offer.title}</h3>
               <p className="text-stone-400">{offer.description}</p>
             </motion.div>
           ))}
         </div>
 
         <motion.p
-          className="border-l-4 border-terracotta bg-stone-800/30 rounded-r-2xl px-6 py-5 text-stone-300 text-lg leading-relaxed mb-16"
+          className="border-l-4 border-terracotta bg-obsidian-raised/30 rounded-r-2xl px-6 py-5 text-stone-300 text-lg leading-relaxed mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-50px' }}
@@ -107,7 +107,7 @@ function Services() {
               <span className="text-4xl font-bold text-terracotta-light block mb-3">
                 {index + 1}
               </span>
-              <h4 className="text-white font-semibold mb-2">{step.title}</h4>
+              <h4 className="text-bone font-semibold mb-2">{step.title}</h4>
               <p className="text-stone-400 text-sm leading-relaxed">{step.description}</p>
             </motion.div>
           ))}

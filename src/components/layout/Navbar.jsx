@@ -30,7 +30,7 @@ function Navbar() {
       <div
         className={`max-w-7xl mx-auto transition-all duration-300 ${
           scrolled
-            ? 'mt-3 glass-panel bg-stone-900/60 rounded-2xl px-4 sm:px-6 shadow-lg'
+            ? 'mt-3 glass-panel bg-obsidian/60 rounded-2xl px-4 sm:px-6 shadow-lg'
             : 'px-1 sm:px-2 lg:px-4'
         }`}
       >
@@ -57,7 +57,7 @@ function Navbar() {
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="liquid-glass px-4 py-2 text-stone-300 hover:text-white font-medium"
+                className="liquid-glass px-4 py-2 text-stone-300 hover:text-bone font-medium"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -67,7 +67,7 @@ function Navbar() {
             ))}
             <motion.button
               onClick={openContact}
-              className="liquid-glass liquid-glass-tinted ml-3 flex items-center gap-2 text-white px-4 py-2 font-medium"
+              className="liquid-glass liquid-glass-tinted ml-3 flex items-center gap-2 text-bone px-4 py-2 font-medium"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -79,7 +79,7 @@ function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-stone-300 hover:text-white p-2"
+            className="md:hidden text-stone-300 hover:text-bone p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -96,14 +96,14 @@ function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden glass-panel bg-stone-900/85 rounded-2xl mt-2 max-w-7xl mx-auto overflow-hidden"
+            className="md:hidden glass-panel bg-obsidian/85 rounded-2xl mt-2 max-w-7xl mx-auto overflow-hidden"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block text-stone-300 hover:text-white transition-colors duration-200 font-medium py-2"
+                  className="block text-stone-300 hover:text-bone transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

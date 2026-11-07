@@ -34,12 +34,12 @@
     <link rel="stylesheet" href="../src/index.css" />
   </head>
   <body>
-    <nav class="border-b border-stone-800">
+    <nav class="border-b border-obsidian-raised">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <a href="/" class="text-2xl font-semibold font-display text-stone-100" aria-label="Georgios Katsikis home">
           γκ<span class="text-terracotta">.</span>
         </a>
-        <a href="/" class="liquid-glass px-3 py-1.5 text-stone-400 hover:text-white text-sm font-medium">← gkats.dev</a>
+        <a href="/" class="liquid-glass px-3 py-1.5 text-stone-400 hover:text-bone text-sm font-medium">← gkats.dev</a>
       </div>
     </nav>
 
@@ -69,10 +69,10 @@
             the inside.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Start from the clinical outcome, not the feature list</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Start from the clinical outcome, not the feature list</h2>
           <p>
             Before I was an engineer I was a social worker, and it changes the
-            first question I ask on any project. <strong class="text-white">What does a good
+            first question I ask on any project. <strong class="text-bone">What does a good
             outcome look like for the person on the other side of the
             screen?</strong>
           </p>
@@ -85,7 +85,7 @@
             decision downstream had to serve it.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Treat HIPAA compliance as architecture, not paperwork</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Treat HIPAA compliance as architecture, not paperwork</h2>
           <p>
             When software handles protected health information (PHI), HIPAA
             shapes the data model on day one, retrofitting it later costs
@@ -93,23 +93,23 @@
             themselves.
           </p>
           <ul class="list-disc pl-6 space-y-2">
-            <li><strong class="text-white">Column-level encryption</strong> on sensitive fields, and decryption failures fail closed, never open.</li>
-            <li><strong class="text-white">An append-only audit trail</strong> written in the same database transaction as every read or write of patient data. The invariant is simple. PHI cannot leave the system without an audit row.</li>
-            <li><strong class="text-white">Mandatory multi-factor authentication with passkeys</strong> for every user, patients and clinicians included, not just staff.</li>
-            <li><strong class="text-white">A compliant AI boundary.</strong> Language-model calls run only on infrastructure covered by a Business Associate Agreement, request bodies are never logged, and background-job payloads carry identifiers, never health information.</li>
+            <li><strong class="text-bone">Column-level encryption</strong> on sensitive fields, and decryption failures fail closed, never open.</li>
+            <li><strong class="text-bone">An append-only audit trail</strong> written in the same database transaction as every read or write of patient data. The invariant is simple. PHI cannot leave the system without an audit row.</li>
+            <li><strong class="text-bone">Mandatory multi-factor authentication with passkeys</strong> for every user, patients and clinicians included, not just staff.</li>
+            <li><strong class="text-bone">A compliant AI boundary.</strong> Language-model calls run only on infrastructure covered by a Business Associate Agreement, request bodies are never logged, and background-job payloads carry identifiers, never health information.</li>
           </ul>
           <p>
             None of this is visible in a product demo. All of it is what an
             auditor, an insurer, or a breach investigation will ask about.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Choose boring technology, and test the seams</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Choose boring technology, and test the seams</h2>
           <p>
             Ocean runs on a deliberately unexciting stack. A Django REST API on
             PostgreSQL, a Next.js/TypeScript frontend, cloud-managed queues for
             background work. Mature technology means fast security patches,
             easy hiring, and a platform that's still maintainable in five
-            years. <strong class="text-white">Novelty is a cost</strong>, I spend it in exactly one
+            years. <strong class="text-bone">Novelty is a cost</strong>, I spend it in exactly one
             place per project, the part that is genuinely the product.
           </p>
           <p>
@@ -121,12 +121,12 @@
             because that's where systems actually break.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Let evidence beat cleverness, even your own</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Let evidence beat cleverness, even your own</h2>
           <p>
             The first version of Ocean's matching engine was the kind engineers
             love. Vector embeddings, linguistic-style similarity, weighted
             composite scores. Building it taught me the domain. Then the
-            evidence taught me something uncomfortable: <strong class="text-white">alliance
+            evidence taught me something uncomfortable: <strong class="text-bone">alliance
             quality is driven more by the clinician's skill</strong>, cultural
             humility, detecting and repairing ruptures, responsiveness to
             feedback, than by how similar a patient and clinician look on
@@ -143,17 +143,17 @@
             Deleting a clever system you built is painful. It's also the job.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">What this means if you're hiring a developer</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">What this means if you're hiring a developer</h2>
           <p>
             The process transfers to any organization whose software touches
             sensitive data, community health, behavioral health, case
             management, non-profit services.
           </p>
           <ul class="list-disc pl-6 space-y-2">
-            <li>Define the <strong class="text-white">human outcome</strong> before the feature list.</li>
-            <li>Treat your <strong class="text-white">regulatory reality as architecture</strong>, not a pre-launch task.</li>
-            <li>Buy <strong class="text-white">boring technology</strong> everywhere except the one place your product is genuinely novel.</li>
-            <li>Demand that the novel part be <strong class="text-white">explainable</strong>, in healthcare, a recommendation you can't explain is one you can't trust.</li>
+            <li>Define the <strong class="text-bone">human outcome</strong> before the feature list.</li>
+            <li>Treat your <strong class="text-bone">regulatory reality as architecture</strong>, not a pre-launch task.</li>
+            <li>Buy <strong class="text-bone">boring technology</strong> everywhere except the one place your product is genuinely novel.</li>
+            <li>Demand that the novel part be <strong class="text-bone">explainable</strong>, in healthcare, a recommendation you can't explain is one you can't trust.</li>
           </ul>
           <p>
             If you run a non-profit or a healthcare organization and this
@@ -168,14 +168,14 @@
       </article>
     </main>
 
-    <footer class="border-t border-stone-800 mt-8">
+    <footer class="border-t border-obsidian-raised mt-8">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-stone-500">
         <a href="/" class="font-display text-stone-300 text-lg">γκ<span class="text-terracotta">.</span></a>
         <div class="flex gap-6">
-          <a href="/case-study/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">The Mercury case study</a>
-          <a href="/pricing-transparency/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">Pricing &amp; sliding scale</a>
-          <a href="https://github.com/gkatsikis" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">GitHub</a>
-          <a href="https://linkedin.com/in/georgios-katsikis" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">LinkedIn</a>
+          <a href="/case-study/" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">The Mercury case study</a>
+          <a href="/pricing-transparency/" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">Pricing &amp; sliding scale</a>
+          <a href="https://github.com/gkatsikis" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/georgios-katsikis" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">LinkedIn</a>
         </div>
         <p>© Georgios Katsikis · Cabro Insight LLC</p>
       </div>

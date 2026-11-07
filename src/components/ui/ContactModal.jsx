@@ -89,7 +89,7 @@ function ContactModal({ open, onClose }) {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-stone-950/80 backdrop-blur-sm"
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-obsidian-deep/80 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -101,7 +101,7 @@ function ContactModal({ open, onClose }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="contact-modal-title"
-            className="glass-panel bg-stone-900/70 rounded-2xl p-6 md:p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto"
+            className="glass-panel bg-obsidian/70 rounded-2xl p-6 md:p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto"
             initial={{ opacity: 0, scale: 0.96, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 8 }}
@@ -109,13 +109,13 @@ function ContactModal({ open, onClose }) {
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-start justify-between mb-2">
-              <h3 id="contact-modal-title" className="text-2xl font-bold text-white">
+              <h3 id="contact-modal-title" className="text-2xl font-bold text-bone">
                 Start a conversation
               </h3>
               <button
                 onClick={handleClose}
                 aria-label="Close"
-                className="liquid-glass p-1.5 text-stone-400 hover:text-white"
+                className="liquid-glass p-1.5 text-stone-400 hover:text-bone"
               >
                 <FiX size={20} />
               </button>

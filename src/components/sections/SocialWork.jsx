@@ -58,7 +58,7 @@ const values = [
 
 function SocialWork() {
   return (
-    <section id="social-work" className="ambient-glow py-20 md:py-32 bg-stone-950">
+    <section id="social-work" className="ambient-glow py-20 md:py-32 bg-obsidian-deep">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="The Social Work Side" />
 
@@ -97,7 +97,7 @@ function SocialWork() {
                 {value.name}
                 <span
                   role="tooltip"
-                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 glass-panel bg-stone-900/85 rounded-xl px-4 py-3 text-sm text-stone-200 font-normal text-left leading-relaxed opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 z-10"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 glass-panel bg-obsidian/85 rounded-xl px-4 py-3 text-sm text-stone-200 font-normal text-left leading-relaxed opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 z-10"
                 >
                   {value.tip}
                 </span>

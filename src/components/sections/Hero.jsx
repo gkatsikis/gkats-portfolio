@@ -135,7 +135,7 @@ function Hero() {
       >
         <motion.a
           href="#about"
-          className="flex flex-col items-center text-stone-400 hover:text-white transition-colors"
+          className="flex flex-col items-center text-stone-400 hover:text-bone transition-colors"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >

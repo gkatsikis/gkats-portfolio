@@ -31,7 +31,7 @@ function App() {
       <div className="min-h-screen">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] liquid-glass liquid-glass-tinted px-4 py-2 text-white font-medium"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] liquid-glass liquid-glass-tinted px-4 py-2 text-bone font-medium"
         >
           Skip to content
         </a>

@@ -14,10 +14,10 @@ function Button({
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-full'
 
   const variants = {
-    primary: 'liquid-glass liquid-glass-tinted text-white',
-    secondary: 'liquid-glass liquid-glass-neutral text-white',
-    outline: 'liquid-glass liquid-glass-outline text-terracotta-light hover:text-white',
-    ghost: 'liquid-glass text-stone-300 hover:text-white',
+    primary: 'liquid-glass liquid-glass-tinted text-bone',
+    secondary: 'liquid-glass liquid-glass-neutral text-bone',
+    outline: 'liquid-glass liquid-glass-outline text-terracotta-light hover:text-bone',
+    ghost: 'liquid-glass text-stone-300 hover:text-bone',
   }
 
   const sizes = {

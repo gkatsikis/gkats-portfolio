@@ -92,6 +92,12 @@ done
 
 Stop the demo with `python3 tracker.py stop` in its folder, or it exits on its own after 30 minutes.
 
+Understory's screens in `public/understory/` are the iPhone 17 Pro simulator captures from
+`../iSeedling/screenshots-check/`, rounded and resized, plus the card banner of their top halves.
+Regenerate them with `python3 scripts/understory-banner.py` (needs Pillow) after refreshing the
+captures. The card links to the App Store; the Google Play button is a placeholder until the
+Android build ships (`comingSoon` in `projects.js`).
+
 ## Customize
 
 Edit the data files in `src/data/`:
@@ -105,6 +111,11 @@ Brand guidelines and logo exports live in `brand/`. `brand-kit.html` is the
 editable source (self-contained, fonts embedded — open in any browser);
 `brand-kit.pdf` and `logo-1024.{png,jpg}` are generated from it.
 
+The palette is obsidian (`#0D0D0D` ground, `#060606` deep, `#1A1A1A` raised),
+bone (`#E3DAC9`, everything that used to be white), terracotta and dusk, with the
+stone scale kept for text greys and lines. The tokens live in `tailwind.config.js`;
+the glass highlights in `src/index.css` are bone at low alpha.
+
 Regenerate the PDF after editing the HTML (Chrome writes the file, then may
 hang on exit because of the page's infinite gradient animation — Ctrl-C once
 the file appears):
@@ -112,4 +123,12 @@ the file appears):
 ```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
   --no-pdf-header-footer --print-to-pdf=brand/brand-kit.pdf brand/brand-kit.html
+```
+
+The logo exports are the favicon rendered at 1024 px:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+  --hide-scrollbars --window-size=1024,1024 --screenshot=brand/logo-1024.png "file://$PWD/public/favicon.svg"
+sips -s format jpeg -s formatOptions 92 brand/logo-1024.png --out brand/logo-1024.jpg
 ```

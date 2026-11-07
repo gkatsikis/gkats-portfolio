@@ -28,6 +28,35 @@ export const projects = [
     featured: true,
   },
   {
+    id: 9,
+    title: 'Understory',
+    description: "A meditation teacher's own iPhone app. A timer that counts up and asks for nothing. Press start, sit, press end, and it keeps one number, the time you have sat, all of it. Beside the timer, the teacher's handwritten notes read aloud in the teacher's own voice, guided meditations you can keep on the phone, and friends who see when you last sat and can ask you to sit with them. Black, white and one grey, made for e-ink readers first and at home on any phone.",
+    image: '/understory/banner.webp',
+    technologies: ['Swift', 'SwiftUI', 'SQLite · GRDB', 'StoreKit 2', 'APNs', 'Cloudflare Workers'],
+    githubUrl: null,
+    liveUrl: 'https://apps.apple.com/app/id6823761070',
+    liveLabel: 'App Store',
+    comingSoon: 'Google Play · TBA',
+    screens: [
+      {
+        src: '/understory/sit.webp',
+        alt: 'Understory Sit screen, a black Start circle on paper with the time meditated beneath it',
+        caption: 'Sit. A timer that counts up. Press start, sit, press end. Underneath is the one number the app keeps, the time you have sat.',
+      },
+      {
+        src: '/understory/meditations.webp',
+        alt: 'Understory Meditations list with three guided meditations',
+        caption: "Meditations and thoughts. The teacher's guided meditations and short writings, read in the teacher's own voice, kept on the phone for when there is no signal.",
+      },
+      {
+        src: '/understory/together.webp',
+        alt: 'Understory Together screen with sign-in by email, Google or Apple',
+        caption: 'Together. Friends see when you last sat and can ask you to sit with them. A friend asking is the only notification the app ever sends.',
+      },
+    ],
+    featured: true,
+  },
+  {
     id: 1,
     title: 'Wisely',
     description: 'A platform where licensed clinicians review and recommend books on anxiety, grief, relationships, and personal growth, helping clients find the right read backed by professional insight.',

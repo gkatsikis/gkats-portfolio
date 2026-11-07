@@ -43,7 +43,7 @@ function TechIcon({ name, icon, color }) {
           className="transition-all duration-300 group-hover:drop-shadow-lg"
         />
       </div>
-      <span className="text-stone-400 text-sm font-medium group-hover:text-white transition-colors">
+      <span className="text-stone-400 text-sm font-medium group-hover:text-bone transition-colors">
         {name}
       </span>
     </motion.div>
@@ -67,7 +67,7 @@ function Technologies() {
   }
 
   return (
-    <section id="technologies" className="ambient-glow py-20 md:py-32 bg-stone-950">
+    <section id="technologies" className="ambient-glow py-20 md:py-32 bg-obsidian-deep">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Technologies"

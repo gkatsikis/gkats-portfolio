@@ -56,7 +56,7 @@ function Footer() {
   ]
 
   return (
-    <footer className="bg-stone-950 border-t border-stone-800">
+    <footer className="bg-obsidian-deep border-t border-obsidian-raised">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo / Brand */}
@@ -78,7 +78,7 @@ function Footer() {
               <button
                 onClick={copyEmail}
                 aria-label="Copy email address"
-                className="liquid-glass p-1.5 text-stone-400 hover:text-white"
+                className="liquid-glass p-1.5 text-stone-400 hover:text-bone"
               >
                 {copied ? <FiCheck className="text-terracotta-light" /> : <FiCopy />}
               </button>
@@ -96,7 +96,7 @@ function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="liquid-glass p-2 text-stone-400 hover:text-white"
+                className="liquid-glass p-2 text-stone-400 hover:text-bone"
                 aria-label={link.name}
               >
                 <link.icon size={20} />
@@ -104,7 +104,7 @@ function Footer() {
             ))}
             <button
               onClick={openContact}
-              className="liquid-glass p-2 text-stone-400 hover:text-white"
+              className="liquid-glass p-2 text-stone-400 hover:text-bone"
               aria-label="Contact form"
             >
               <FaEnvelope size={20} />
@@ -113,19 +113,19 @@ function Footer() {
 
           {/* Writing */}
           <div className="flex flex-col items-center md:items-start gap-1 text-sm">
-            <a href="/the-process/" className="text-stone-400 hover:text-white transition-colors">
+            <a href="/the-process/" className="text-stone-400 hover:text-bone transition-colors">
               How I Built Ocean
             </a>
-            <a href="/case-study/" className="text-stone-400 hover:text-white transition-colors">
+            <a href="/case-study/" className="text-stone-400 hover:text-bone transition-colors">
               The Mercury Case Study
             </a>
-            <a href="/pricing-transparency/" className="text-stone-400 hover:text-white transition-colors">
+            <a href="/pricing-transparency/" className="text-stone-400 hover:text-bone transition-colors">
               Pricing &amp; Sliding Scale
             </a>
-            <a href="/do-you-need-custom-software/" className="text-stone-400 hover:text-white transition-colors">
+            <a href="/do-you-need-custom-software/" className="text-stone-400 hover:text-bone transition-colors">
               Do You Need Custom Software?
             </a>
-            <a href="/outgrown-your-spreadsheet/" className="text-stone-400 hover:text-white transition-colors">
+            <a href="/outgrown-your-spreadsheet/" className="text-stone-400 hover:text-bone transition-colors">
               7 Signs You've Outgrown Your Spreadsheet
             </a>
           </div>

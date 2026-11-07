@@ -43,7 +43,7 @@ function ExperienceCard({ company, url, role, location, startDate, endDate, desc
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
               <div>
-                <h3 className="text-xl md:text-2xl font-bold text-white">{role}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-bone">{role}</h3>
                 {url ? (
                   <a
                     href={url}
@@ -109,7 +109,7 @@ function ExperienceCard({ company, url, role, location, startDate, endDate, desc
 
 function Experience() {
   return (
-    <section id="experience" className="ambient-glow py-20 md:py-32 bg-stone-900">
+    <section id="experience" className="ambient-glow py-20 md:py-32 bg-obsidian">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Software Engineer Experience"
