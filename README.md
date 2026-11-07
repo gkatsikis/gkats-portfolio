@@ -125,10 +125,15 @@ the file appears):
   --no-pdf-header-footer --print-to-pdf=brand/brand-kit.pdf brand/brand-kit.html
 ```
 
-The logo exports are the favicon rendered at 1024 px:
+The obsidian ground has a glass shine (a crisp reflection and its double, a window highlight
+along the top, conchoidal rings from a corner, depth at the edges), painted in bone light on
+the obsidian only. On the site it is the fixed `body::before` slab in `src/index.css`; sections
+are transparent or a translucent `band-deep` so it shows through. The logo export carries the
+same shine, painted by `scripts/obsidian-glass.py` onto the flat favicon render:
 
 ```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
-  --hide-scrollbars --window-size=1024,1024 --screenshot=brand/logo-1024.png "file://$PWD/public/favicon.svg"
+  --hide-scrollbars --window-size=1024,1024 --screenshot=brand/logo-1024-flat.png "file://$PWD/public/favicon.svg"
+python3 scripts/obsidian-glass.py brand/logo-1024-flat.png brand/logo-1024.png   # needs Pillow
 sips -s format jpeg -s formatOptions 92 brand/logo-1024.png --out brand/logo-1024.jpg
 ```

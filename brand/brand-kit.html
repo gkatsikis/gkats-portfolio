@@ -8,7 +8,7 @@
     --card:   #1A1A1A;   /* obsidian raised */
     --bone:   #E3DAC9;   /* the voice: titles, button labels, glass highlights */
     --line:   #44403c;   /* stone-700 */
-    --ink:    #e7e5e4;   /* stone-200 */
+    --ink:    #E3DAC9;   /* bone: headings and everything that was white */
     --body:   #d6d3d1;   /* stone-300 */
     --muted:  #a8a29e;   /* stone-400 */
     --terra:   #C97064;
@@ -296,7 +296,7 @@
       <div class="swatch"><div class="chip" style="background:#0D0D0D; border:1px solid var(--line)"></div><div class="meta"><b>Obsidian</b><span class="mono">#0D0D0D · the ground, page and section bands</span></div></div>
       <div class="swatch"><div class="chip" style="background:#060606; border:1px solid var(--line)"></div><div class="meta"><b>Obsidian Deep</b><span class="mono">#060606 · alternating bands, modal backdrops</span></div></div>
       <div class="swatch"><div class="chip" style="background:#1A1A1A; border:1px solid var(--line)"></div><div class="meta"><b>Obsidian Raised</b><span class="mono">#1A1A1A · cards, card borders, scrollbar track</span></div></div>
-      <div class="swatch"><div class="chip" style="background:#E3DAC9"></div><div class="meta"><b>Bone</b><span class="mono">#E3DAC9 · titles, button labels, glass highlights</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#E3DAC9"></div><div class="meta"><b>Bone</b><span class="mono">#E3DAC9 · headings, titles, button labels, glass highlights; nothing on the site is white</span></div></div>
       <div class="swatch"><div class="chip" style="background:#D98A6C"></div><div class="meta"><b>Terracotta Light</b><span class="mono">#D98A6C · hover, links on dark</span></div></div>
       <div class="swatch"><div class="chip" style="background:#C97064"></div><div class="meta"><b>Terracotta</b><span class="mono">#C97064 · primary actions, the period</span></div></div>
       <div class="swatch"><div class="chip" style="background:#A85847"></div><div class="meta"><b>Terracotta Dark</b><span class="mono">#A85847 · pressed, depth</span></div></div>
@@ -320,7 +320,7 @@
       </div>
       <div class="ramp-caps">
         <div><span class="hex">100</span><span class="role">&nbsp;</span></div>
-        <div><span class="hex">200</span><span class="role">headings</span></div>
+        <div><span class="hex">200</span><span class="role">retired</span></div>
         <div><span class="hex">300</span><span class="role">body</span></div>
         <div><span class="hex">400</span><span class="role">muted</span></div>
         <div><span class="hex">500</span><span class="role">&nbsp;</span></div>
@@ -344,7 +344,7 @@
       </div>
     </div>
 
-    <div class="note"><strong>Proportions.</strong> Obsidian carries the ground and bone the voice; stone does the quiet work in between, as headings, body, muted text and lines. Stone 800 to 950 are retired as surfaces since the obsidian steps replaced them (November 2026). Terracotta appears only where something matters — a primary button, the period, a heading's underline bar. If everything is terracotta, nothing is. Dusk never carries text or actions; it lives in ambient backgrounds and alternating accents.</div>
+    <div class="note"><strong>Proportions.</strong> Obsidian carries the ground and bone the voice; stone does the quiet work in between, as headings, body, muted text and lines. Stone 800 to 950 are retired as surfaces since the obsidian steps replaced them, and stone 100 and 200 are retired as text since bone replaced every white (November 2026). The obsidian ground is not flat: it carries a glass shine in bone light, a crisp diagonal reflection with a thin double, a window highlight along the top, faint conchoidal rings from one corner and depth at the edges, painted on the obsidian only and never on bone or terracotta. The 1024 px logo export shows it; <code>src/index.css</code> (<code>body::before</code>) and <code>scripts/obsidian-glass.py</code> hold the recipe. Terracotta appears only where something matters — a primary button, the period, a heading's underline bar. If everything is terracotta, nothing is. Dusk never carries text or actions; it lives in ambient backgrounds and alternating accents.</div>
   </section>
 
   <section>

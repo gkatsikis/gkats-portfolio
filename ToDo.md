@@ -2,6 +2,7 @@
 
 ## Styling
 
+- [ ] **Obsidian glass ground** (Nov 7, 2026): the page sits on a fixed `body::before` slab with the logo's shine; About, Experience and Projects sections are transparent, Technologies, Social Work, Services and the footer use `band-deep`. The hero gradient is translucent so the slab shows through. Review on a real display at several widths; the reflection band is viewport-relative, so it sits steeper on phones. The favicon stays flat (16 px).
 - [ ] **Palette switched to obsidian and bone** (Nov 7, 2026): ground `#0D0D0D`, deep `#060606`, cards `#1A1A1A`, bone `#E3DAC9` for everything that was white; terracotta and dusk unchanged, stone kept for text greys. Review every section and the six essay pages in the browser; the essay pages' `border-stone-800` rules became `border-obsidian-raised`, check the rules still read against the darker ground.
 - [ ] Brand kit still lists `georgioscabro@gmail.com` as the contact channel; the site shows `hello@gkats.dev`. Update the Assets table when the kit is next edited.
 - [ ] Hero headshot uses default center crop (`object-cover`); add `object-position` if the face sits off-center in the circle.

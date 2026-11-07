@@ -58,7 +58,7 @@ const values = [
 
 function SocialWork() {
   return (
-    <section id="social-work" className="ambient-glow py-20 md:py-32 bg-obsidian-deep">
+    <section id="social-work" className="ambient-glow py-20 md:py-32 band-deep">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="The Social Work Side" />
 
@@ -88,7 +88,7 @@ function SocialWork() {
               <motion.span
                 key={value.name}
                 tabIndex={0}
-                className="group relative glass-panel rounded-full px-5 py-2.5 text-stone-200 border-terracotta/30 font-medium cursor-default hover:border-terracotta/60 transition-colors"
+                className="group relative glass-panel rounded-full px-5 py-2.5 text-bone border-terracotta/30 font-medium cursor-default hover:border-terracotta/60 transition-colors"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -97,7 +97,7 @@ function SocialWork() {
                 {value.name}
                 <span
                   role="tooltip"
-                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 glass-panel bg-obsidian/85 rounded-xl px-4 py-3 text-sm text-stone-200 font-normal text-left leading-relaxed opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 z-10"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 glass-panel bg-obsidian/85 rounded-xl px-4 py-3 text-sm text-bone font-normal text-left leading-relaxed opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 z-10"
                 >
                   {value.tip}
                 </span>

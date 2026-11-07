@@ -71,7 +71,7 @@ function ProjectCard({ title, description, technologies, githubUrl, liveUrl, liv
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="glass-panel rounded-md px-2.5 py-1 text-xs font-medium text-stone-200 border-terracotta/30"
+                className="glass-panel rounded-md px-2.5 py-1 text-xs font-medium text-bone border-terracotta/30"
               >
                 {tech}
               </span>
@@ -254,7 +254,7 @@ function Projects() {
   const [open, setOpen] = useState(null)
 
   return (
-    <section id="projects" className="ambient-glow py-20 md:py-32 bg-obsidian">
+    <section id="projects" className="ambient-glow py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Projects"

@@ -5,7 +5,7 @@ import Button from '../ui/Button'
 
 function About() {
   return (
-    <section id="about" className="ambient-glow py-20 md:py-32 bg-obsidian">
+    <section id="about" className="ambient-glow py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="About Me"

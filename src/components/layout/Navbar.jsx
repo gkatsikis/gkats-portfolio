@@ -42,7 +42,7 @@ function Navbar() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="text-2xl md:text-3xl font-semibold font-display text-stone-100"
+            className="text-2xl md:text-3xl font-semibold font-display text-bone"
             aria-label="Georgios Katsikis home"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

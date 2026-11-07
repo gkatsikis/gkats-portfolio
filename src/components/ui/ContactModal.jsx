@@ -23,7 +23,7 @@ export function ContactProvider({ children }) {
 }
 
 const inputClasses =
-  'w-full glass-panel rounded-xl px-4 py-3 text-stone-100 placeholder-stone-500 focus:outline-none focus:border-terracotta transition-colors'
+  'w-full glass-panel rounded-xl px-4 py-3 text-bone placeholder-stone-500 focus:outline-none focus:border-terracotta transition-colors'
 
 function ContactModal({ open, onClose }) {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
@@ -123,7 +123,7 @@ function ContactModal({ open, onClose }) {
 
             {status === 'sent' ? (
               <div className="py-8 text-center">
-                <p className="text-stone-100 text-lg mb-2">Message sent. Take a breath.</p>
+                <p className="text-bone text-lg mb-2">Message sent. Take a breath.</p>
                 <p className="text-stone-400">It's in my inbox now; you'll hear from me within a day.</p>
               </div>
             ) : (

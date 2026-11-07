@@ -56,12 +56,12 @@ function Footer() {
   ]
 
   return (
-    <footer className="bg-obsidian-deep border-t border-obsidian-raised">
+    <footer className="band-deep border-t border-obsidian-raised">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo / Brand */}
           <div className="text-center md:text-left">
-            <span className="text-2xl font-semibold font-display text-stone-100">
+            <span className="text-2xl font-semibold font-display text-bone">
               γκ<span className="text-terracotta">.</span>
             </span>
             <p className="text-stone-400 text-sm mt-2">
@@ -69,7 +69,7 @@ function Footer() {
             </p>
             <a
               href="/coming-home/"
-              className="text-stone-500 text-sm mt-1 hover:text-stone-200 transition-colors block"
+              className="text-stone-500 text-sm mt-1 hover:text-bone transition-colors block"
             >
               Home is the mats, the cushion, the table, and a good book →
             </a>

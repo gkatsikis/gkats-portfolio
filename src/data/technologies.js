@@ -8,7 +8,7 @@ export const technologies = {
   frameworks: [
     { name: 'Django', icon: 'SiDjango', color: '#092E20' },
     { name: 'FastAPI', icon: 'SiFastapi', color: '#009688' },
-    { name: 'Flask', icon: 'SiFlask', color: '#ffffff' },
+    { name: 'Flask', icon: 'SiFlask', color: '#E3DAC9' },
     { name: 'React', icon: 'SiReact', color: '#61DAFB' },
     { name: 'PostgreSQL', icon: 'SiPostgresql', color: '#4169E1' },
     { name: 'Redis', icon: 'SiRedis', color: '#DC382D' },

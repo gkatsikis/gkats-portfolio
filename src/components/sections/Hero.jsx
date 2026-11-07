@@ -65,7 +65,7 @@ function Hero() {
           </motion.p>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="text-stone-100">Georgios Katsikis<span className="text-terracotta">.</span></span>
+            <span className="text-bone">Georgios Katsikis<span className="text-terracotta">.</span></span>
           </h1>
 
           <motion.h2
