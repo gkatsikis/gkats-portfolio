@@ -63,15 +63,15 @@
       ]
     }
     </script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D8LUmH8e.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-Dw2QSv7a.css">
   </head>
   <body>
-    <nav class="border-b border-stone-800">
+    <nav class="border-b border-obsidian-raised">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <a href="/" class="text-2xl font-semibold font-display text-stone-100" aria-label="Georgios Katsikis home">
           γκ<span class="text-terracotta">.</span>
         </a>
-        <a href="/" class="liquid-glass px-3 py-1.5 text-stone-400 hover:text-white text-sm font-medium">← gkats.dev</a>
+        <a href="/" class="liquid-glass px-3 py-1.5 text-stone-400 hover:text-bone text-sm font-medium">← gkats.dev</a>
       </div>
     </nav>
 
@@ -87,13 +87,13 @@
         </p>
 
         <div class="space-y-6 text-stone-300 leading-relaxed text-lg">
-          <h2 class="text-2xl font-bold text-white pt-2">Years of campaign data trapped in Excel</h2>
+          <h2 class="text-2xl font-bold text-bone pt-2">Years of campaign data trapped in Excel</h2>
           <p>
             Mercury Marketing runs advertising campaigns for its client
             businesses across eight channels, print, e-blasts, e-newsletters,
             banner ads, sponsored content, webinars, social media, and
             continuing-education placements. The complete record of that work
-            lived in Excel workbooks: <strong class="text-white">thousands of campaign line
+            lived in Excel workbooks: <strong class="text-bone">thousands of campaign line
             items spanning multiple years.</strong>
           </p>
           <p>
@@ -104,12 +104,12 @@
             portfolio.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">The fix, a multi-tenant dashboard that meets the spreadsheet where it is</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">The fix, a multi-tenant dashboard that meets the spreadsheet where it is</h2>
           <p>
             Instead of forcing a new workflow, the platform ingests the
             workbooks the agency already produces. An admin uploads a workbook;
             each client logs in and sees live dashboards of their own
-            campaigns, nothing else. <strong class="text-white">The spreadsheet stays the
+            campaigns, nothing else. <strong class="text-bone">The spreadsheet stays the
             source of truth; the platform makes it queryable, visual, and
             shareable.</strong>
           </p>
@@ -120,15 +120,15 @@
             environment heals itself instead of drifting.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Client data isolation, enforced by the server</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Client data isolation, enforced by the server</h2>
           <p>
             Every campaign record belongs to a company, and every data route
             checks that boundary on the server before returning a byte.
           </p>
           <ul class="list-disc pl-6 space-y-2">
-            <li><strong class="text-white">Client users</strong> see only their own company's campaigns.</li>
-            <li><strong class="text-white">The agency's users</strong> get cross-brand visibility over the whole portfolio, each brand stays sealed off from the others.</li>
-            <li><strong class="text-white">Admins</strong> alone can upload data, create companies, or grant access. Self-registration can only join an existing company and can never grant admin.</li>
+            <li><strong class="text-bone">Client users</strong> see only their own company's campaigns.</li>
+            <li><strong class="text-bone">The agency's users</strong> get cross-brand visibility over the whole portfolio, each brand stays sealed off from the others.</li>
+            <li><strong class="text-bone">Admins</strong> alone can upload data, create companies, or grant access. Self-registration can only join an existing company and can never grant admin.</li>
           </ul>
           <p>
             The frontend mirrors the same rule, but only to decide what to
@@ -136,11 +136,11 @@
             advice, never security.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Spreadsheet ingestion that doesn't trust the spreadsheet</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Spreadsheet ingestion that doesn't trust the spreadsheet</h2>
           <p>
             Real client workbooks are messy, so the Pandas pipeline is strict
             at the border. A nineteen-column contract is validated up front,
-            and a workbook missing a column is <strong class="text-white">rejected whole rather
+            and a workbook missing a column is <strong class="text-bone">rejected whole rather
             than half-imported</strong>. Rows are cleaned, de-duplicated, and
             type-coerced, then routed by ad type and upserted on the
             insertion-order number, re-uploading a corrected workbook updates
@@ -151,7 +151,7 @@
             loudly.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Dashboards clients actually open</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Dashboards clients actually open</h2>
           <p>
             The reporting layer answers the questions clients were emailing
             about. Financial time-series with monthly, quarterly, and yearly
@@ -164,7 +164,7 @@
             line item sees the actual ad that ran.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">The result</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">The result</h2>
           <p>
             The platform is in production on the agency's own domain, serving
             the agency and its client businesses, with over two hundred
@@ -187,12 +187,12 @@
             </figcaption>
           </figure>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Is this your organization?</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Is this your organization?</h2>
           <p>
             Most small organizations, non-profits very much included, run on
             spreadsheets that one person understands. You don't need an
             eighteen-month "digital transformation" to fix that.
-            <strong class="text-white">Meeting your spreadsheet where it is, and putting a
+            <strong class="text-bone">Meeting your spreadsheet where it is, and putting a
             validated, access-controlled window in front of it, is often the
             highest-leverage software you can buy.</strong>
           </p>
@@ -203,18 +203,18 @@
             published openly, sliding scale included.
           </p>
 
-          <h2 class="text-2xl font-bold text-white pt-6">Common questions</h2>
+          <h2 class="text-2xl font-bold text-bone pt-6">Common questions</h2>
           <div class="space-y-4">
             <div class="glass-panel rounded-xl p-4">
-              <h3 class="font-bold text-white">Do we have to stop using our spreadsheets?</h3>
+              <h3 class="font-bold text-bone">Do we have to stop using our spreadsheets?</h3>
               <p>No. The spreadsheet stays the source of truth, the platform ingests, validates, and visualizes it. Corrected re-uploads update records instead of duplicating them.</p>
             </div>
             <div class="glass-panel rounded-xl p-4">
-              <h3 class="font-bold text-white">Can clients see each other's data?</h3>
+              <h3 class="font-bold text-bone">Can clients see each other's data?</h3>
               <p>No. Every record belongs to a company and the server enforces that boundary on every request. Only the agency's own users see across brands.</p>
             </div>
             <div class="glass-panel rounded-xl p-4">
-              <h3 class="font-bold text-white">What happens when someone uploads a bad file?</h3>
+              <h3 class="font-bold text-bone">What happens when someone uploads a bad file?</h3>
               <p>It's rejected whole, with the reason. Nothing half-imports, ever.</p>
             </div>
           </div>
@@ -229,14 +229,14 @@
       </article>
     </main>
 
-    <footer class="border-t border-stone-800 mt-8">
+    <footer class="border-t border-obsidian-raised mt-8">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-stone-500">
         <a href="/" class="font-display text-stone-300 text-lg">γκ<span class="text-terracotta">.</span></a>
         <div class="flex gap-6">
-          <a href="/the-process/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">How I built Ocean</a>
-          <a href="/pricing-transparency/" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">Pricing &amp; sliding scale</a>
-          <a href="https://github.com/gkatsikis" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">GitHub</a>
-          <a href="https://linkedin.com/in/georgios-katsikis" class="liquid-glass px-3 py-1.5 hover:text-white transition-colors">LinkedIn</a>
+          <a href="/the-process/" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">How I built Ocean</a>
+          <a href="/pricing-transparency/" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">Pricing &amp; sliding scale</a>
+          <a href="https://github.com/gkatsikis" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/georgios-katsikis" class="liquid-glass px-3 py-1.5 hover:text-bone transition-colors">LinkedIn</a>
         </div>
         <p>© Georgios Katsikis · Cabro Insight LLC</p>
       </div>
